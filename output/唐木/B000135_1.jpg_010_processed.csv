@@ -1,0 +1,10 @@
+﻿file_path,original_file_name,page_index,row_number,original_header_text,column_1_value,column_2_value,column_3_value,column_4_value,column_5_value,column_6_value,column_7_value,column_8_value,column_9_value,column_10_value,column_11_value,column_12_value,column_13_value,column_14_value,column_15_value,column_16_value,column_17_value,column_18_value,column_19_value,column_20_value
+,,,0,金融機関名,金融機関名,支店名,種類,口座番号,期末現在高,摘要,,,,,,,,,,,,,,
+,,,1,静岡銀行,静岡銀行,葵町支店,定期預金,,6169596,0069656/0072559,,,,,,,,,,,,,,
+,,,2,浜松磐田信用金庫,浜松磐田信用金庫,高丘支店,定期預金,,2868453,,,,,,,,,,,,,,,
+,,,3,清水銀行,清水銀行,葵町支店,定期預金,40000126651,1208425,,,,,,,,,,,,,,,
+,,,4,小計,小計,,,,10246474,,,,,,,,,,,,,,,
+,,,5,浜松磐田信用金庫,浜松磐田信用金庫,高丘支店,定期積金,,700000,,,,,,,,,,,,,,,
+,,,6,清水銀行,清水銀行,葵町支店,定期積金,3000015739,1350000,,,,,,,,,,,,,,,
+,,,7,小計,小計,,,,2050000,,,,,,,,,,,,,,,
+,,,8,計,計,,,,188821754,,,,,,,,,,,,,,,

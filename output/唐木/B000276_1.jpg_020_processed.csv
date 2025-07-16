@@ -1,0 +1,5 @@
+﻿ocr_result_id,page_no,id,jgroupid_string,cif_number,settlement_at,maker_name_original,maker_name,maker_com_code,issue_date_rightside_date,issue_date,due_date_rightside_date,due_date,balance_rightside,balance,payment_bank_name_rightside,payment_bank_name,payment_bank_branch_name_rightside,payment_bank_branch_name,description_rightside,description
+202507161920430907,1,1,000,713722,202507,トッパン・フォームズ(株),トッパン・フォームズ(株),,4.9.30,4.9.30,5.4.10,5.4.10,10340000,10340000,三菱UFJ銀行,三菱UFJ銀行,本店,本店,,
+202507161920430907,1,2,000,713722,202507,(有)ハシモト電子,(有)ハシモト電子,,4.12.5,4.12.5,5.4.5,5.4.5,440000,440000,福岡銀行,福岡銀行,徳力支店,徳力支店,,
+202507161920430907,1,3,000,713722,202507,小計,小計,,,,,,10780000,10780000,,,,,,
+202507161920430907,1,4,000,713722,202507,計,計,,,,,,,,,,,,,

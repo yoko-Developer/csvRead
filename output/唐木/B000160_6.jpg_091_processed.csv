@@ -1,0 +1,8 @@
+﻿file_path,original_file_name,page_index,row_number,original_header_text,column_1_value,column_2_value,column_3_value,column_4_value,column_5_value,column_6_value,column_7_value,column_8_value,column_9_value,column_10_value,column_11_value,column_12_value,column_13_value,column_14_value,column_15_value,column_16_value,column_17_value,column_18_value,column_19_value,column_20_value
+,,,0,科目,科目,名称(氏名),所在地(住所),期末現在高,摘要,,,,,,,,,,,,,,,
+,,,1,未払法人税等,未払法人税等,法人県民税確定,,10500,均等割額,,,,,,,,,,,,,,,
+,,,2,〃,〃,法人市民税確定,,30000,均等割額,,,,,,,,,,,,,,,
+,,,3,(小計),(小計),,,40500,,,,,,,,,,,,,,,,
+,,,4,未払消費税等,未払消費税等,魚津税務署,,2365800,,,,,,,,,,,,,,,,
+,,,5,(小計),(小計),,,2365800,,,,,,,,,,,,,,,,
+,,,6,計,計,,,,,,,,,,,,,,,,,,,

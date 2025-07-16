@@ -1,0 +1,10 @@
+﻿file_path,original_file_name,page_index,row_number,original_header_text,column_1_value,column_2_value,column_3_value,column_4_value,column_5_value,column_6_value,column_7_value,column_8_value,column_9_value,column_10_value,column_11_value,column_12_value,column_13_value,column_14_value,column_15_value,column_16_value,column_17_value,column_18_value,column_19_value,column_20_value
+,,,0,金融機関名,金融機関名,支店名,種類,口座番号,期末現在高,摘要,,,,,,,,,,,,,,
+,,,1,横浜信用金庫,横浜信用金庫,十日市場,定期積金,0321628,1000000,10万X10,,,,,,,,,,,,,,
+,,,2,〃,〃,〃,〃,0321830,2400000,30万X8,,,,,,,,,,,,,,
+,,,3,〃,〃,〃,〃,0152911,1900000,10万X19,,,,,,,,,,,,,,
+,,,4,計,計,,,,5300000,,,,,,,,,,,,,,,
+,,,5,横浜銀行,横浜銀行,十日市場,積立定期,1053823,5400083,20万口,,,,,,,,,,,,,,
+,,,6,〃,〃,中山,〃,1173265,18709119,30万口,,,,,,,,,,,,,,
+,,,7,計,計,,,,24109202,,,,,,,,,,,,,,,
+,,,8,合計,合計,,,,269102874,,,,,,,,,,,,,,,

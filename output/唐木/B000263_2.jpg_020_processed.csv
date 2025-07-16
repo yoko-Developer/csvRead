@@ -1,0 +1,5 @@
+﻿ocr_result_id,page_no,id,jgroupid_string,cif_number,settlement_at,maker_name_original,maker_name,maker_com_code,issue_date_rightside_date,issue_date,due_date_rightside_date,due_date,balance_rightside,balance,payment_bank_name_rightside,payment_bank_name,payment_bank_branch_name_rightside,payment_bank_branch_name,description_rightside,description
+202507161920376878,2,1,000,159035,202507,犬飼タオル(株),犬飼タオル(株),,令4.11.28,令4.11.28,令5.2.28,令5.2.28,2992036,2992036,八十二,八十二,名古屋,名古屋,,
+202507161920376878,2,2,000,159035,202507,野村タオル(株),野村タオル(株),,令4.11.28,令4.11.28,令5.2.28,令5.2.28,185124,185124,三菱UFJ,三菱UFJ,名古屋中央,名古屋中央,,
+202507161920376878,2,3,000,159035,202507,(小計(割引手形)),(小計(割引手形)),,,,,,3177160,3177160,,,,,,
+202507161920376878,2,4,000,159035,202507,計,計,,,,,,12105833,12105833,,,,,,

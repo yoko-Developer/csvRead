@@ -1,0 +1,12 @@
+﻿file_path,original_file_name,page_index,row_number,original_header_text,column_1_value,column_2_value,column_3_value,column_4_value,column_5_value,column_6_value,column_7_value,column_8_value,column_9_value,column_10_value,column_11_value,column_12_value,column_13_value,column_14_value,column_15_value,column_16_value,column_17_value,column_18_value,column_19_value,column_20_value
+,,,0,借入先名称(氏名),借入先名称(氏名),借入先所在地(住所),法人・代表者との関係,期末現在高,期中の支払利子額,利率,担保の内容,,,,,,,,,,,,,
+,,,1,<短期借入金>,<短期借入金>,,,,,,,,,,,,,,,,,,,
+,,,2,商工中金,商工中金,堺支店,,,28596,,,,,,,,,,,,,,,
+,,,3,,,合計,,,28596,,,,,,,,,,,,,,,
+,,,4,<長期借入金>,<長期借入金>,,,0,,,,,,,,,,,,,,,,
+,,,5,商工中金,商工中金,堺市店,,0,9277,,,,,,,,,,,,,,,
+,,,6,商工中金,商工中金,堺支店,,6835000,181215,,,,,,,,,,,,,,,
+,,,7,商工中金,商工中金,堺支店,,70000000,33600,,,,,,,,,,,,,,,
+,,,8,日本政策金融金庫,日本政策金融金庫,堺支店,,100000000,209994,,,,,,,,,,,,,,,
+,,,9,,,長期借入金計,,176835000,434086,,,,,,,,,,,,,,,
+,,,10,,,支払利息計,,,462682,,,,,,,,,,,,,,,

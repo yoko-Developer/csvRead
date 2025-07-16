@@ -1,0 +1,12 @@
+﻿file_path,original_file_name,page_index,row_number,original_header_text,column_1_value,column_2_value,column_3_value,column_4_value,column_5_value,column_6_value,column_7_value,column_8_value,column_9_value,column_10_value,column_11_value,column_12_value,column_13_value,column_14_value,column_15_value,column_16_value,column_17_value,column_18_value,column_19_value,column_20_value
+,,,0,金融機関名,金融機関名,支店名,種類,口座番号,期末現在高,摘要,,,,,,,,,,,,,,
+,,,1,福岡,福岡,博多駅東,普通預金,2159420,338183,九州,,,,,,,,,,,,,,
+,,,2,みずほ,みずほ,名古屋,普通預金,2414983,1218193,名古屋,,,,,,,,,,,,,,
+,,,3,三井住友,三井住友,広畑,普通預金,4134081,800950,四国,,,,,,,,,,,,,,
+,,,4,小計,小計,,,,598396491,,,,,,,,,,,,,,,
+,,,5,山陰合同,山陰合同,姫路,定期預金,6061307,50000000,本社,,,,,,,,,,,,,,
+,,,6,みなと,みなと,姫路,定期預金,2413487,16620342,本社,,,,,,,,,,,,,,
+,,,7,小計,小計,,,,66620342,,,,,,,,,,,,,,,
+,,,8,住友生命,住友生命,,保険積立,,6826953,本社,,,,,,,,,,,,,,
+,,,9,小計,小計,,,,6826953,,,,,,,,,,,,,,,
+,,,10,計,計,,,,2530638284,,,,,,,,,,,,,,,

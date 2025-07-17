@@ -1,7 +1,7 @@
-﻿file_path,original_file_name,page_index,row_number,original_header_text,column_1_value,column_2_value,column_3_value,column_4_value,column_5_value,column_6_value,column_7_value,column_8_value,column_9_value,column_10_value,column_11_value,column_12_value,column_13_value,column_14_value,column_15_value,column_16_value,column_17_value,column_18_value,column_19_value,column_20_value
-,,,0,科目,科目,名称(氏名),所在地(住所),期末現在高,摘要,,,,,,,,,,,,,,,
-,,,1,未払費用,未払費用,その他,,38196,,,,,,,,,,,,,,,,
-,,,2,計,計,,,12338064,,,,,,,,,,,,,,,,
-,,,3,輸入商品未払金,輸入商品未払金,,,5843965,,,,,,,,,,,,,,,,
-,,,4,〃,〃,神港通運,,3044084,,,,,,,,,,,,,,,,
-,,,5,計,計,,,8888049,,,,,,,,,,,,,,,,
+﻿ocr_result_id,page_no,id,jgroupid_string,cif_number,settlement_at,maker_name_original,maker_name,maker_com_code,issue_date_rightside_date,issue_date,due_date_rightside_date,due_date,balance_rightside,balance,payment_bank_name_rightside,payment_bank_name,payment_bank_branch_name_rightside,payment_bank_branch_name,description_rightside,description
+,,1,000,912986,202507,科目,科目,,名称(氏名),名称(氏名),所在地(住所),所在地(住所),,,期末現在高,期末現在高,摘要,摘要,,
+,,2,000,912986,202507,未払費用,未払費用,,その他,その他,,,,,38196,38196,,,,
+,,3,000,912986,202507,計,計,,,,,,,,12338064,12338064,,,,
+,,4,000,912986,202507,輸入商品未払金,輸入商品未払金,,,,,,,,5843965,5843965,,,,
+,,5,000,912986,202507,〃,〃,,神港通運,神港通運,,,,,3044084,3044084,,,,
+,,6,000,912986,202507,計,計,,,,,,,,8888049,8888049,,,,

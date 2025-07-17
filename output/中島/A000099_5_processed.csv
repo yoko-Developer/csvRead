@@ -1,7 +1,6 @@
-﻿file_path,original_file_name,page_index,row_number,original_header_text,column_1_value,column_2_value,column_3_value,column_4_value,column_5_value,column_6_value,column_7_value,column_8_value,column_9_value,column_10_value,column_11_value,column_12_value,column_13_value,column_14_value,column_15_value,column_16_value,column_17_value,column_18_value,column_19_value,column_20_value
-,,,0,account,account,資本金,利益準備金,繰越利益剩余金,利益剰余金合計,株主資本合計,純資産合計,,,,,,,,,,,,,
-,,,1,当期首残高,当期首残高,"23,000,000","2,500,000","▲144,904,403","▲142,404,403","▲119,404,403","▲119,404,403",,,,,,,,,,,,,
-,,,2,当期変動額,当期変動額,,,,,,,,,,,,,,,,,,,
-,,,3,当期純損益金,当期純損益金,,,"21,633,797","21,633,797","21,633,797","21,633,797",,,,,,,,,,,,,
-,,,4,当期変動額合計,当期変動額合計,,,"21,633,797","21,633,797","21,633,797","21,633,797",,,,,,,,,,,,,
-,,,5,当期末残高,当期末残高,"23,000,000","2,500,000","▲123,270,606","▲120,770,606","▲97,770,606","▲97,770,606",,,,,,,,,,,,,
+﻿ocr_result_id,page_no,id,jgroupid_string,cif_number,settlement_at,maker_name_original,maker_name,maker_com_code,issue_date_rightside_date,issue_date,due_date_rightside_date,due_date,balance_rightside,balance,payment_bank_name_rightside,payment_bank_name,payment_bank_branch_name_rightside,payment_bank_branch_name,description_rightside,description
+,,1,000,361018,202507,当期首残高,当期首残高,,"23,000,000","23,000,000","2,500,000","2,500,000","▲119,404,403","▲119,404,403","▲144,904,403","▲144,904,403","▲142,404,403","▲142,404,403","▲119,404,403",
+,,2,000,361018,202507,当期変動額,当期変動額,,,,,,,,,,,,,
+,,3,000,361018,202507,当期純損益金,当期純損益金,,,,,,"21,633,797","21,633,797","21,633,797","21,633,797","21,633,797","21,633,797","21,633,797",
+,,4,000,361018,202507,当期変動額合計,当期変動額合計,,,,,,"21,633,797","21,633,797","21,633,797","21,633,797","21,633,797","21,633,797","21,633,797",
+,,5,000,361018,202507,当期末残高,当期末残高,,"23,000,000","23,000,000","2,500,000","2,500,000","▲97,770,606","▲97,770,606","▲123,270,606","▲123,270,606","▲120,770,606","▲120,770,606","▲97,770,606",

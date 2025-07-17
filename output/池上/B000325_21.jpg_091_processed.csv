@@ -1,7 +1,7 @@
-﻿file_path,original_file_name,page_index,row_number,original_header_text,column_1_value,column_2_value,column_3_value,column_4_value,column_5_value,column_6_value,column_7_value,column_8_value,column_9_value,column_10_value,column_11_value,column_12_value,column_13_value,column_14_value,column_15_value,column_16_value,column_17_value,column_18_value,column_19_value,column_20_value
-,,,0,科目,科目,名称(氏名),所在地(住所),期末現在高,摘要,,,,,,,,,,,,,,,
-,,,1,,,セメント商工健康保険組合,渋谷区東2-10-8,3374694,8月分健康保険・介護保険,,,,,,,,,,,,,,,
-,,,2,,,東京電カエナジーパートナー(株),新宿新宿5-4-9,1938735,8月分電気代,,,,,,,,,,,,,,,
-,,,3,,,東京都水道局,板橋区氷川町3-6,96277,8月分水道代,,,,,,,,,,,,,,,
-,,,4,計,計,,,11634100,,,,,,,,,,,,,,,,
-,,,5,合計,合計,,,377734357,,,,,,,,,,,,,,,,
+﻿ocr_result_id,page_no,id,jgroupid_string,cif_number,settlement_at,maker_name_original,maker_name,maker_com_code,issue_date_rightside_date,issue_date,due_date_rightside_date,due_date,balance_rightside,balance,payment_bank_name_rightside,payment_bank_name,payment_bank_branch_name_rightside,payment_bank_branch_name,description_rightside,description
+,,1,000,249942,202507,科目,科目,,名称(氏名),名称(氏名),所在地(住所),所在地(住所),,,期末現在高,期末現在高,摘要,摘要,,
+,,2,000,249942,202507,,,,セメント商工健康保険組合,セメント商工健康保険組合,渋谷区東2-10-8,渋谷区東2-10-8,,,3374694,3374694,8月分健康保険・介護保険,8月分健康保険・介護保険,,
+,,3,000,249942,202507,,,,東京電カエナジーパートナー(株),東京電カエナジーパートナー(株),新宿新宿5-4-9,新宿新宿5-4-9,,,1938735,1938735,8月分電気代,8月分電気代,,
+,,4,000,249942,202507,,,,東京都水道局,東京都水道局,板橋区氷川町3-6,板橋区氷川町3-6,,,96277,96277,8月分水道代,8月分水道代,,
+,,5,000,249942,202507,計,計,,,,,,,,11634100,11634100,,,,
+,,6,000,249942,202507,合計,合計,,,,,,,,377734357,377734357,,,,

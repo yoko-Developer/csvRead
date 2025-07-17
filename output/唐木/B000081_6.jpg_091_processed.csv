@@ -1,8 +1,8 @@
-﻿file_path,original_file_name,page_index,row_number,original_header_text,column_1_value,column_2_value,column_3_value,column_4_value,column_5_value,column_6_value,column_7_value,column_8_value,column_9_value,column_10_value,column_11_value,column_12_value,column_13_value,column_14_value,column_15_value,column_16_value,column_17_value,column_18_value,column_19_value,column_20_value
-,,,0,科目,科目,名称(氏名),所在地(住所),期末現在高,摘要,,,,,,,,,,,,,,,
-,,,1,未払費用,未払費用,従業員,,568990,締め後給与,,,,,,,,,,,,,,,
-,,,2,〃,〃,大田年金事務所,,513346,厚生年金,,,,,,,,,,,,,,,
-,,,3,〃,〃,東日本プラスチック健康保険組合,,304944,健康保険料,,,,,,,,,,,,,,,
-,,,4,〃,〃,トープラ企業年金基金,,155550,企業年金基金,,,,,,,,,,,,,,,
-,,,5,,,未払費用計,,1542830,,,,,,,,,,,,,,,,
-,,,6,計,計,,,,,,,,,,,,,,,,,,,
+﻿ocr_result_id,page_no,id,jgroupid_string,cif_number,settlement_at,maker_name_original,maker_name,maker_com_code,issue_date_rightside_date,issue_date,due_date_rightside_date,due_date,balance_rightside,balance,payment_bank_name_rightside,payment_bank_name,payment_bank_branch_name_rightside,payment_bank_branch_name,description_rightside,description
+,,1,000,396392,202507,科目,科目,,名称(氏名),名称(氏名),所在地(住所),所在地(住所),,,期末現在高,期末現在高,摘要,摘要,,
+,,2,000,396392,202507,未払費用,未払費用,,従業員,従業員,,,,,568990,568990,締め後給与,締め後給与,,
+,,3,000,396392,202507,〃,〃,,大田年金事務所,大田年金事務所,,,,,513346,513346,厚生年金,厚生年金,,
+,,4,000,396392,202507,〃,〃,,東日本プラスチック健康保険組合,東日本プラスチック健康保険組合,,,,,304944,304944,健康保険料,健康保険料,,
+,,5,000,396392,202507,〃,〃,,トープラ企業年金基金,トープラ企業年金基金,,,,,155550,155550,企業年金基金,企業年金基金,,
+,,6,000,396392,202507,,,,未払費用計,未払費用計,,,,,1542830,1542830,,,,
+,,7,000,396392,202507,計,計,,,,,,,,,,,,,

@@ -1,6 +1,6 @@
-﻿file_path,original_file_name,page_index,row_number,original_header_text,column_1_value,column_2_value,column_3_value,column_4_value,column_5_value,column_6_value,column_7_value,column_8_value,column_9_value,column_10_value,column_11_value,column_12_value,column_13_value,column_14_value,column_15_value,column_16_value,column_17_value,column_18_value,column_19_value,column_20_value
-,,,0,科目,科目,名称(氏名),所在地(住所),期末現在高,摘要,,,,,,,,,,,,,,,
-,,,1,売掛金,売掛金,東京ガスエンジニアリングソリューションズ(株),東京都港区海岸1-2-3,95893050,,,,,,,,,,,,,,,,
-,,,2,〃,〃,東京ガス(株),東京都港区海岸1-5-20,24294600,,,,,,,,,,,,,,,,
-,,,3,〃,〃,東海建設(株),横浜市鶴見区潮田町2-114-9,264000,,,,,,,,,,,,,,,,
-,,,4,計,計,,,120451650,,,,,,,,,,,,,,,,
+﻿ocr_result_id,page_no,id,jgroupid_string,cif_number,settlement_at,maker_name_original,maker_name,maker_com_code,issue_date_rightside_date,issue_date,due_date_rightside_date,due_date,balance_rightside,balance,payment_bank_name_rightside,payment_bank_name,payment_bank_branch_name_rightside,payment_bank_branch_name,description_rightside,description
+,,1,000,682667,202507,科目,科目,,名称(氏名),名称(氏名),所在地(住所),所在地(住所),,,期末現在高,期末現在高,摘要,摘要,,
+,,2,000,682667,202507,売掛金,売掛金,,東京ガスエンジニアリングソリューションズ(株),東京ガスエンジニアリングソリューションズ(株),東京都港区海岸1-2-3,東京都港区海岸1-2-3,,,95893050,95893050,,,,
+,,3,000,682667,202507,〃,〃,,東京ガス(株),東京ガス(株),東京都港区海岸1-5-20,東京都港区海岸1-5-20,,,24294600,24294600,,,,
+,,4,000,682667,202507,〃,〃,,東海建設(株),東海建設(株),横浜市鶴見区潮田町2-114-9,横浜市鶴見区潮田町2-114-9,,,264000,264000,,,,
+,,5,000,682667,202507,計,計,,,,,,,,120451650,120451650,,,,

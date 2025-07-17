@@ -1,8 +1,8 @@
-﻿file_path,original_file_name,page_index,row_number,original_header_text,column_1_value,column_2_value,column_3_value,column_4_value,column_5_value,column_6_value,column_7_value,column_8_value,column_9_value,column_10_value,column_11_value,column_12_value,column_13_value,column_14_value,column_15_value,column_16_value,column_17_value,column_18_value,column_19_value,column_20_value
-,,,0,科目,科目,名称(氏名),所在地(住所),期末現在高,摘要,,,,,,,,,,,,,,,
-,,,1,未払法人税等,未払法人税等,那覇県税事務所,,25000,,,,,,,,,,,,,,,,
-,,,2,〃,〃,那覇市,,65000,,,,,,,,,,,,,,,,
-,,,3,〃,〃,南風原町,,65000,,,,,,,,,,,,,,,,
-,,,4,〃,〃,うるま市,,65000,,,,,,,,,,,,,,,,
-,,,5,,,,未払法人税等計,220000,,,,,,,,,,,,,,,,
-,,,6,計,計,,,,,,,,,,,,,,,,,,,
+﻿ocr_result_id,page_no,id,jgroupid_string,cif_number,settlement_at,maker_name_original,maker_name,maker_com_code,issue_date_rightside_date,issue_date,due_date_rightside_date,due_date,balance_rightside,balance,payment_bank_name_rightside,payment_bank_name,payment_bank_branch_name_rightside,payment_bank_branch_name,description_rightside,description
+,,1,000,197691,202507,科目,科目,,名称(氏名),名称(氏名),所在地(住所),所在地(住所),,,期末現在高,期末現在高,摘要,摘要,,
+,,2,000,197691,202507,未払法人税等,未払法人税等,,那覇県税事務所,那覇県税事務所,,,,,25000,25000,,,,
+,,3,000,197691,202507,〃,〃,,那覇市,那覇市,,,,,65000,65000,,,,
+,,4,000,197691,202507,〃,〃,,南風原町,南風原町,,,,,65000,65000,,,,
+,,5,000,197691,202507,〃,〃,,うるま市,うるま市,,,,,65000,65000,,,,
+,,6,000,197691,202507,,,,,,未払法人税等計,未払法人税等計,,,220000,220000,,,,
+,,7,000,197691,202507,計,計,,,,,,,,,,,,,

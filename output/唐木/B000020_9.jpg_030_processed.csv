@@ -1,8 +1,8 @@
-﻿file_path,original_file_name,page_index,row_number,original_header_text,column_1_value,column_2_value,column_3_value,column_4_value,column_5_value,column_6_value,column_7_value,column_8_value,column_9_value,column_10_value,column_11_value,column_12_value,column_13_value,column_14_value,column_15_value,column_16_value,column_17_value,column_18_value,column_19_value,column_20_value
-,,,0,科目,科目,名称(氏名),所在地(住所),期末現在高,摘要,,,,,,,,,,,,,,,
-,,,1,計,計,,,"265,853,003",,,,,,,,,,,,,,,,
-,,,2,未収入金,未収入金,従業員,,"324,000",寮費,,,,,,,,,,,,,,,
-,,,3,未収入金,未収入金,,,"70,769",家賃等,,,,,,,,,,,,,,,
-,,,4,未収入金,未収入金,イーストジャパン,東京都港区赤坂六丁目1番20号,"25,114",,,,,,,,,,,,,,,,
-,,,5,計,計,,,"419,883",,,,,,,,,,,,,,,,
-,,,6,合計,合計,,,"266,272,886",,,,,,,,,,,,,,,,
+﻿ocr_result_id,page_no,id,jgroupid_string,cif_number,settlement_at,maker_name_original,maker_name,maker_com_code,issue_date_rightside_date,issue_date,due_date_rightside_date,due_date,balance_rightside,balance,payment_bank_name_rightside,payment_bank_name,payment_bank_branch_name_rightside,payment_bank_branch_name,description_rightside,description
+,,1,000,628309,202507,科目,科目,,名称(氏名),名称(氏名),所在地(住所),所在地(住所),,,期末現在高,期末現在高,摘要,摘要,,
+,,2,000,628309,202507,計,計,,,,,,,,"265,853,003","265,853,003",,,,
+,,3,000,628309,202507,未収入金,未収入金,,従業員,従業員,,,,,"324,000","324,000",寮費,寮費,,
+,,4,000,628309,202507,未収入金,未収入金,,,,,,,,"70,769","70,769",家賃等,家賃等,,
+,,5,000,628309,202507,未収入金,未収入金,,イーストジャパン,イーストジャパン,東京都港区赤坂六丁目1番20号,東京都港区赤坂六丁目1番20号,,,"25,114","25,114",,,,
+,,6,000,628309,202507,計,計,,,,,,,,"419,883","419,883",,,,
+,,7,000,628309,202507,合計,合計,,,,,,,,"266,272,886","266,272,886",,,,

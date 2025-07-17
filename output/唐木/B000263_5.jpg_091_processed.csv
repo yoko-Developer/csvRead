@@ -1,8 +1,8 @@
-﻿file_path,original_file_name,page_index,row_number,original_header_text,column_1_value,column_2_value,column_3_value,column_4_value,column_5_value,column_6_value,column_7_value,column_8_value,column_9_value,column_10_value,column_11_value,column_12_value,column_13_value,column_14_value,column_15_value,column_16_value,column_17_value,column_18_value,column_19_value,column_20_value
-,,,0,科目,科目,名称(氏名),所在地(住所),期末現在高,摘要,,,,,,,,,,,,,,,
-,,,1,買掛金,買掛金,,,760425,,,,,,,,,,,,,,,,
-,,,2,,,イヨテリー(株),今治市別名194番地11,588421,,,,,,,,,,,,,,,,
-,,,3,,,犬飼タオル(株),岩倉市大地町深田25番地,168300,,,,,,,,,,,,,,,,
-,,,4,,,岡本産業(株),今治市朝倉南甲92-1,72463,,,,,,,,,,,,,,,,
-,,,5,,,富士(株),大阪府箕面市船場西3丁目1-13,9658,,,,,,,,,,,,,,,,
-,,,6,頁計,頁計,,,1599267,,,,,,,,,,,,,,,,
+﻿ocr_result_id,page_no,id,jgroupid_string,cif_number,settlement_at,maker_name_original,maker_name,maker_com_code,issue_date_rightside_date,issue_date,due_date_rightside_date,due_date,balance_rightside,balance,payment_bank_name_rightside,payment_bank_name,payment_bank_branch_name_rightside,payment_bank_branch_name,description_rightside,description
+,,1,000,842675,202507,科目,科目,,名称(氏名),名称(氏名),所在地(住所),所在地(住所),,,期末現在高,期末現在高,摘要,摘要,,
+,,2,000,842675,202507,買掛金,買掛金,,,,,,,,760425,760425,,,,
+,,3,000,842675,202507,,,,イヨテリー(株),イヨテリー(株),今治市別名194番地11,今治市別名194番地11,,,588421,588421,,,,
+,,4,000,842675,202507,,,,犬飼タオル(株),犬飼タオル(株),岩倉市大地町深田25番地,岩倉市大地町深田25番地,,,168300,168300,,,,
+,,5,000,842675,202507,,,,岡本産業(株),岡本産業(株),今治市朝倉南甲92-1,今治市朝倉南甲92-1,,,72463,72463,,,,
+,,6,000,842675,202507,,,,富士(株),富士(株),大阪府箕面市船場西3丁目1-13,大阪府箕面市船場西3丁目1-13,,,9658,9658,,,,
+,,7,000,842675,202507,頁計,頁計,,,,,,,,1599267,1599267,,,,

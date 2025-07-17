@@ -1,4 +1,5 @@
 ﻿ocr_result_id,page_no,id,jgroupid_string,cif_number,settlement_at,maker_name_original,maker_name,maker_com_code,issue_date_rightside_date,issue_date,due_date_rightside_date,due_date,balance_rightside,balance,payment_bank_name_rightside,payment_bank_name,payment_bank_branch_name_rightside,payment_bank_branch_name,description_rightside,description
-202507161919498529,2,1,000,241883,202507,(株)三洋,(株)三洋,,R5.2.27,R5.2.27,R5.7.10,R5.7.10,960000,960000,三菱UFJ名古屋営業部,三菱UFJ名古屋営業部,,,,
-202507161919498529,2,2,000,241883,202507,〃,〃,,R5.2.27,R5.2.27,R5.7.10,R5.7.10,95596,95596,三菱UFJ名古屋営業部,三菱UFJ名古屋営業部,,,,
-202507161919498529,2,3,000,241883,202507,計,計,,,,,,16126442,16126442,,,,,,
+,,1,000,732639,202507,振出人,振出人,,振出年月日,振出年月日,支払期日,支払期日,金額,金額,支払銀行名称,支払銀行名称,支払銀行支店名,支払銀行支店名,割引銀行名及び支店名等,摘要
+,,2,000,732639,202507,(株)三洋,(株)三洋,,R5.2.27,R5.2.27,R5.7.10,R5.7.10,960000,960000,三菱UFJ名古屋営業部,三菱UFJ名古屋営業部,,,,
+,,3,000,732639,202507,〃,〃,,R5.2.27,R5.2.27,R5.7.10,R5.7.10,95596,95596,三菱UFJ名古屋営業部,三菱UFJ名古屋営業部,,,,
+,,4,000,732639,202507,計,計,,,,,,16126442,16126442,,,,,,

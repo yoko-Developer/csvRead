@@ -1,7 +1,7 @@
-﻿file_path,original_file_name,page_index,row_number,original_header_text,column_1_value,column_2_value,column_3_value,column_4_value,column_5_value,column_6_value,column_7_value,column_8_value,column_9_value,column_10_value,column_11_value,column_12_value,column_13_value,column_14_value,column_15_value,column_16_value,column_17_value,column_18_value,column_19_value,column_20_value
-,,,0,科目,科目,名称(氏名),所在地(住所),期末現在高,摘要,,,,,,,,,,,,,,,
-,,,1,未払金,未払金,従業員,,15894564,R5.3月分給与,,,,,,,,,,,,,,,
-,,,2,〃,〃,栃木県トラック健康保険組合,,2158448,健康保険料R5.3分,,,,,,,,,,,,,,,
-,,,3,〃,〃,宇都宮東年金事務所,,3232285,原生年金保険R5.3分,,,,,,,,,,,,,,,
-,,,4,〃,〃,UDフィナンシャルサービス(株),東京都港区芝公園1-8-12,118683,,,,,,,,,,,,,,,,
-,,,5,計,計,,,21403980,,,,,,,,,,,,,,,,
+﻿ocr_result_id,page_no,id,jgroupid_string,cif_number,settlement_at,maker_name_original,maker_name,maker_com_code,issue_date_rightside_date,issue_date,due_date_rightside_date,due_date,balance_rightside,balance,payment_bank_name_rightside,payment_bank_name,payment_bank_branch_name_rightside,payment_bank_branch_name,description_rightside,description
+,,1,000,553326,202507,科目,科目,,名称(氏名),名称(氏名),所在地(住所),所在地(住所),,,期末現在高,期末現在高,摘要,摘要,,
+,,2,000,553326,202507,未払金,未払金,,従業員,従業員,,,,,15894564,15894564,R5.3月分給与,R5.3月分給与,,
+,,3,000,553326,202507,〃,〃,,栃木県トラック健康保険組合,栃木県トラック健康保険組合,,,,,2158448,2158448,健康保険料R5.3分,健康保険料R5.3分,,
+,,4,000,553326,202507,〃,〃,,宇都宮東年金事務所,宇都宮東年金事務所,,,,,3232285,3232285,原生年金保険R5.3分,原生年金保険R5.3分,,
+,,5,000,553326,202507,〃,〃,,UDフィナンシャルサービス(株),UDフィナンシャルサービス(株),東京都港区芝公園1-8-12,東京都港区芝公園1-8-12,,,118683,118683,,,,
+,,6,000,553326,202507,計,計,,,,,,,,21403980,21403980,,,,

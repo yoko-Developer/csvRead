@@ -1,6 +1,6 @@
-﻿file_path,original_file_name,page_index,row_number,original_header_text,column_1_value,column_2_value,column_3_value,column_4_value,column_5_value,column_6_value,column_7_value,column_8_value,column_9_value,column_10_value,column_11_value,column_12_value,column_13_value,column_14_value,column_15_value,column_16_value,column_17_value,column_18_value,column_19_value,column_20_value
-,,,0,金融機関名,金融機関名,支店名,種類,口座番号,期末現在高,摘要,,,,,,,,,,,,,,
-,,,1,宇和島信用金庫恵美須町支店,宇和島信用金庫恵美須町支店,,定期積立金,315000,1000000,,,,,,,,,,,,,,,
-,,,2,香川銀行宇和島支店,香川銀行宇和島支店,,〃,2030168,900000,,,,,,,,,,,,,,,
-,,,3,定期積立金計,定期積立金計,,,,2600000,,,,,,,,,,,,,,,
-,,,4,計,計,,,,39417396,,,,,,,,,,,,,,,
+﻿ocr_result_id,page_no,id,jgroupid_string,cif_number,settlement_at,maker_name_original,maker_name,maker_com_code,issue_date_rightside_date,issue_date,due_date_rightside_date,due_date,balance_rightside,balance,payment_bank_name_rightside,payment_bank_name,payment_bank_branch_name_rightside,payment_bank_branch_name,description_rightside,description
+,,1,000,749102,202507,金融機関名,金融機関名,,支店名,支店名,種類,種類,摘要,摘要,口座番号,口座番号,期末現在高,期末現在高,,
+,,2,000,749102,202507,宇和島信用金庫恵美須町支店,宇和島信用金庫恵美須町支店,,,,定期積立金,定期積立金,,,315000,315000,1000000,1000000,,
+,,3,000,749102,202507,香川銀行宇和島支店,香川銀行宇和島支店,,,,〃,〃,,,2030168,2030168,900000,900000,,
+,,4,000,749102,202507,定期積立金計,定期積立金計,,,,,,,,,,2600000,2600000,,
+,,5,000,749102,202507,計,計,,,,,,,,,,39417396,39417396,,

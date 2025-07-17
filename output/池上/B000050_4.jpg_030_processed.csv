@@ -1,8 +1,8 @@
-﻿file_path,original_file_name,page_index,row_number,original_header_text,column_1_value,column_2_value,column_3_value,column_4_value,column_5_value,column_6_value,column_7_value,column_8_value,column_9_value,column_10_value,column_11_value,column_12_value,column_13_value,column_14_value,column_15_value,column_16_value,column_17_value,column_18_value,column_19_value,column_20_value
-,,,0,科目,科目,名称(氏名),所在地(住所),期末現在高,摘要,,,,,,,,,,,,,,,
-,,,1,売掛金,売掛金,(株)大豊印刷,板橋区小豆沢2-15-8,391789,,,,,,,,,,,,,,,,
-,,,2,〃,〃,(株)平河工業社,新宿区新小川町3-9,361350,,,,,,,,,,,,,,,,
-,,,3,〃,〃,(株)東洋社,文京区白山3-1-13,1,備忘価額,,,,,,,,,,,,,,,
-,,,4,〃,〃,(有)ウェーブ紙工,所沢市南永井245,1,〃,,,,,,,,,,,,,,,
-,,,5,〃,〃,その他,,7829084,22件,,,,,,,,,,,,,,,
-,,,6,計,計,,,84626453,,,,,,,,,,,,,,,,
+﻿ocr_result_id,page_no,id,jgroupid_string,cif_number,settlement_at,maker_name_original,maker_name,maker_com_code,issue_date_rightside_date,issue_date,due_date_rightside_date,due_date,balance_rightside,balance,payment_bank_name_rightside,payment_bank_name,payment_bank_branch_name_rightside,payment_bank_branch_name,description_rightside,description
+,,1,000,913341,202507,科目,科目,,名称(氏名),名称(氏名),所在地(住所),所在地(住所),,,期末現在高,期末現在高,摘要,摘要,,
+,,2,000,913341,202507,売掛金,売掛金,,(株)大豊印刷,(株)大豊印刷,板橋区小豆沢2-15-8,板橋区小豆沢2-15-8,,,391789,391789,,,,
+,,3,000,913341,202507,〃,〃,,(株)平河工業社,(株)平河工業社,新宿区新小川町3-9,新宿区新小川町3-9,,,361350,361350,,,,
+,,4,000,913341,202507,〃,〃,,(株)東洋社,(株)東洋社,文京区白山3-1-13,文京区白山3-1-13,,,1,1,備忘価額,備忘価額,,
+,,5,000,913341,202507,〃,〃,,(有)ウェーブ紙工,(有)ウェーブ紙工,所沢市南永井245,所沢市南永井245,,,1,1,〃,〃,,
+,,6,000,913341,202507,〃,〃,,その他,その他,,,,,7829084,7829084,22件,22件,,
+,,7,000,913341,202507,計,計,,,,,,,,84626453,84626453,,,,

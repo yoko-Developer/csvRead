@@ -1,6 +1,6 @@
-﻿file_path,original_file_name,page_index,row_number,original_header_text,column_1_value,column_2_value,column_3_value,column_4_value,column_5_value,column_6_value,column_7_value,column_8_value,column_9_value,column_10_value,column_11_value,column_12_value,column_13_value,column_14_value,column_15_value,column_16_value,column_17_value,column_18_value,column_19_value,column_20_value
-,,,0,借入先名称(氏名),借入先名称(氏名),借入先所在地(住所),法人・代表者との関係,期末現在高,期中の支払利子額,利率,担保の内容,,,,,,,,,,,,,
-,,,1,商工組合中央金庫/仙台支店,商工組合中央金庫/仙台支店,仙台市青葉区中央2丁目10-30,,0,35161,1.300,"元金510千円3,000万円",,,,,,,,,,,,,
-,,,2,宮城第一信用金庫/宮城野支店,宮城第一信用金庫/宮城野支店,仙台市若林区志波町13-1,ー,3070000,39694,1.000,"元金165千円1,000万円",,,,,,,,,,,,,
-,,,3,,,長期借入金計,,3070000,74855,,,,,,,,,,,,,,,
-,,,4,,,計,,3070000,74855,,,,,,,,,,,,,,,
+﻿ocr_result_id,page_no,id,jgroupid_string,cif_number,settlement_at,maker_name_original,maker_name,maker_com_code,issue_date_rightside_date,issue_date,due_date_rightside_date,due_date,balance_rightside,balance,payment_bank_name_rightside,payment_bank_name,payment_bank_branch_name_rightside,payment_bank_branch_name,description_rightside,description
+,,1,000,974974,202507,借入先名称(氏名),借入先名称(氏名),,借入先所在地(住所),借入先所在地(住所),法人・代表者との関係,法人・代表者との関係,利率,利率,期末現在高,期末現在高,期中の支払利子額,期中の支払利子額,担保の内容,
+,,2,000,974974,202507,商工組合中央金庫/仙台支店,商工組合中央金庫/仙台支店,,仙台市青葉区中央2丁目10-30,仙台市青葉区中央2丁目10-30,,,1.300,1.300,0,0,35161,35161,"元金510千円3,000万円",
+,,3,000,974974,202507,宮城第一信用金庫/宮城野支店,宮城第一信用金庫/宮城野支店,,仙台市若林区志波町13-1,仙台市若林区志波町13-1,ー,ー,1.000,1.000,3070000,3070000,39694,39694,"元金165千円1,000万円",
+,,4,000,974974,202507,,,,長期借入金計,長期借入金計,,,,,3070000,3070000,74855,74855,,
+,,5,000,974974,202507,,,,計,計,,,,,3070000,3070000,74855,74855,,

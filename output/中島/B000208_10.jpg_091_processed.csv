@@ -1,8 +1,8 @@
-﻿file_path,original_file_name,page_index,row_number,original_header_text,column_1_value,column_2_value,column_3_value,column_4_value,column_5_value,column_6_value,column_7_value,column_8_value,column_9_value,column_10_value,column_11_value,column_12_value,column_13_value,column_14_value,column_15_value,column_16_value,column_17_value,column_18_value,column_19_value,column_20_value
-,,,0,科目,科目,名称(氏名),所在地(住所),期末現在高,摘要,,,,,,,,,,,,,,,
-,,,1,買掛金,買掛金,科研ファルマ(株),東京都文京区本駒込二丁目28-8文京グリーンコートセンターオフィス19階,2331014,,,,,,,,,,,,,,,,
-,,,2,〃,〃,ニプロファーマ(株),大阪市中央区道修町二丁目2-7,94199533,,,,,,,,,,,,,,,,
-,,,3,〃,〃,立山化成商事(株),大阪市中央区道修町2-5-9イトヨシビル3階,11253000,,,,,,,,,,,,,,,,
-,,,4,〃,〃,宝酒造(株),京都市伏見区竹中町609,1101158,,,,,,,,,,,,,,,,
-,,,5,〃,〃,その他,,21979272,,,,,,,,,,,,,,,,
-,,,6,計,計,,,563858819,,,,,,,,,,,,,,,,
+﻿ocr_result_id,page_no,id,jgroupid_string,cif_number,settlement_at,maker_name_original,maker_name,maker_com_code,issue_date_rightside_date,issue_date,due_date_rightside_date,due_date,balance_rightside,balance,payment_bank_name_rightside,payment_bank_name,payment_bank_branch_name_rightside,payment_bank_branch_name,description_rightside,description
+,,1,000,850414,202507,科目,科目,,名称(氏名),名称(氏名),所在地(住所),所在地(住所),,,期末現在高,期末現在高,摘要,摘要,,
+,,2,000,850414,202507,買掛金,買掛金,,科研ファルマ(株),科研ファルマ(株),東京都文京区本駒込二丁目28-8文京グリーンコートセンターオフィス19階,東京都文京区本駒込二丁目28-8文京グリーンコートセンターオフィス19階,,,2331014,2331014,,,,
+,,3,000,850414,202507,〃,〃,,ニプロファーマ(株),ニプロファーマ(株),大阪市中央区道修町二丁目2-7,大阪市中央区道修町二丁目2-7,,,94199533,94199533,,,,
+,,4,000,850414,202507,〃,〃,,立山化成商事(株),立山化成商事(株),大阪市中央区道修町2-5-9イトヨシビル3階,大阪市中央区道修町2-5-9イトヨシビル3階,,,11253000,11253000,,,,
+,,5,000,850414,202507,〃,〃,,宝酒造(株),宝酒造(株),京都市伏見区竹中町609,京都市伏見区竹中町609,,,1101158,1101158,,,,
+,,6,000,850414,202507,〃,〃,,その他,その他,,,,,21979272,21979272,,,,
+,,7,000,850414,202507,計,計,,,,,,,,563858819,563858819,,,,

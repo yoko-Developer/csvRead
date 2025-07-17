@@ -1,7 +1,7 @@
-﻿file_path,original_file_name,page_index,row_number,original_header_text,column_1_value,column_2_value,column_3_value,column_4_value,column_5_value,column_6_value,column_7_value,column_8_value,column_9_value,column_10_value,column_11_value,column_12_value,column_13_value,column_14_value,column_15_value,column_16_value,column_17_value,column_18_value,column_19_value,column_20_value
-,,,0,,,資本金,資本準備金,その他資本剰余金,資本剰余金合計,利益準備金,任意積立金,繰越利益剰余金,利益剰余金合計,自己株式,株主資本合計,純資産合計,,,,,,,,
-,,,1,当期首残高,当期首残高,"50,000,000",,,,"12,500,000","35,000,000","▲1,470,834","46,029,166","▲4,200,000","91,829,166","91,829,166",,,,,,,,
-,,,2,当期変動額,当期変動額,,,,,,,,,,,,,,,,,,,
-,,,3,当期純損失,当期純損失,,,,,,,"21,026,954","21,026,954",,"21,026,954","21,026,954",,,,,,,,
-,,,4,当期変動額合計,当期変動額合計,-,-,-,-,-,-,"▲21,026,954","▲21,026,954",-,"▲21,026,954","▲21,026,954",,,,,,,,
-,,,5,当期末残高,当期末残高,"50,000,000",,,,"12,500,000","35,000,000","▲22,497,788","25,002,212","▲4,200,000","70,802,212","70,802,212",,,,,,,,
+﻿ocr_result_id,page_no,id,jgroupid_string,cif_number,settlement_at,maker_name_original,maker_name,maker_com_code,issue_date_rightside_date,issue_date,due_date_rightside_date,due_date,balance_rightside,balance,payment_bank_name_rightside,payment_bank_name,payment_bank_branch_name_rightside,payment_bank_branch_name,description_rightside,description
+,,1,000,711624,202507,,,,資本金,資本金,資本準備金,資本準備金,利益準備金,利益準備金,その他資本剰余金,その他資本剰余金,資本剰余金合計,資本剰余金合計,任意積立金,繰越利益剰余金
+,,2,000,711624,202507,当期首残高,当期首残高,,"50,000,000","50,000,000",,,"12,500,000","12,500,000",,,,,"35,000,000","▲1,470,834"
+,,3,000,711624,202507,当期変動額,当期変動額,,,,,,,,,,,,,
+,,4,000,711624,202507,当期純損失,当期純損失,,,,,,,,,,,,,"21,026,954"
+,,5,000,711624,202507,当期変動額合計,当期変動額合計,,-,-,-,-,-,-,-,-,-,-,-,"▲21,026,954"
+,,6,000,711624,202507,当期末残高,当期末残高,,"50,000,000","50,000,000",,,"12,500,000","12,500,000",,,,,"35,000,000","▲22,497,788"

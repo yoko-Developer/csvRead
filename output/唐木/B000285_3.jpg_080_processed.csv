@@ -1,8 +1,8 @@
-﻿file_path,original_file_name,page_index,row_number,original_header_text,column_1_value,column_2_value,column_3_value,column_4_value,column_5_value,column_6_value,column_7_value,column_8_value,column_9_value,column_10_value,column_11_value,column_12_value,column_13_value,column_14_value,column_15_value,column_16_value,column_17_value,column_18_value,column_19_value,column_20_value
-,,,0,支払先,支払先,振出年月日,支払期日,支払銀行名称,支払銀行支店名,金額,摘要,,,,,,,,,,,,,
-,,,1,丸久鋼材,丸久鋼材,3.12.31,4.5.5,,,449400,,,,,,,,,,,,,,
-,,,2,有田工業,有田工業,3.11.30,4.4.5,,,1109222,,,,,,,,,,,,,,
-,,,3,(株)吉野商店,(株)吉野商店,4.2.28,4.7.5,,,500000,,,,,,,,,,,,,,
-,,,4,有田工業,有田工業,4.2.28,4.7.5,,,391875,,,,,,,,,,,,,,
-,,,5,大興,大興,4.3.31,4.8.5,,,530838,,,,,,,,,,,,,,
-,,,6,合計,合計,,,,,2981335,,,,,,,,,,,,,,
+﻿ocr_result_id,page_no,id,jgroupid_string,cif_number,settlement_at,maker_name_original,maker_name,maker_com_code,issue_date_rightside_date,issue_date,due_date_rightside_date,due_date,balance_rightside,balance,payment_bank_name_rightside,payment_bank_name,payment_bank_branch_name_rightside,payment_bank_branch_name,description_rightside,description
+,,1,000,703143,202507,支払先,支払先,,振出年月日,振出年月日,支払期日,支払期日,金額,金額,支払銀行名称,支払銀行名称,支払銀行支店名,支払銀行支店名,摘要,
+,,2,000,703143,202507,丸久鋼材,丸久鋼材,,3.12.31,3.12.31,4.5.5,4.5.5,449400,449400,,,,,,
+,,3,000,703143,202507,有田工業,有田工業,,3.11.30,3.11.30,4.4.5,4.4.5,1109222,1109222,,,,,,
+,,4,000,703143,202507,(株)吉野商店,(株)吉野商店,,4.2.28,4.2.28,4.7.5,4.7.5,500000,500000,,,,,,
+,,5,000,703143,202507,有田工業,有田工業,,4.2.28,4.2.28,4.7.5,4.7.5,391875,391875,,,,,,
+,,6,000,703143,202507,大興,大興,,4.3.31,4.3.31,4.8.5,4.8.5,530838,530838,,,,,,
+,,7,000,703143,202507,合計,合計,,,,,,2981335,2981335,,,,,,

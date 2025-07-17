@@ -1,7 +1,7 @@
-﻿file_path,original_file_name,page_index,row_number,original_header_text,column_1_value,column_2_value,column_3_value,column_4_value,column_5_value,column_6_value,column_7_value,column_8_value,column_9_value,column_10_value,column_11_value,column_12_value,column_13_value,column_14_value,column_15_value,column_16_value,column_17_value,column_18_value,column_19_value,column_20_value
-,,,0,科目,科目,名称(氏名),所在地(住所),期末現在高,摘要,,,,,,,,,,,,,,,
-,,,1,未払金,未払金,従業員,,8000568,R5.4分給与,,,,,,,,,,,,,,,
-,,,2,〃,〃,年金事務所,,3788472,"R5.3,4月分社会保険料",,,,,,,,,,,,,,,
-,,,3,〃,〃,肥銀カード他,,818833,R5.5以後引落諸経費,,,,,,,,,,,,,,,
-,,,4,,,未払金計,,12607873,,,,,,,,,,,,,,,,
-,,,5,計,計,,,124555536,,,,,,,,,,,,,,,,
+﻿ocr_result_id,page_no,id,jgroupid_string,cif_number,settlement_at,maker_name_original,maker_name,maker_com_code,issue_date_rightside_date,issue_date,due_date_rightside_date,due_date,balance_rightside,balance,payment_bank_name_rightside,payment_bank_name,payment_bank_branch_name_rightside,payment_bank_branch_name,description_rightside,description
+,,1,000,351704,202507,科目,科目,,名称(氏名),名称(氏名),所在地(住所),所在地(住所),,,期末現在高,期末現在高,摘要,摘要,,
+,,2,000,351704,202507,未払金,未払金,,従業員,従業員,,,,,8000568,8000568,R5.4分給与,R5.4分給与,,
+,,3,000,351704,202507,〃,〃,,年金事務所,年金事務所,,,,,3788472,3788472,"R5.3,4月分社会保険料","R5.3,4月分社会保険料",,
+,,4,000,351704,202507,〃,〃,,肥銀カード他,肥銀カード他,,,,,818833,818833,R5.5以後引落諸経費,R5.5以後引落諸経費,,
+,,5,000,351704,202507,,,,未払金計,未払金計,,,,,12607873,12607873,,,,
+,,6,000,351704,202507,計,計,,,,,,,,124555536,124555536,,,,

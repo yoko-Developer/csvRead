@@ -1,7 +1,7 @@
-﻿file_path,original_file_name,page_index,row_number,original_header_text,column_1_value,column_2_value,column_3_value,column_4_value,column_5_value,column_6_value,column_7_value,column_8_value,column_9_value,column_10_value,column_11_value,column_12_value,column_13_value,column_14_value,column_15_value,column_16_value,column_17_value,column_18_value,column_19_value,column_20_value
-,,,0,借入先名称(氏名),借入先名称(氏名),借入先所在地(住所),法人・代表者との関係,期末現在高,期中の支払利子額,利率,担保の内容,,,,,,,,,,,,,
-,,,1,北陸銀行,北陸銀行,松任支店,,19179000,,0.700,@833千円,,,,,,,,,,,,,
-,,,2,福井銀行,福井銀行,松任支店,,48332000,,0.900,@834千円,,,,,,,,,,,,,
-,,,3,日本政策金融公庫,日本政策金融公庫,中小企業,,50000000,,0.530,@600千円,,,,,,,,,,,,,
-,,,4,,,長期借入金計,,340675000,,,,,,,,,,,,,,,,
-,,,5,,,合計,,750675000,,,,,,,,,,,,,,,,
+﻿ocr_result_id,page_no,id,jgroupid_string,cif_number,settlement_at,maker_name_original,maker_name,maker_com_code,issue_date_rightside_date,issue_date,due_date_rightside_date,due_date,balance_rightside,balance,payment_bank_name_rightside,payment_bank_name,payment_bank_branch_name_rightside,payment_bank_branch_name,description_rightside,description
+,,1,000,154731,202507,借入先名称(氏名),借入先名称(氏名),,借入先所在地(住所),借入先所在地(住所),法人・代表者との関係,法人・代表者との関係,利率,利率,期末現在高,期末現在高,期中の支払利子額,期中の支払利子額,担保の内容,
+,,2,000,154731,202507,北陸銀行,北陸銀行,,松任支店,松任支店,,,0.700,0.700,19179000,19179000,,,@833千円,
+,,3,000,154731,202507,福井銀行,福井銀行,,松任支店,松任支店,,,0.900,0.900,48332000,48332000,,,@834千円,
+,,4,000,154731,202507,日本政策金融公庫,日本政策金融公庫,,中小企業,中小企業,,,0.530,0.530,50000000,50000000,,,@600千円,
+,,5,000,154731,202507,,,,長期借入金計,長期借入金計,,,,,340675000,340675000,,,,
+,,6,000,154731,202507,,,,合計,合計,,,,,750675000,750675000,,,,

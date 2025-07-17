@@ -1,7 +1,7 @@
-﻿file_path,original_file_name,page_index,row_number,original_header_text,column_1_value,column_2_value,column_3_value,column_4_value,column_5_value,column_6_value,column_7_value,column_8_value,column_9_value,column_10_value,column_11_value,column_12_value,column_13_value,column_14_value,column_15_value,column_16_value,column_17_value,column_18_value,column_19_value,column_20_value
-,,,0,科目,科目,名称(氏名),所在地(住所),期末現在高,摘要,,,,,,,,,,,,,,,
-,,,1,長期未払金,長期未払金,NTTファイナンス(株),名古屋市東区東桜1-1-10,670624,"NTTビジネスホン41,914X16",,,,,,,,,,,,,,,
-,,,2,,,NTTファイナンス(株),名古屋市東区東桜1-1-10,1100000,"NTTビジネスホン22,000X50",,,,,,,,,,,,,,,
-,,,3,,,三菱HBL(株),,752400,"キャノン複合機2台19,800X38",,,,,,,,,,,,,,,
-,,,4,計,計,,,2523024,,,,,,,,,,,,,,,,
-,,,5,計,計,,,,,,,,,,,,,,,,,,,
+﻿ocr_result_id,page_no,id,jgroupid_string,cif_number,settlement_at,maker_name_original,maker_name,maker_com_code,issue_date_rightside_date,issue_date,due_date_rightside_date,due_date,balance_rightside,balance,payment_bank_name_rightside,payment_bank_name,payment_bank_branch_name_rightside,payment_bank_branch_name,description_rightside,description
+,,1,000,922146,202507,科目,科目,,名称(氏名),名称(氏名),所在地(住所),所在地(住所),,,期末現在高,期末現在高,摘要,摘要,,
+,,2,000,922146,202507,長期未払金,長期未払金,,NTTファイナンス(株),NTTファイナンス(株),名古屋市東区東桜1-1-10,名古屋市東区東桜1-1-10,,,670624,670624,"NTTビジネスホン41,914X16","NTTビジネスホン41,914X16",,
+,,3,000,922146,202507,,,,NTTファイナンス(株),NTTファイナンス(株),名古屋市東区東桜1-1-10,名古屋市東区東桜1-1-10,,,1100000,1100000,"NTTビジネスホン22,000X50","NTTビジネスホン22,000X50",,
+,,4,000,922146,202507,,,,三菱HBL(株),三菱HBL(株),,,,,752400,752400,"キャノン複合機2台19,800X38","キャノン複合機2台19,800X38",,
+,,5,000,922146,202507,計,計,,,,,,,,2523024,2523024,,,,
+,,6,000,922146,202507,計,計,,,,,,,,,,,,,

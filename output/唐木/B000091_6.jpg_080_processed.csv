@@ -1,5 +1,5 @@
-﻿file_path,original_file_name,page_index,row_number,original_header_text,column_1_value,column_2_value,column_3_value,column_4_value,column_5_value,column_6_value,column_7_value,column_8_value,column_9_value,column_10_value,column_11_value,column_12_value,column_13_value,column_14_value,column_15_value,column_16_value,column_17_value,column_18_value,column_19_value,column_20_value
-,,,0,支払先,支払先,振出年月日,支払期日,支払銀行名称,支払銀行支店名,金額,摘要,,,,,,,,,,,,,
-,,,1,羽衣マネキン,羽衣マネキン,,,,,365200,,,,,,,,,,,,,,
-,,,2,ALC,ALC,,,,,425812,,,,,,,,,,,,,,
-,,,3,合計,合計,,,,,555590926,,,,,,,,,,,,,,
+﻿ocr_result_id,page_no,id,jgroupid_string,cif_number,settlement_at,maker_name_original,maker_name,maker_com_code,issue_date_rightside_date,issue_date,due_date_rightside_date,due_date,balance_rightside,balance,payment_bank_name_rightside,payment_bank_name,payment_bank_branch_name_rightside,payment_bank_branch_name,description_rightside,description
+,,1,000,826676,202507,支払先,支払先,,振出年月日,振出年月日,支払期日,支払期日,金額,金額,支払銀行名称,支払銀行名称,支払銀行支店名,支払銀行支店名,摘要,
+,,2,000,826676,202507,羽衣マネキン,羽衣マネキン,,,,,,365200,365200,,,,,,
+,,3,000,826676,202507,ALC,ALC,,,,,,425812,425812,,,,,,
+,,4,000,826676,202507,合計,合計,,,,,,555590926,555590926,,,,,,

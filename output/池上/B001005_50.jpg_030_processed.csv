@@ -1,8 +1,8 @@
-﻿file_path,original_file_name,page_index,row_number,original_header_text,column_1_value,column_2_value,column_3_value,column_4_value,column_5_value,column_6_value,column_7_value,column_8_value,column_9_value,column_10_value,column_11_value,column_12_value,column_13_value,column_14_value,column_15_value,column_16_value,column_17_value,column_18_value,column_19_value,column_20_value
-,,,0,科目,科目,登録番号,名称(氏名),所在地(住所),期末現在高,摘要,,,,,,,,,,,,,,
-,,,1,未収入金,未収入金,,(有)一建工業,沖縄県うるま市みどり町1-10-5,259600,,,,,,,,,,,,,,,
-,,,2,未収入金,未収入金,T5470001000369,朝日スチール工業(株),香川県高松市花園町1丁目2番29号,250000,,,,,,,,,,,,,,,
-,,,3,未収入金,未収入金,T5360001007862,タイガー工業(株),大阪府大東市御領3丁目6番30号,200000,,,,,,,,,,,,,,,
-,,,4,未収入金,未収入金,,その他48件,,1146771,,,,,,,,,,,,,,,
-,,,5,,,,,未収入金計,36532328,,,,,,,,,,,,,,,
-,,,6,計,計,,,,1762514780,,,,,,,,,,,,,,,
+﻿ocr_result_id,page_no,id,jgroupid_string,cif_number,settlement_at,maker_name_original,maker_name,maker_com_code,issue_date_rightside_date,issue_date,due_date_rightside_date,due_date,balance_rightside,balance,payment_bank_name_rightside,payment_bank_name,payment_bank_branch_name_rightside,payment_bank_branch_name,description_rightside,description
+,,1,000,845821,202507,科目,科目,,登録番号,登録番号,名称(氏名),名称(氏名),摘要,摘要,所在地(住所),所在地(住所),期末現在高,期末現在高,,
+,,2,000,845821,202507,未収入金,未収入金,,,,(有)一建工業,(有)一建工業,,,沖縄県うるま市みどり町1-10-5,沖縄県うるま市みどり町1-10-5,259600,259600,,
+,,3,000,845821,202507,未収入金,未収入金,,T5470001000369,T5470001000369,朝日スチール工業(株),朝日スチール工業(株),,,香川県高松市花園町1丁目2番29号,香川県高松市花園町1丁目2番29号,250000,250000,,
+,,4,000,845821,202507,未収入金,未収入金,,T5360001007862,T5360001007862,タイガー工業(株),タイガー工業(株),,,大阪府大東市御領3丁目6番30号,大阪府大東市御領3丁目6番30号,200000,200000,,
+,,5,000,845821,202507,未収入金,未収入金,,,,その他48件,その他48件,,,,,1146771,1146771,,
+,,6,000,845821,202507,,,,,,,,,,未収入金計,未収入金計,36532328,36532328,,
+,,7,000,845821,202507,計,計,,,,,,,,,,1762514780,1762514780,,

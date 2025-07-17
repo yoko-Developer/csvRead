@@ -1,7 +1,7 @@
-﻿file_path,original_file_name,page_index,row_number,original_header_text,column_1_value,column_2_value,column_3_value,column_4_value,column_5_value,column_6_value,column_7_value,column_8_value,column_9_value,column_10_value,column_11_value,column_12_value,column_13_value,column_14_value,column_15_value,column_16_value,column_17_value,column_18_value,column_19_value,column_20_value
-,,,0,支払先,支払先,振出年月日,支払期日,支払銀行名称,支払銀行支店名,金額,摘要,,,,,,,,,,,,,
-,,,1,アイマップス株式会社,アイマップス株式会社,2023年3月20日,2023年6月20日,みずほ銀行/虎ノ門支店,,4625500,,,,,,,,,,,,,,
-,,,2,株式会社タービン・インタラクティブ,株式会社タービン・インタラクティブ,2023年3月20日,2023年6月20日,みずほ銀行/虎ノ門支店,,1047750,,,,,,,,,,,,,,
-,,,3,株式会社hamon,株式会社hamon,2023年3月20日,2023年6月20日,みずほ銀行/虎ノ門支店,,2735364,,,,,,,,,,,,,,
-,,,4,小計,小計,,,,,8408614,,,,,,,,,,,,,,
-,,,5,計,計,,,,,58915242,,,,,,,,,,,,,,
+﻿ocr_result_id,page_no,id,jgroupid_string,cif_number,settlement_at,maker_name_original,maker_name,maker_com_code,issue_date_rightside_date,issue_date,due_date_rightside_date,due_date,balance_rightside,balance,payment_bank_name_rightside,payment_bank_name,payment_bank_branch_name_rightside,payment_bank_branch_name,description_rightside,description
+,,1,000,755652,202507,支払先,支払先,,振出年月日,振出年月日,支払期日,支払期日,金額,金額,支払銀行名称,支払銀行名称,支払銀行支店名,支払銀行支店名,摘要,
+,,2,000,755652,202507,アイマップス株式会社,アイマップス株式会社,,2023年3月20日,2023年3月20日,2023年6月20日,2023年6月20日,4625500,4625500,みずほ銀行/虎ノ門支店,みずほ銀行/虎ノ門支店,,,,
+,,3,000,755652,202507,株式会社タービン・インタラクティブ,株式会社タービン・インタラクティブ,,2023年3月20日,2023年3月20日,2023年6月20日,2023年6月20日,1047750,1047750,みずほ銀行/虎ノ門支店,みずほ銀行/虎ノ門支店,,,,
+,,4,000,755652,202507,株式会社hamon,株式会社hamon,,2023年3月20日,2023年3月20日,2023年6月20日,2023年6月20日,2735364,2735364,みずほ銀行/虎ノ門支店,みずほ銀行/虎ノ門支店,,,,
+,,5,000,755652,202507,小計,小計,,,,,,8408614,8408614,,,,,,
+,,6,000,755652,202507,計,計,,,,,,58915242,58915242,,,,,,

@@ -1,7 +1,7 @@
-﻿file_path,original_file_name,page_index,row_number,original_header_text,column_1_value,column_2_value,column_3_value,column_4_value,column_5_value,column_6_value,column_7_value,column_8_value,column_9_value,column_10_value,column_11_value,column_12_value,column_13_value,column_14_value,column_15_value,column_16_value,column_17_value,column_18_value,column_19_value,column_20_value
-,,,0,科目,科目,名称(氏名),所在地(住所),期末現在高,摘要,,,,,,,,,,,,,,,
-,,,1,リース債務,リース債務,(株)クレディセゾン,豊島区東池袋3-1-1サンシャイン60・38F(本社分),594000,"ソフォスXG135FULLファイアーウォール@13,200",,,,,,,,,,,,,,,
-,,,2,同上,同上,三井住友トラスト・パナソニックファイナンス(株),港区芝浦1-2-3シーバンスS館12F(本社分),893200,"キャノン複合機iR-ADVC3826F@15,400",,,,,,,,,,,,,,,
-,,,3,計,計,,,3886600,,,,,,,,,,,,,,,,
-,,,4,長期未払金,長期未払金,(株)クレディセゾン,豊島区東池袋3-1-1サンシャイン60・38F,283300,"本社HP作成リフトEZマネージャー@12,900",,,,,,,,,,,,,,,
-,,,5,合計,合計,,,25743835,,,,,,,,,,,,,,,,
+﻿ocr_result_id,page_no,id,jgroupid_string,cif_number,settlement_at,maker_name_original,maker_name,maker_com_code,issue_date_rightside_date,issue_date,due_date_rightside_date,due_date,balance_rightside,balance,payment_bank_name_rightside,payment_bank_name,payment_bank_branch_name_rightside,payment_bank_branch_name,description_rightside,description
+,,1,000,758867,202507,科目,科目,,名称(氏名),名称(氏名),所在地(住所),所在地(住所),,,期末現在高,期末現在高,摘要,摘要,,
+,,2,000,758867,202507,リース債務,リース債務,,(株)クレディセゾン,(株)クレディセゾン,豊島区東池袋3-1-1サンシャイン60・38F(本社分),豊島区東池袋3-1-1サンシャイン60・38F(本社分),,,594000,594000,"ソフォスXG135FULLファイアーウォール@13,200","ソフォスXG135FULLファイアーウォール@13,200",,
+,,3,000,758867,202507,同上,同上,,三井住友トラスト・パナソニックファイナンス(株),三井住友トラスト・パナソニックファイナンス(株),港区芝浦1-2-3シーバンスS館12F(本社分),港区芝浦1-2-3シーバンスS館12F(本社分),,,893200,893200,"キャノン複合機iR-ADVC3826F@15,400","キャノン複合機iR-ADVC3826F@15,400",,
+,,4,000,758867,202507,計,計,,,,,,,,3886600,3886600,,,,
+,,5,000,758867,202507,長期未払金,長期未払金,,(株)クレディセゾン,(株)クレディセゾン,豊島区東池袋3-1-1サンシャイン60・38F,豊島区東池袋3-1-1サンシャイン60・38F,,,283300,283300,"本社HP作成リフトEZマネージャー@12,900","本社HP作成リフトEZマネージャー@12,900",,
+,,6,000,758867,202507,合計,合計,,,,,,,,25743835,25743835,,,,

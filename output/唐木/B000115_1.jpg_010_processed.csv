@@ -1,8 +1,8 @@
-﻿file_path,original_file_name,page_index,row_number,original_header_text,column_1_value,column_2_value,column_3_value,column_4_value,column_5_value,column_6_value,column_7_value,column_8_value,column_9_value,column_10_value,column_11_value,column_12_value,column_13_value,column_14_value,column_15_value,column_16_value,column_17_value,column_18_value,column_19_value,column_20_value
-,,,0,金融機関名,金融機関名,支店名,種類,口座番号,期末現在高,摘要,,,,,,,,,,,,,,
-,,,1,静岡中央銀行,静岡中央銀行,中央林間支店,定期預金,,3601504,,,,,,,,,,,,,,,
-,,,2,小計,小計,,,,3601504,,,,,,,,,,,,,,,
-,,,3,商工組合中央金庫,商工組合中央金庫,横浜西口支店,外貨預金,,312463,"HKD21,126.68@14.79",,,,,,,,,,,,,,
-,,,4,きらぼし銀行,きらぼし銀行,田名支店,外貨預金,,12127,U5D104.950@115.55,,,,,,,,,,,,,,
-,,,5,小計,小計,,,,324590,,,,,,,,,,,,,,,
-,,,6,計,計,,,,50180006,,,,,,,,,,,,,,,
+﻿ocr_result_id,page_no,id,jgroupid_string,cif_number,settlement_at,maker_name_original,maker_name,maker_com_code,issue_date_rightside_date,issue_date,due_date_rightside_date,due_date,balance_rightside,balance,payment_bank_name_rightside,payment_bank_name,payment_bank_branch_name_rightside,payment_bank_branch_name,description_rightside,description
+,,1,000,383445,202507,金融機関名,金融機関名,,支店名,支店名,種類,種類,摘要,摘要,口座番号,口座番号,期末現在高,期末現在高,,
+,,2,000,383445,202507,静岡中央銀行,静岡中央銀行,,中央林間支店,中央林間支店,定期預金,定期預金,,,,,3601504,3601504,,
+,,3,000,383445,202507,小計,小計,,,,,,,,,,3601504,3601504,,
+,,4,000,383445,202507,商工組合中央金庫,商工組合中央金庫,,横浜西口支店,横浜西口支店,外貨預金,外貨預金,"HKD21,126.68@14.79","HKD21,126.68@14.79",,,312463,312463,,
+,,5,000,383445,202507,きらぼし銀行,きらぼし銀行,,田名支店,田名支店,外貨預金,外貨預金,U5D104.950@115.55,U5D104.950@115.55,,,12127,12127,,
+,,6,000,383445,202507,小計,小計,,,,,,,,,,324590,324590,,
+,,7,000,383445,202507,計,計,,,,,,,,,,50180006,50180006,,

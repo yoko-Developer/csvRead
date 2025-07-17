@@ -1,8 +1,8 @@
-﻿file_path,original_file_name,page_index,row_number,original_header_text,column_1_value,column_2_value,column_3_value,column_4_value,column_5_value,column_6_value,column_7_value,column_8_value,column_9_value,column_10_value,column_11_value,column_12_value,column_13_value,column_14_value,column_15_value,column_16_value,column_17_value,column_18_value,column_19_value,column_20_value
-,,,0,支払先,支払先,振出年月日,支払期日,支払銀行名称,支払銀行支店名,金額,摘要,,,,,,,,,,,,,
-,,,1,いすず自動車(株),いすず自動車(株),4.12.26,5.4.5,,,1600000,,,,,,,,,,,,,,
-,,,2,いすず自動車(株),いすず自動車(株),5.1.30,5.5.5,,,438500,,,,,,,,,,,,,,
-,,,3,いすず自動車(株),いすず自動車(株),5.2.27,5.6.5,,,960500,,,,,,,,,,,,,,
-,,,4,いすず自動車(株),いすず自動車(株),5.3.30,5.7.5,,,488500,,,,,,,,,,,,,,
-,,,5,西日本自動車ガラス,西日本自動車ガラス,5.3.31,5.7.5,,,208912,,,,,,,,,,,,,,
-,,,6,合計,合計,,,,,3696412,,,,,,,,,,,,,,
+﻿ocr_result_id,page_no,id,jgroupid_string,cif_number,settlement_at,maker_name_original,maker_name,maker_com_code,issue_date_rightside_date,issue_date,due_date_rightside_date,due_date,balance_rightside,balance,payment_bank_name_rightside,payment_bank_name,payment_bank_branch_name_rightside,payment_bank_branch_name,description_rightside,description
+,,1,000,438148,202507,支払先,支払先,,振出年月日,振出年月日,支払期日,支払期日,金額,金額,支払銀行名称,支払銀行名称,支払銀行支店名,支払銀行支店名,摘要,
+,,2,000,438148,202507,いすず自動車(株),いすず自動車(株),,4.12.26,4.12.26,5.4.5,5.4.5,1600000,1600000,,,,,,
+,,3,000,438148,202507,いすず自動車(株),いすず自動車(株),,5.1.30,5.1.30,5.5.5,5.5.5,438500,438500,,,,,,
+,,4,000,438148,202507,いすず自動車(株),いすず自動車(株),,5.2.27,5.2.27,5.6.5,5.6.5,960500,960500,,,,,,
+,,5,000,438148,202507,いすず自動車(株),いすず自動車(株),,5.3.30,5.3.30,5.7.5,5.7.5,488500,488500,,,,,,
+,,6,000,438148,202507,西日本自動車ガラス,西日本自動車ガラス,,5.3.31,5.3.31,5.7.5,5.7.5,208912,208912,,,,,,
+,,7,000,438148,202507,合計,合計,,,,,,3696412,3696412,,,,,,

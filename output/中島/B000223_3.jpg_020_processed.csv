@@ -1,4 +1,5 @@
 ﻿ocr_result_id,page_no,id,jgroupid_string,cif_number,settlement_at,maker_name_original,maker_name,maker_com_code,issue_date_rightside_date,issue_date,due_date_rightside_date,due_date,balance_rightside,balance,payment_bank_name_rightside,payment_bank_name,payment_bank_branch_name_rightside,payment_bank_branch_name,description_rightside,description
-202507161923054334,3,1,000,800808,202507,早瀬工業(株),早瀬工業(株),,R5.3.20,R5.3.20,R5.7.10,R5.7.10,114869,114869,,,,,,
-202507161923054334,3,2,000,800808,202507,小田建材店(有),小田建材店(有),,R5.5.31,R5.5.31,R5.9.12,R5.9.12,109593,109593,,,,,,
-202507161923054334,3,3,000,800808,202507,計,計,,,,,,16142933,16142933,,,,,,
+,,1,000,676033,202507,振出人,振出人,,振出年月日,振出年月日,支払期日,支払期日,金額,金額,支払銀行名称,支払銀行名称,支払銀行支店名,支払銀行支店名,割引銀行名及び支店名等,摘要
+,,2,000,676033,202507,早瀬工業(株),早瀬工業(株),,R5.3.20,R5.3.20,R5.7.10,R5.7.10,114869,114869,,,,,,
+,,3,000,676033,202507,小田建材店(有),小田建材店(有),,R5.5.31,R5.5.31,R5.9.12,R5.9.12,109593,109593,,,,,,
+,,4,000,676033,202507,計,計,,,,,,16142933,16142933,,,,,,

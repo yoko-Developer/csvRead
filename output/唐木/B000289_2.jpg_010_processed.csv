@@ -1,8 +1,8 @@
-﻿file_path,original_file_name,page_index,row_number,original_header_text,column_1_value,column_2_value,column_3_value,column_4_value,column_5_value,column_6_value,column_7_value,column_8_value,column_9_value,column_10_value,column_11_value,column_12_value,column_13_value,column_14_value,column_15_value,column_16_value,column_17_value,column_18_value,column_19_value,column_20_value
-,,,0,金融機関名,金融機関名,支店名,種類,口座番号,期末現在高,摘要,,,,,,,,,,,,,,
-,,,1,(株)三菱UFJ銀行,(株)三菱UFJ銀行,熊本,定期預金,16432他,75043466,,,,,,,,,,,,,,,
-,,,2,阿蘇農業協同組合,阿蘇農業協同組合,阿蘇町中央,定期預金,11549853,10006392,,,,,,,,,,,,,,,
-,,,3,(株)熊本銀行,(株)熊本銀行,武蔵ヶ丘,定期預金,1000928,0,外貨,,,,,,,,,,,,,,
-,,,4,(株)熊本銀行,(株)熊本銀行,武蔵ヶ丘,定期預金,3000399,0,外貨,,,,,,,,,,,,,,
-,,,5,定期預金計,定期預金計,,,,1504040524,,,,,,,,,,,,,,,
-,,,6,計,計,,,,2857415647,,,,,,,,,,,,,,,
+﻿ocr_result_id,page_no,id,jgroupid_string,cif_number,settlement_at,maker_name_original,maker_name,maker_com_code,issue_date_rightside_date,issue_date,due_date_rightside_date,due_date,balance_rightside,balance,payment_bank_name_rightside,payment_bank_name,payment_bank_branch_name_rightside,payment_bank_branch_name,description_rightside,description
+,,1,000,748508,202507,金融機関名,金融機関名,,支店名,支店名,種類,種類,摘要,摘要,口座番号,口座番号,期末現在高,期末現在高,,
+,,2,000,748508,202507,(株)三菱UFJ銀行,(株)三菱UFJ銀行,,熊本,熊本,定期預金,定期預金,,,16432他,16432他,75043466,75043466,,
+,,3,000,748508,202507,阿蘇農業協同組合,阿蘇農業協同組合,,阿蘇町中央,阿蘇町中央,定期預金,定期預金,,,11549853,11549853,10006392,10006392,,
+,,4,000,748508,202507,(株)熊本銀行,(株)熊本銀行,,武蔵ヶ丘,武蔵ヶ丘,定期預金,定期預金,外貨,外貨,1000928,1000928,0,0,,
+,,5,000,748508,202507,(株)熊本銀行,(株)熊本銀行,,武蔵ヶ丘,武蔵ヶ丘,定期預金,定期預金,外貨,外貨,3000399,3000399,0,0,,
+,,6,000,748508,202507,定期預金計,定期預金計,,,,,,,,,,1504040524,1504040524,,
+,,7,000,748508,202507,計,計,,,,,,,,,,2857415647,2857415647,,

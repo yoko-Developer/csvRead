@@ -1,6 +1,6 @@
-﻿file_path,original_file_name,page_index,row_number,original_header_text,column_1_value,column_2_value,column_3_value,column_4_value,column_5_value,column_6_value,column_7_value,column_8_value,column_9_value,column_10_value,column_11_value,column_12_value,column_13_value,column_14_value,column_15_value,column_16_value,column_17_value,column_18_value,column_19_value,column_20_value
-,,,0,金融機関名支店名,金融機関名支店名,支店名,種類,口座番号,期末現在高,摘要,,,,,,,,,,,,,,
-,,,1,(株)鹿児島銀行,(株)鹿児島銀行,湯之元支店,定期預金,3062583,25813667,,,,,,,,,,,,,,,
-,,,2,(株)商工組合中央金庫,(株)商工組合中央金庫,渋谷支店,〃,,700000,,,,,,,,,,,,,,,
-,,,3,計,計,,,,26513667,,,,,,,,,,,,,,,
-,,,4,計,計,,,,179968872,,,,,,,,,,,,,,,
+﻿ocr_result_id,page_no,id,jgroupid_string,cif_number,settlement_at,maker_name_original,maker_name,maker_com_code,issue_date_rightside_date,issue_date,due_date_rightside_date,due_date,balance_rightside,balance,payment_bank_name_rightside,payment_bank_name,payment_bank_branch_name_rightside,payment_bank_branch_name,description_rightside,description
+,,1,000,891901,202507,金融機関名支店名,金融機関名支店名,,支店名,支店名,種類,種類,摘要,摘要,口座番号,口座番号,期末現在高,期末現在高,,
+,,2,000,891901,202507,(株)鹿児島銀行,(株)鹿児島銀行,,湯之元支店,湯之元支店,定期預金,定期預金,,,3062583,3062583,25813667,25813667,,
+,,3,000,891901,202507,(株)商工組合中央金庫,(株)商工組合中央金庫,,渋谷支店,渋谷支店,〃,〃,,,,,700000,700000,,
+,,4,000,891901,202507,計,計,,,,,,,,,,26513667,26513667,,
+,,5,000,891901,202507,計,計,,,,,,,,,,179968872,179968872,,

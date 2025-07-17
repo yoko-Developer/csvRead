@@ -1,8 +1,8 @@
-﻿file_path,original_file_name,page_index,row_number,original_header_text,column_1_value,column_2_value,column_3_value,column_4_value,column_5_value,column_6_value,column_7_value,column_8_value,column_9_value,column_10_value,column_11_value,column_12_value,column_13_value,column_14_value,column_15_value,column_16_value,column_17_value,column_18_value,column_19_value,column_20_value
-,,,0,借入先名称(氏名),借入先名称(氏名),借入先所在地(住所),法人・代表者との関係,期末現在高,期中の支払利子額,利率,担保の内容,,,,,,,,,,,,,
-,,,1,日本政策金融公庫川越支店,日本政策金融公庫川越支店,川越市脇田本町14-1,,4896000,,,,,,,,,,,,,,,,
-,,,2,商工組合中央金庫さいたま支店,商工組合中央金庫さいたま支店,さいたま市浦和区岸町4-25-13,,26675000,,,,,,,,,,,,,,,,
-,,,3,,,計,,1056595930,,,,,,,,,,,,,,,,
-,,,4,飯能信用金庫他,飯能信用金庫他,,,,28823929,,,,,,,,,,,,,,,
-,,,5,,,計,,1064195930,28823929,,,,,,,,,,,,,,,
-,,,6,,,,,,,,,,,,,,,,,,,,,
+﻿ocr_result_id,page_no,id,jgroupid_string,cif_number,settlement_at,maker_name_original,maker_name,maker_com_code,issue_date_rightside_date,issue_date,due_date_rightside_date,due_date,balance_rightside,balance,payment_bank_name_rightside,payment_bank_name,payment_bank_branch_name_rightside,payment_bank_branch_name,description_rightside,description
+,,1,000,346162,202507,借入先名称(氏名),借入先名称(氏名),,借入先所在地(住所),借入先所在地(住所),法人・代表者との関係,法人・代表者との関係,利率,利率,期末現在高,期末現在高,期中の支払利子額,期中の支払利子額,担保の内容,
+,,2,000,346162,202507,日本政策金融公庫川越支店,日本政策金融公庫川越支店,,川越市脇田本町14-1,川越市脇田本町14-1,,,,,4896000,4896000,,,,
+,,3,000,346162,202507,商工組合中央金庫さいたま支店,商工組合中央金庫さいたま支店,,さいたま市浦和区岸町4-25-13,さいたま市浦和区岸町4-25-13,,,,,26675000,26675000,,,,
+,,4,000,346162,202507,,,,計,計,,,,,1056595930,1056595930,,,,
+,,5,000,346162,202507,飯能信用金庫他,飯能信用金庫他,,,,,,,,,,28823929,28823929,,
+,,6,000,346162,202507,,,,計,計,,,,,1064195930,1064195930,28823929,28823929,,
+,,7,000,346162,202507,,,,,,,,,,,,,,,

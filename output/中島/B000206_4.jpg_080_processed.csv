@@ -1,8 +1,8 @@
-﻿file_path,original_file_name,page_index,row_number,original_header_text,column_1_value,column_2_value,column_3_value,column_4_value,column_5_value,column_6_value,column_7_value,column_8_value,column_9_value,column_10_value,column_11_value,column_12_value,column_13_value,column_14_value,column_15_value,column_16_value,column_17_value,column_18_value,column_19_value,column_20_value
-,,,0,支払先,支払先,振出年月日,支払期日,支払銀行名称,支払銀行支店名,金額,摘要,,,,,,,,,,,,,
-,,,1,UDトラックス(株),UDトラックス(株),3.12.31,5.4.30,大阪商工信用金庫,吉田支店,551271,,,,,,,,,,,,,,
-,,,2,UDトラックス(株),UDトラックス(株),5.1.31,5.5.30,大阪商工信用金庫,吉田支店,329850,,,,,,,,,,,,,,
-,,,3,UDトラックス(株),UDトラックス(株),5.2.28,5.6.30,大阪商工信用金庫,吉田支店,789216,,,,,,,,,,,,,,
-,,,4,トーヨータイヤ,トーヨータイヤ,5.3.31,5.7.31,大阪商工信用金庫,吉田支店,962500,,,,,,,,,,,,,,
-,,,5,UDトラックス(株),UDトラックス(株),5.3.31,5.7.31,大阪商工信用金庫,吉田支店,329850,,,,,,,,,,,,,,
-,,,6,合計,合計,,,,,2962687,,,,,,,,,,,,,,
+﻿ocr_result_id,page_no,id,jgroupid_string,cif_number,settlement_at,maker_name_original,maker_name,maker_com_code,issue_date_rightside_date,issue_date,due_date_rightside_date,due_date,balance_rightside,balance,payment_bank_name_rightside,payment_bank_name,payment_bank_branch_name_rightside,payment_bank_branch_name,description_rightside,description
+,,1,000,907902,202507,支払先,支払先,,振出年月日,振出年月日,支払期日,支払期日,金額,金額,支払銀行名称,支払銀行名称,支払銀行支店名,支払銀行支店名,摘要,
+,,2,000,907902,202507,UDトラックス(株),UDトラックス(株),,3.12.31,3.12.31,5.4.30,5.4.30,551271,551271,大阪商工信用金庫,大阪商工信用金庫,吉田支店,吉田支店,,
+,,3,000,907902,202507,UDトラックス(株),UDトラックス(株),,5.1.31,5.1.31,5.5.30,5.5.30,329850,329850,大阪商工信用金庫,大阪商工信用金庫,吉田支店,吉田支店,,
+,,4,000,907902,202507,UDトラックス(株),UDトラックス(株),,5.2.28,5.2.28,5.6.30,5.6.30,789216,789216,大阪商工信用金庫,大阪商工信用金庫,吉田支店,吉田支店,,
+,,5,000,907902,202507,トーヨータイヤ,トーヨータイヤ,,5.3.31,5.3.31,5.7.31,5.7.31,962500,962500,大阪商工信用金庫,大阪商工信用金庫,吉田支店,吉田支店,,
+,,6,000,907902,202507,UDトラックス(株),UDトラックス(株),,5.3.31,5.3.31,5.7.31,5.7.31,329850,329850,大阪商工信用金庫,大阪商工信用金庫,吉田支店,吉田支店,,
+,,7,000,907902,202507,合計,合計,,,,,,2962687,2962687,,,,,,

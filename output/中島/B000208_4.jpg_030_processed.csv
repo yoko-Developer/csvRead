@@ -1,8 +1,8 @@
-﻿file_path,original_file_name,page_index,row_number,original_header_text,column_1_value,column_2_value,column_3_value,column_4_value,column_5_value,column_6_value,column_7_value,column_8_value,column_9_value,column_10_value,column_11_value,column_12_value,column_13_value,column_14_value,column_15_value,column_16_value,column_17_value,column_18_value,column_19_value,column_20_value
-,,,0,科目,科目,名称(氏名),所在地(住所),期末現在高,摘要,,,,,,,,,,,,,,,
-,,,1,売掛金,売掛金,三宝製薬(株),東京都新宿区下落合2-3-18,2635641,,,,,,,,,,,,,,,,
-,,,2,〃,〃,(株)セキ薬品,埼玉県北葛飾郡杉戸町高野台西4-9-2,1397646,,,,,,,,,,,,,,,,
-,,,3,〃,〃,中央薬品(株),富山市西四十物町4-9,797469,,,,,,,,,,,,,,,,
-,,,4,〃,〃,(株)廣貫堂,富山市梅沢町2-9-1,647301,,,,,,,,,,,,,,,,
-,,,5,〃,〃,その他,,7320774,,,,,,,,,,,,,,,,
-,,,6,計,計,,,882516961,,,,,,,,,,,,,,,,
+﻿ocr_result_id,page_no,id,jgroupid_string,cif_number,settlement_at,maker_name_original,maker_name,maker_com_code,issue_date_rightside_date,issue_date,due_date_rightside_date,due_date,balance_rightside,balance,payment_bank_name_rightside,payment_bank_name,payment_bank_branch_name_rightside,payment_bank_branch_name,description_rightside,description
+,,1,000,920368,202507,科目,科目,,名称(氏名),名称(氏名),所在地(住所),所在地(住所),,,期末現在高,期末現在高,摘要,摘要,,
+,,2,000,920368,202507,売掛金,売掛金,,三宝製薬(株),三宝製薬(株),東京都新宿区下落合2-3-18,東京都新宿区下落合2-3-18,,,2635641,2635641,,,,
+,,3,000,920368,202507,〃,〃,,(株)セキ薬品,(株)セキ薬品,埼玉県北葛飾郡杉戸町高野台西4-9-2,埼玉県北葛飾郡杉戸町高野台西4-9-2,,,1397646,1397646,,,,
+,,4,000,920368,202507,〃,〃,,中央薬品(株),中央薬品(株),富山市西四十物町4-9,富山市西四十物町4-9,,,797469,797469,,,,
+,,5,000,920368,202507,〃,〃,,(株)廣貫堂,(株)廣貫堂,富山市梅沢町2-9-1,富山市梅沢町2-9-1,,,647301,647301,,,,
+,,6,000,920368,202507,〃,〃,,その他,その他,,,,,7320774,7320774,,,,
+,,7,000,920368,202507,計,計,,,,,,,,882516961,882516961,,,,

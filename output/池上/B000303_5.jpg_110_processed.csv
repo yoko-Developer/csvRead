@@ -1,7 +1,0 @@
-﻿ocr_result_id,page_no,id,jgroupid_string,cif_number,settlement_at,maker_name_original,maker_name,maker_com_code,issue_date_rightside_date,issue_date,due_date_rightside_date,due_date,balance_rightside,balance,payment_bank_name_rightside,payment_bank_name,payment_bank_branch_name_rightside,payment_bank_branch_name,description_rightside,description
-,,1,000,600476,202507,借入先名称(氏名),借入先名称(氏名),,借入先所在地(住所),借入先所在地(住所),法人・代表者との関係,法人・代表者との関係,利率,利率,期末現在高,期末現在高,期中の支払利子額,期中の支払利子額,短期,長期
-,,2,000,600476,202507,(株)商工組合中央金庫,(株)商工組合中央金庫,,300万口,300万口,,,0.90％,0.90％,678000,678000,10381,10381,678000,0
-,,3,000,600476,202507,宮崎銀行,宮崎銀行,,300万口,300万口,,,0.90％,0.90％,0,0,1812,1812,0,0
-,,4,000,600476,202507,鹿児島銀行串良支店,鹿児島銀行串良支店,,300万口,300万口,,,0.90％,0.90％,1167400,1167400,14643,14643,999600,167800
-,,5,000,600476,202507,宮崎銀行,宮崎銀行,,250万口,250万口,,,0.90％,0.90％,1450000,1450000,16532,16532,840000,610000
-,,6,000,600476,202507,,,,合計,合計,,,,,3295400,3295400,43368,43368,2517600,777800

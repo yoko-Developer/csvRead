@@ -1,7 +1,0 @@
-﻿ocr_result_id,page_no,id,jgroupid_string,cif_number,settlement_at,maker_name_original,maker_name,maker_com_code,issue_date_rightside_date,issue_date,due_date_rightside_date,due_date,balance_rightside,balance,payment_bank_name_rightside,payment_bank_name,payment_bank_branch_name_rightside,payment_bank_branch_name,description_rightside,description
-,,1,000,349471,202507,支払先,支払先,,振出年月日,振出年月日,支払期日,支払期日,金額,金額,支払銀行名称,支払銀行名称,支払銀行支店名,支払銀行支店名,摘要,
-,,2,000,349471,202507,コウキ(株),コウキ(株),,令5.1.31,令5.1.31,令5.4.30,令5.4.30,1569994,1569994,三菱UFJ銀行,三菱UFJ銀行,各古屋港支店,各古屋港支店,,
-,,3,000,349471,202507,コウキ(株),コウキ(株),,令5.2.28,令5.2.28,令5.5.31,令5.5.31,730693,730693,三菱UFJ銀行,三菱UFJ銀行,各古屋港支店,各古屋港支店,,
-,,4,000,349471,202507,コウキ(株),コウキ(株),,令5.3.31,令5.3.31,令5.6.30,令5.6.30,3048070,3048070,三菱UFJ銀行,三菱UFJ銀行,名古屋港支店,名古屋港支店,,
-,,5,000,349471,202507,(小計),(小計),,,,,,5348757,5348757,,,,,,
-,,6,000,349471,202507,計,計,,,,,,5348757,5348757,,,,,,

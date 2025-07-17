@@ -1,7 +1,0 @@
-﻿ocr_result_id,page_no,id,jgroupid_string,cif_number,settlement_at,maker_name_original,maker_name,maker_com_code,issue_date_rightside_date,issue_date,due_date_rightside_date,due_date,balance_rightside,balance,payment_bank_name_rightside,payment_bank_name,payment_bank_branch_name_rightside,payment_bank_branch_name,description_rightside,description
-,,1,000,982269,202507,借入先名称(氏名),借入先名称(氏名),,借入先所在地(住所),借入先所在地(住所),法人・代表者との関係,法人・代表者との関係,利率,利率,期末現在高,期末現在高,期中の支払利子額,期中の支払利子額,担保の内容,
-,,2,000,982269,202507,大分銀行宇佐支店,大分銀行宇佐支店,,宇佐市四日市,宇佐市四日市,,,,,31500000,31500000,,,当座貸越,
-,,3,000,982269,202507,大分銀行宇佐支店,大分銀行宇佐支店,,〃,〃,,,,,2984000,2984000,,,大分県コロナ,
-,,4,000,982269,202507,商工中金,商工中金,,,,,,,,2196000,2196000,,,,
-,,5,000,982269,202507,〃,〃,,,,,,,,4620000,4620000,,,,
-,,6,000,982269,202507,,,,合計,合計,,,,,41300000,41300000,,,,

@@ -1,9 +1,0 @@
-﻿ocr_result_id,page_no,id,jgroupid_string,cif_number,settlement_at,maker_name_original,maker_name,maker_com_code,issue_date_rightside_date,issue_date,due_date_rightside_date,due_date,balance_rightside,balance,payment_bank_name_rightside,payment_bank_name,payment_bank_branch_name_rightside,payment_bank_branch_name,description_rightside,description
-,,1,000,548147,202507,科目,科目,,名称(氏名),名称(氏名),所在地(住所),所在地(住所),,,期末現在高,期末現在高,摘要,摘要,,
-,,2,000,548147,202507,買掛金金,買掛金金,,塩見電工,塩見電工,,,,,77000,77000,,,,
-,,3,000,548147,202507,,,,科目計,科目計,,,,,14169281,14169281,,,,
-,,4,000,548147,202507,未払金,未払金,,ミツイトラスト,ミツイトラスト,,,,,4576176,4576176,,,,
-,,5,000,548147,202507,,,,科目計,科目計,,,,,4576176,4576176,,,,
-,,6,000,548147,202507,未払費用,未払費用,,従業員,従業員,,,,,2887888,2887888,給与,給与,,
-,,7,000,548147,202507,,,,科目計,科目計,,,,,2887888,2887888,,,,
-,,8,000,548147,202507,計,計,,,,,,,,21633345,21633345,,,,

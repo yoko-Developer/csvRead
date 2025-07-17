@@ -1,6 +1,0 @@
-﻿ocr_result_id,page_no,id,jgroupid_string,cif_number,settlement_at,maker_name_original,maker_name,maker_com_code,issue_date_rightside_date,issue_date,due_date_rightside_date,due_date,balance_rightside,balance,payment_bank_name_rightside,payment_bank_name,payment_bank_branch_name_rightside,payment_bank_branch_name,description_rightside,description
-,,1,000,164201,202507,支払先,支払先,,振出年月日,振出年月日,支払期日,支払期日,金額,金額,支払銀行名称,支払銀行名称,支払銀行支店名,支払銀行支店名,摘要,
-,,2,000,164201,202507,平田バルブ工業(株),平田バルブ工業(株),,令4.7.20,令4.7.20,令4.11.20,令4.11.20,1101100,1101100,城南信用金庫,城南信用金庫,鶴見支店,鶴見支店,,
-,,3,000,164201,202507,(有)三浦重機,(有)三浦重機,,令4.7.20,令4.7.20,令4.11.20,令4.11.20,789800,789800,〃,〃,〃,〃,,
-,,4,000,164201,202507,(株)ムライ,(株)ムライ,,令4.7.20,令4.7.20,令4.11.20,令4.11.20,1213440,1213440,〃,〃,〃,〃,,
-,,5,000,164201,202507,合計,合計,,,,,,140542185,140542185,,,,,,

@@ -1,8 +1,0 @@
-﻿ocr_result_id,page_no,id,jgroupid_string,cif_number,settlement_at,maker_name_original,maker_name,maker_com_code,issue_date_rightside_date,issue_date,due_date_rightside_date,due_date,balance_rightside,balance,payment_bank_name_rightside,payment_bank_name,payment_bank_branch_name_rightside,payment_bank_branch_name,description_rightside,description
-,,1,000,330503,202507,金融機関名,金融機関名,,支店名,支店名,種類,種類,摘要,摘要,口座番号,口座番号,期末現在高,期末現在高,,
-,,2,000,330503,202507,商工中金,商工中金,,函館,函館,定期預金,定期預金,,,5103339,5103339,6124315,6124315,,
-,,3,000,330503,202507,〃,〃,,〃,〃,〃,〃,,,5107270,5107270,6120118,6120118,,
-,,4,000,330503,202507,〃,〃,,〃,〃,〃,〃,,,5126061,5126061,6107084,6107084,,
-,,5,000,330503,202507,〃,〃,,〃,〃,〃,〃,,,5129052,5129052,6103126,6103126,,
-,,6,000,330503,202507,,,,,,計,計,,,,,105299437,105299437,,
-,,7,000,330503,202507,合計,合計,,,,,,,,,,713477821,713477821,,

@@ -1,8 +1,0 @@
-﻿ocr_result_id,page_no,id,jgroupid_string,cif_number,settlement_at,maker_name_original,maker_name,maker_com_code,issue_date_rightside_date,issue_date,due_date_rightside_date,due_date,balance_rightside,balance,payment_bank_name_rightside,payment_bank_name,payment_bank_branch_name_rightside,payment_bank_branch_name,description_rightside,description
-,,1,000,776155,202507,借入先名称(氏名),借入先名称(氏名),,借入先所在地(住所),借入先所在地(住所),法人・代表者との関係,法人・代表者との関係,利率,利率,期末現在高,期末現在高,期中の支払利子額,期中の支払利子額,担保の内容,
-,,2,000,776155,202507,愛知銀行,愛知銀行,,道徳支店,道徳支店,,,,,425952000,425952000,0,0,,
-,,3,000,776155,202507,商工組合中央金庫,商工組合中央金庫,,熱田支店,熱田支店,,,,,331331000,331331000,0,0,,
-,,4,000,776155,202507,名古屋銀行,名古屋銀行,,内田橋支店,内田橋支店,,,,,14290000,14290000,0,0,,
-,,5,000,776155,202507,日本政策金融公庫,日本政策金融公庫,,熱田支店,熱田支店,,,,,49180000,49180000,0,0,,
-,,6,000,776155,202507,計,計,,,,,,,,820753000,820753000,0,0,,
-,,7,000,776155,202507,,,,計,計,,,,,820753000,820753000,0,0,,

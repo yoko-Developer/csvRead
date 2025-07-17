@@ -1,8 +1,0 @@
-﻿ocr_result_id,page_no,id,jgroupid_string,cif_number,settlement_at,maker_name_original,maker_name,maker_com_code,issue_date_rightside_date,issue_date,due_date_rightside_date,due_date,balance_rightside,balance,payment_bank_name_rightside,payment_bank_name,payment_bank_branch_name_rightside,payment_bank_branch_name,description_rightside,description
-,,1,000,581058,202507,借入先名称(氏名),借入先名称(氏名),,借入先所在地(住所),借入先所在地(住所),法人・代表者との関係,法人・代表者との関係,利率,利率,期末現在高,期末現在高,期中の支払利子額,期中の支払利子額,担保の内容,
-,,2,000,581058,202507,阿波銀行,阿波銀行,,,,,,,,650621357,650621357,10075798,10075798,,
-,,3,000,581058,202507,商工組合中央金庫,商工組合中央金庫,,,,,,,,3680000,3680000,54040,54040,,
-,,4,000,581058,202507,日本政策金融公庫,日本政策金融公庫,,,,,,,,19040000,19040000,39501,39501,,
-,,5,000,581058,202507,,,,計,計,,,,,673341357,673341357,10169339,10169339,,
-,,6,000,581058,202507,,,,,,,,,,23170000,23170000,,,,
-,,7,000,581058,202507,,,,合計,合計,,,,,696511357,696511357,10169339,10169339,,

@@ -1,5 +1,0 @@
-﻿ocr_result_id,page_no,id,jgroupid_string,cif_number,settlement_at,maker_name_original,maker_name,maker_com_code,issue_date_rightside_date,issue_date,due_date_rightside_date,due_date,balance_rightside,balance,payment_bank_name_rightside,payment_bank_name,payment_bank_branch_name_rightside,payment_bank_branch_name,description_rightside,description
-,,1,000,154780,202507,金融機関名,金融機関名,,支店名,支店名,種類,種類,摘要,摘要,口座番号,口座番号,期末現在高,期末現在高,,
-,,2,000,154780,202507,城北信用金庫,城北信用金庫,,戸田,戸田,定期積金,定期積金,"@50,000円","@50,000円",9435789,9435789,1150000,1150000,,
-,,3,000,154780,202507,,,,,,計,計,,,,,1750000,1750000,,
-,,4,000,154780,202507,合計,合計,,,,,,,,,,58363663,58363663,,

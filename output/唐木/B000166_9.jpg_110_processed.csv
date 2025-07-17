@@ -1,7 +1,0 @@
-﻿ocr_result_id,page_no,id,jgroupid_string,cif_number,settlement_at,maker_name_original,maker_name,maker_com_code,issue_date_rightside_date,issue_date,due_date_rightside_date,due_date,balance_rightside,balance,payment_bank_name_rightside,payment_bank_name,payment_bank_branch_name_rightside,payment_bank_branch_name,description_rightside,description
-,,1,000,221230,202507,借入先名称(氏名),借入先名称(氏名),,借入先所在地(住所),借入先所在地(住所),法人・代表者との関係,法人・代表者との関係,利率,利率,期末現在高,期末現在高,期中の支払利子額,期中の支払利子額,担保の内容,
-,,2,000,221230,202507,福井銀行,福井銀行,,松任支店,松任支店,,,1.100,1.100,74200000,74200000,,,"@1,400千円",
-,,3,000,221230,202507,,,,長期借入金計,長期借入金計,,,,,345671000,345671000,,,,
-,,4,000,221230,202507,協同組合石川中央,協同組合石川中央,,,,,,,,76348000,76348000,,,高度化資金,
-,,5,000,221230,202507,,,,石川県長期借入金計,石川県長期借入金計,,,,,76348000,76348000,,,,
-,,6,000,221230,202507,,,,合計,合計,,,,,832019000,832019000,,,,

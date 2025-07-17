@@ -1,7 +1,0 @@
-﻿ocr_result_id,page_no,id,jgroupid_string,cif_number,settlement_at,maker_name_original,maker_name,maker_com_code,issue_date_rightside_date,issue_date,due_date_rightside_date,due_date,balance_rightside,balance,payment_bank_name_rightside,payment_bank_name,payment_bank_branch_name_rightside,payment_bank_branch_name,description_rightside,description
-,,1,000,968429,202507,借入先名称(氏名),借入先名称(氏名),,借入先所在地(住所),借入先所在地(住所),法人・代表者との関係,法人・代表者との関係,利率,利率,期末現在高,期末現在高,期中の支払利子額,期中の支払利子額,担保の内容,
-,,2,000,968429,202507,東日本銀行相模原支店,東日本銀行相模原支店,,,,,,,,96000000,96000000,,,コミットメントライン,
-,,3,000,968429,202507,城南信用金庫相武台支店,城南信用金庫相武台支店,,,,,,,,19360000,19360000,,,,
-,,4,000,968429,202507,横浜銀行相模原駅前支店,横浜銀行相模原駅前支店,,,,,,,,24750000,24750000,,,,
-,,5,000,968429,202507,小計,小計,,,,,,,,2440977000,2440977000,,,,
-,,6,000,968429,202507,,,,計,計,,,,,2440977000,2440977000,,,,

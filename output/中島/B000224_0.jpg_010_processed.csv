@@ -1,6 +1,0 @@
-﻿ocr_result_id,page_no,id,jgroupid_string,cif_number,settlement_at,maker_name_original,maker_name,maker_com_code,issue_date_rightside_date,issue_date,due_date_rightside_date,due_date,balance_rightside,balance,payment_bank_name_rightside,payment_bank_name,payment_bank_branch_name_rightside,payment_bank_branch_name,description_rightside,description
-,,1,000,904242,202507,金融機関名,金融機関名,,支店名,支店名,種類,種類,摘要,摘要,口座番号,口座番号,期末現在高,期末現在高,,
-,,2,000,904242,202507,紀陽銀行,紀陽銀行,,箕島支店,箕島支店,当座預金,当座預金,,,,,3393518,3393518,,
-,,3,000,904242,202507,きのくに信用金庫,きのくに信用金庫,,同上,同上,普通預金,普通預金,,,,,67720,67720,,
-,,4,000,904242,202507,商工組合中央金庫,商工組合中央金庫,,和歌山支店,和歌山支店,当座預金,当座預金,,,,,383050,383050,,
-,,5,000,904242,202507,合計,合計,,,,,,,,,,3844288,3844288,,

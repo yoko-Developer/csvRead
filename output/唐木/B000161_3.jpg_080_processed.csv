@@ -1,8 +1,0 @@
-﻿ocr_result_id,page_no,id,jgroupid_string,cif_number,settlement_at,maker_name_original,maker_name,maker_com_code,issue_date_rightside_date,issue_date,due_date_rightside_date,due_date,balance_rightside,balance,payment_bank_name_rightside,payment_bank_name,payment_bank_branch_name_rightside,payment_bank_branch_name,description_rightside,description
-,,1,000,449411,202507,支払先,支払先,,振出年月日,振出年月日,支払期日,支払期日,金額,金額,支払銀行名称,支払銀行名称,支払銀行支店名,支払銀行支店名,摘要,
-,,2,000,449411,202507,R4.7.20決済11枚計,R4.7.20決済11枚計,,,,令4.7.20,令4.7.20,7613808,7613808,北陸銀行,北陸銀行,金沢駅前,金沢駅前,,
-,,3,000,449411,202507,R4.8.20決済15枚計,R4.8.20決済15枚計,,,,令4.8.20,令4.8.20,9870168,9870168,〃,〃,〃,〃,,
-,,4,000,449411,202507,R4.9.20決済19枚計,R4.9.20決済19枚計,,,,令4.9.20,令4.9.20,12800940,12800940,〃,〃,〃,〃,,
-,,5,000,449411,202507,R4.10.20決済15枚計,R4.10.20決済15枚計,,,,令4.10.20,令4.10.20,14315478,14315478,〃,〃,〃,〃,,
-,,6,000,449411,202507,R4.11.20決済1枚計,R4.11.20決済1枚計,,,,令4.11.20,令4.11.20,2738349,2738349,〃,〃,〃,〃,,
-,,7,000,449411,202507,合計,合計,,,,,,47338743,47338743,,,,,,

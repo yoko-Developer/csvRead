@@ -1,7 +1,0 @@
-﻿ocr_result_id,page_no,id,jgroupid_string,cif_number,settlement_at,maker_name_original,maker_name,maker_com_code,issue_date_rightside_date,issue_date,due_date_rightside_date,due_date,balance_rightside,balance,payment_bank_name_rightside,payment_bank_name,payment_bank_branch_name_rightside,payment_bank_branch_name,description_rightside,description
-,,1,000,138326,202507,借入先名称(氏名),借入先名称(氏名),,借入先所在地(住所),借入先所在地(住所),法人・代表者との関係,法人・代表者との関係,利率,利率,期末現在高,期末現在高,期中の支払利子額,期中の支払利子額,担保の内容,
-,,2,000,138326,202507,足利銀行新宿支店,足利銀行新宿支店,,桐生市錦町2-15-17,桐生市錦町2-15-17,,,0.200,0.200,50000000,50000000,100000,100000,私募債,
-,,3,000,138326,202507,〃,〃,,〃,〃,,,0.260,0.260,50000000,50000000,130000,130000,〃,
-,,4,000,138326,202507,群馬銀行桐生支店,群馬銀行桐生支店,,桐生市本町5-354,桐生市本町5-354,,,0.400,0.400,21000000,21000000,53550,53550,〃,
-,,5,000,138326,202507,その他計,その他計,,,,,,,,121000000,121000000,283550,283550,,
-,,6,000,138326,202507,,,,合計,合計,,,,,315147000,315147000,1831597,1831597,,

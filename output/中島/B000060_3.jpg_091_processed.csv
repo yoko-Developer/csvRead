@@ -1,8 +1,0 @@
-﻿ocr_result_id,page_no,id,jgroupid_string,cif_number,settlement_at,maker_name_original,maker_name,maker_com_code,issue_date_rightside_date,issue_date,due_date_rightside_date,due_date,balance_rightside,balance,payment_bank_name_rightside,payment_bank_name,payment_bank_branch_name_rightside,payment_bank_branch_name,description_rightside,description
-,,1,000,451579,202507,科目,科目,,名称(氏名),名称(氏名),所在地(住所),所在地(住所),,,期末現在高,期末現在高,摘要,摘要,,
-,,2,000,451579,202507,買掛金,買掛金,,,,,,,,512770,512770,,,,
-,,3,000,451579,202507,買掛金,買掛金,,その他50万円未満一括,その他50万円未満一括,,,,,3360726,3360726,,,,
-,,4,000,451579,202507,小計,小計,,,,,,,,43118565,43118565,,,,
-,,5,000,451579,202507,未払金,未払金,,江東年金事務所,江東年金事務所,,,,,488799,488799,社会保険料,社会保険料,,
-,,6,000,451579,202507,小計,小計,,,,,,,,488799,488799,,,,
-,,7,000,451579,202507,計,計,,,,,,,,117951645,117951645,,,,

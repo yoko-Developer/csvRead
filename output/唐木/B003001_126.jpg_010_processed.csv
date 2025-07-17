@@ -1,9 +1,0 @@
-﻿ocr_result_id,page_no,id,jgroupid_string,cif_number,settlement_at,maker_name_original,maker_name,maker_com_code,issue_date_rightside_date,issue_date,due_date_rightside_date,due_date,balance_rightside,balance,payment_bank_name_rightside,payment_bank_name,payment_bank_branch_name_rightside,payment_bank_branch_name,description_rightside,description
-,,1,000,378133,202507,金融機関名,金融機関名,,支店名,支店名,種類,種類,摘要,摘要,口座番号,口座番号,期末現在高,期末現在高,,
-,,2,000,378133,202507,鹿児島銀行,鹿児島銀行,,志布志支店,志布志支店,普通預金,普通預金,,,607230,607230,365311,365311,,
-,,3,000,378133,202507,三菱UFJ銀行,三菱UFJ銀行,,岡山駅前支店,岡山駅前支店,普通預金,普通預金,,,64776,64776,311852,311852,,
-,,4,000,378133,202507,ゆうちょ銀行,ゆうちょ銀行,,一三九,一三九,当座預金,当座預金,,,0000629,0000629,84427,84427,,
-,,5,000,378133,202507,ゆうちょ銀行,ゆうちょ銀行,,一三九,一三九,普通預金,普通預金,,,0091780,0091780,703,703,,
-,,6,000,378133,202507,三菱UFJ,三菱UFJ,,岡山駅前,岡山駅前,外貨預金,外貨預金,,,41442,41442,18600962,18600962,,
-,,7,000,378133,202507,小計,小計,,,,,,,,,,1112497220,1112497220,,
-,,8,000,378133,202507,計,計,,,,,,,,,,1112497220,1112497220,,

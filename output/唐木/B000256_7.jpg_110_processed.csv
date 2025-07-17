@@ -1,7 +1,0 @@
-﻿ocr_result_id,page_no,id,jgroupid_string,cif_number,settlement_at,maker_name_original,maker_name,maker_com_code,issue_date_rightside_date,issue_date,due_date_rightside_date,due_date,balance_rightside,balance,payment_bank_name_rightside,payment_bank_name,payment_bank_branch_name_rightside,payment_bank_branch_name,description_rightside,description
-,,1,000,546309,202507,借入先名称(氏名),借入先名称(氏名),,借入先所在地(住所),借入先所在地(住所),法人・代表者との関係,法人・代表者との関係,利率,利率,期末現在高,期末現在高,期中の支払利子額,期中の支払利子額,担保の内容,
-,,2,000,546309,202507,香川銀行,香川銀行,,,,,,,,20600000,20600000,,,,
-,,3,000,546309,202507,中国銀行,中国銀行,,,,,,,,2772000,2772000,,,,
-,,4,000,546309,202507,日本政策金融公庫,日本政策金融公庫,,,,,,,,11660000,11660000,,,,
-,,5,000,546309,202507,百十四銀行,百十四銀行,,,,,,,,30000000,30000000,,,,
-,,6,000,546309,202507,,,,計,計,,,,,65032000,65032000,,,,

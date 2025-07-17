@@ -1,7 +1,0 @@
-﻿ocr_result_id,page_no,id,jgroupid_string,cif_number,settlement_at,maker_name_original,maker_name,maker_com_code,issue_date_rightside_date,issue_date,due_date_rightside_date,due_date,balance_rightside,balance,payment_bank_name_rightside,payment_bank_name,payment_bank_branch_name_rightside,payment_bank_branch_name,description_rightside,description
-,,1,000,711624,202507,,,,資本金,資本金,資本準備金,資本準備金,利益準備金,利益準備金,その他資本剰余金,その他資本剰余金,資本剰余金合計,資本剰余金合計,任意積立金,繰越利益剰余金
-,,2,000,711624,202507,当期首残高,当期首残高,,"50,000,000","50,000,000",,,"12,500,000","12,500,000",,,,,"35,000,000","▲1,470,834"
-,,3,000,711624,202507,当期変動額,当期変動額,,,,,,,,,,,,,
-,,4,000,711624,202507,当期純損失,当期純損失,,,,,,,,,,,,,"21,026,954"
-,,5,000,711624,202507,当期変動額合計,当期変動額合計,,-,-,-,-,-,-,-,-,-,-,-,"▲21,026,954"
-,,6,000,711624,202507,当期末残高,当期末残高,,"50,000,000","50,000,000",,,"12,500,000","12,500,000",,,,,"35,000,000","▲22,497,788"

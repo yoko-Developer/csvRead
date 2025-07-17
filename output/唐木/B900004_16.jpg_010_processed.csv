@@ -1,6 +1,0 @@
-﻿ocr_result_id,page_no,id,jgroupid_string,cif_number,settlement_at,maker_name_original,maker_name,maker_com_code,issue_date_rightside_date,issue_date,due_date_rightside_date,due_date,balance_rightside,balance,payment_bank_name_rightside,payment_bank_name,payment_bank_branch_name_rightside,payment_bank_branch_name,description_rightside,description
-,,1,000,979490,202507,金融機関名,金融機関名,,支店名,支店名,種類,種類,摘要,摘要,口座番号,口座番号,期末現在高,期末現在高,,
-,,2,000,979490,202507,三井住友銀行,三井住友銀行,,日本橋支店,日本橋支店,普通預金,普通預金,,,8301520,8301520,10210501,10210501,,
-,,3,000,979490,202507,みずほ銀行,みずほ銀行,,日本橋支店,日本橋支店,普通預金,普通預金,,,2559819,2559819,1346671,1346671,,
-,,4,000,979490,202507,商工中金,商工中金,,本店営業部,本店営業部,普通預金,普通預金,,,1072251,1072251,209972,209972,,
-,,5,000,979490,202507,計,計,,,,,,,,,,11767144,11767144,,

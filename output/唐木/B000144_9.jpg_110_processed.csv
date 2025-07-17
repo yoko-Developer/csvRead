@@ -1,8 +1,0 @@
-﻿ocr_result_id,page_no,id,jgroupid_string,cif_number,settlement_at,maker_name_original,maker_name,maker_com_code,issue_date_rightside_date,issue_date,due_date_rightside_date,due_date,balance_rightside,balance,payment_bank_name_rightside,payment_bank_name,payment_bank_branch_name_rightside,payment_bank_branch_name,description_rightside,description
-,,1,000,981920,202507,借入先名称(氏名),借入先名称(氏名),,借入先所在地(住所),借入先所在地(住所),法人・代表者との関係,法人・代表者との関係,利率,利率,期末現在高,期末現在高,期中の支払利子額,期中の支払利子額,担保の内容,
-,,2,000,981920,202507,岐阜信用金庫平田支店,岐阜信用金庫平田支店,,名古屋市西区平出町133,名古屋市西区平出町133,,,,,46087000,46087000,,,,
-,,3,000,981920,202507,三菱UFJ銀行浄心支店,三菱UFJ銀行浄心支店,,名古屋市西区浄心1-1-1,名古屋市西区浄心1-1-1,,,,,32507000,32507000,,,,
-,,4,000,981920,202507,長期借入金計,長期借入金計,,,,,,,,756623000,756623000,,,,
-,,5,000,981920,202507,名古屋銀行小田井支店,名古屋銀行小田井支店,,名古屋市西区南川町70番地,名古屋市西区南川町70番地,,,,,15000000,15000000,,,,
-,,6,000,981920,202507,社債計,社債計,,,,,,,,15000000,15000000,,,,
-,,7,000,981920,202507,,,,計,計,,,,,913498000,913498000,,,,

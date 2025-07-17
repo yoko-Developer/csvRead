@@ -1,7 +1,0 @@
-﻿ocr_result_id,page_no,id,jgroupid_string,cif_number,settlement_at,maker_name_original,maker_name,maker_com_code,issue_date_rightside_date,issue_date,due_date_rightside_date,due_date,balance_rightside,balance,payment_bank_name_rightside,payment_bank_name,payment_bank_branch_name_rightside,payment_bank_branch_name,description_rightside,description
-,,1,000,845637,202507,科目,科目,,名称(氏名),名称(氏名),所在地(住所),所在地(住所),,,期末現在高,期末現在高,摘要,摘要,,
-,,2,000,845637,202507,未払金,未払金,,社会保険,社会保険,,,,,39162461,39162461,3月分,3月分,,
-,,3,000,845637,202507,〃,〃,,その他合計,その他合計,,,,,366079,366079,労働保険他,労働保険他,,
-,,4,000,845637,202507,,,,小計,小計,,,,,(39528540),(39528540),,,,
-,,5,000,845637,202507,未払費用,未払費用,,社員,社員,,,,,9075230,9075230,,,,
-,,6,000,845637,202507,計,計,,,,,,,,111904562,111904562,,,,

@@ -1,8 +1,0 @@
-﻿ocr_result_id,page_no,id,jgroupid_string,cif_number,settlement_at,maker_name_original,maker_name,maker_com_code,issue_date_rightside_date,issue_date,due_date_rightside_date,due_date,balance_rightside,balance,payment_bank_name_rightside,payment_bank_name,payment_bank_branch_name_rightside,payment_bank_branch_name,description_rightside,description
-,,1,000,585892,202507,支払先,支払先,,振出年月日,振出年月日,支払期日,支払期日,金額,金額,支払銀行名称,支払銀行名称,支払銀行支店名,支払銀行支店名,摘要,
-,,2,000,585892,202507,日鉄物産ワイヤ&ウェルディング,日鉄物産ワイヤ&ウェルディング,,令4.2.25,令4.2.25,令7.7.6,令7.7.6,5388824,5388824,商工中金,商工中金,名古屋,名古屋,,
-,,3,000,585892,202507,〃,〃,,令4.3.25,令4.3.25,令4.8.6,令4.8.6,4935567,4935567,〃,〃,〃,〃,,
-,,4,000,585892,202507,〃,〃,,令4.5.25,令4.5.25,令4.9.6,令4.9.6,4287898,4287898,〃,〃,〃,〃,,
-,,5,000,585892,202507,〃,〃,,令4.6.25,令4.6.25,令4.10.6,令4.10.6,6464483,6464483,〃,〃,〃,〃,,
-,,6,000,585892,202507,〃,〃,,令4.6.25,令4.6.25,令4.11.6,令4.11.6,4743751,4743751,〃,〃,〃,〃,,
-,,7,000,585892,202507,合計,合計,,,,,,25820523,25820523,,,,,,

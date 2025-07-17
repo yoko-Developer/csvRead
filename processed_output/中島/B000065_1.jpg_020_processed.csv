@@ -1,4 +1,4 @@
 ﻿ocr_result_id,page_no,id,jgroupid_string,cif_number,settlement_at,maker_name_original,maker_name,maker_com_code,issue_date_rightside_date,issue_date,due_date_rightside_date,due_date,balance_rightside,balance,payment_bank_name_rightside,payment_bank_name,payment_bank_branch_name_rightside,payment_bank_branch_name,description_rightside,description
-,,1,000,847665,202507,振出人,振出人,001,振出年月日,振出年月日,支払期日,支払期日,金額,金額,支払銀行名称,支払銀行名称,支払銀行支店名,支払銀行支店名,割引銀行名及び支店名等,摘要
-,,2,000,847665,202507,株式会社ホクシン,株式会社ホクシン,221,令4.12.15,令4.12.15,令5.4.15,令5.4.15,649000,649000,福井銀行,福井銀行,松本支店,松本支店,,
-,,3,000,847665,202507,合計,合計,020,,,,,649000,649000,,,,,,
+20250717125003041,1,1,000,914298,202507,振出人,振出人,001,振出年月日,振出年月日,支払期日,支払期日,金額,金額,支払銀行名称,支払銀行名称,支払銀行支店名,支払銀行支店名,割引銀行名及び支店名等,摘要
+20250717125003041,1,2,000,914298,202507,株式会社ホクシン,株式会社ホクシン,221,令4.12.15,令4.12.15,令5.4.15,令5.4.15,649000,649000,福井銀行,福井銀行,松本支店,松本支店,,
+20250717125003041,1,3,000,914298,202507,合計,合計,020,,,,,649000,649000,,,,,,

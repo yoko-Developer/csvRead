@@ -1,7 +1,0 @@
-﻿ocr_result_id,page_no,id,jgroupid_string,cif_number,settlement_at,maker_name_original,maker_name,maker_com_code,issue_date_rightside_date,issue_date,due_date_rightside_date,due_date,balance_rightside,balance,payment_bank_name_rightside,payment_bank_name,payment_bank_branch_name_rightside,payment_bank_branch_name,description_rightside,description
-,,1,000,384441,202507,借入先名称(氏名),借入先名称(氏名),,借入先所在地(住所),借入先所在地(住所),法人・代表者との関係,法人・代表者との関係,利率,利率,期末現在高,期末現在高,期中の支払利子額,期中の支払利子額,担保の内容,
-,,2,000,384441,202507,短期借入金,短期借入金,,,,,,,,,,,,,
-,,3,000,384441,202507,北國銀行金沢城北支店,北國銀行金沢城北支店,,,,,,0.780,0.780,10000000,10000000,76392,76392,,
-,,4,000,384441,202507,三菱UFJ銀行金沢支店,三菱UFJ銀行金沢支店,,,,,,0.670,0.670,10000000,10000000,78888,78888,,
-,,5,000,384441,202507,(計),(計),,,,,,,,20000000,20000000,155280,155280,,
-,,6,000,384441,202507,,,,頁計,頁計,,,,,20000000,20000000,155280,155280,,

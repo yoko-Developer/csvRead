@@ -1,8 +1,0 @@
-﻿ocr_result_id,page_no,id,jgroupid_string,cif_number,settlement_at,maker_name_original,maker_name,maker_com_code,issue_date_rightside_date,issue_date,due_date_rightside_date,due_date,balance_rightside,balance,payment_bank_name_rightside,payment_bank_name,payment_bank_branch_name_rightside,payment_bank_branch_name,description_rightside,description
-,,1,000,718871,202507,借入先名称(氏名),借入先名称(氏名),,借入先所在地(住所),借入先所在地(住所),法人・代表者との関係,法人・代表者との関係,利率,利率,期末現在高,期末現在高,期中の支払利子額,期中の支払利子額,担保の内容,
-,,2,000,718871,202507,スルガ銀行,スルガ銀行,,本店営業部,本店営業部,,,,,40000000,40000000,,,,
-,,3,000,718871,202507,,,,短期借入計,短期借入計,,,,,40000000,40000000,,,,
-,,4,000,718871,202507,静岡銀行,静岡銀行,,沼津駅北支店,沼津駅北支店,,,,,455028000,455028000,,,,
-,,5,000,718871,202507,スルガ銀行,スルガ銀行,,本店営業部,本店営業部,,,,,155528000,155528000,,,,
-,,6,000,718871,202507,,,,長期借入計,長期借入計,,,,,610556000,610556000,,,,
-,,7,000,718871,202507,計,計,,,,,,,,650556000,650556000,,,,

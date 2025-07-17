@@ -1,9 +1,0 @@
-﻿ocr_result_id,page_no,id,jgroupid_string,cif_number,settlement_at,maker_name_original,maker_name,maker_com_code,issue_date_rightside_date,issue_date,due_date_rightside_date,due_date,balance_rightside,balance,payment_bank_name_rightside,payment_bank_name,payment_bank_branch_name_rightside,payment_bank_branch_name,description_rightside,description
-,,1,000,417856,202507,Ⅰ材料費,Ⅰ材料費,,,,,,,,,,,,,
-,,2,000,417856,202507,1期首材料,1期首材料,,"267,373","267,373",,,,,,,,,,
-,,3,000,417856,202507,2食材仕入,2食材仕入,,"1,599,516","1,599,516",,,,,,,,,,
-,,4,000,417856,202507,3飲料仕入,3飲料仕入,,"915,634","915,634",,,,,,,,,,
-,,5,000,417856,202507,合計,合計,,"2,782,523","2,782,523",,,,,,,,,,
-,,6,000,417856,202507,4期末材料,4期末材料,,"248,851","248,851","2,533,672","2,533,672",,,,,,,,
-,,7,000,417856,202507,当期総製造費用,当期総製造費用,,,,"2,533,672","2,533,672",,,,,,,,
-,,8,000,417856,202507,当期製品製造原価,当期製品製造原価,,,,"2,533,672","2,533,672",,,,,,,,

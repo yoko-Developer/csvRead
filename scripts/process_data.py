@@ -2,21 +2,24 @@ import pandas as pd
 import os
 import re
 from datetime import datetime
-import random
-import shutil
+import random 
 
 # --- 設定項目（ここだけ、くまちゃんの環境に合わせて修正してね！） ---
+# AIReadが出力したCSVファイルが保存されているルートフォルダ (池上, 中島, 唐木フォルダがある場所)
+# 例: r'G:\共有ドライブ\VLM-OCR\20_教師データ\30_output_csv'
+INPUT_BASE_DIR = r'G:\共有ドライブ\VLM-OCR\20_教師データ\30_output_csv' 
+
 # アプリのルートフォルダ (GitHubリポジトリのルート)
 # C:\Users\User26\yoko\dev\csvRead を指定
 APP_ROOT_DIR = r'C:\Users\User26\yoko\dev\csvRead'
 
-# 検索結果（B*020.csv）のオリジナルファイルが保存されているルートフォルダ
+# 検索結果（B*020.csv）のオリジナルファイルを保存するルートフォルダ
 # APP_ROOT_DIR の下の filtered_originals フォルダ
-INPUT_PROCESSED_DIR = os.path.join(APP_ROOT_DIR, 'filtered_originals')
+SEARCH_RESULT_OUTPUT_BASE_DIR = os.path.join(APP_ROOT_DIR, 'filtered_originals')
 
 # 加工後のCSVファイルを保存するルートフォルダ
 # APP_ROOT_DIR の下の processed_output フォルダ
-OUTPUT_PROCESSED_DIR = os.path.join(APP_ROOT_DIR, 'processed_output') 
+PROCESSED_OUTPUT_BASE_DIR = os.path.join(APP_ROOT_DIR, 'processed_output') 
 
 # マスタデータファイルが保存されているフォルダ
 # APP_ROOT_DIR の下の master_data フォルダ
@@ -64,6 +67,7 @@ FINANCIAL_STATEMENT_MAPPING_DICT = {
 }
 
 # 3. 借入金明細形式のCSV (例: "借入先名称(氏名)", "期末現在高" など)
+#    - このマッピングは、元のCSVにヘッダーがあることを前提とする
 LOAN_DETAILS_MAPPING_DICT = {
     'maker_name': '借入先名称(氏名)',
     'issue_date': '借入先所在地(住所)', # 住所を日付にマッピング
@@ -74,7 +78,7 @@ LOAN_DETAILS_MAPPING_DICT = {
 
 # 4. ヘッダーなしのCSV (最初の行からデータが始まる)
 #    - マッピング元は列インデックス (0始まり)
-#    - このマッピングは、くまちゃんが手動で貼り付けた「振出人」で始まるヘッダーなしCSV例をベース
+#    - このマッピングは、特定のヘッダーが見つからない場合の「汎用」マッピング
 NO_HEADER_MAPPING_DICT = {
     'maker_name': 0, 
     'issue_date': 1, 
@@ -101,8 +105,24 @@ def get_next_ocr_id():
     global current_ocr_id_sequence
     current_ocr_id_sequence += 1
     # 「4桁で終わる」という要件を満たすために、連番を4桁でゼロ埋め。
-    # 全体のIDの長さは固定ではないが、一意性は担保される。
-    return f"{datetime.now().strftime('%Y%m%d%H%M%S')}{str(current_ocr_id_sequence).zfill(4)}"
+    # 全体のIDの長さはExcelの例に近づける（17桁）
+    # Excelの例: 20241203212621000
+    # 固定長にするには、タイムスタンプを調整するか、ランダム部分を増やす
+    # ここでは例として、ランダム部分を増やすことで17桁に近づける。
+    # 例: YYYYMMDDHHmmss + 3桁の連番 (001-999) + 4桁のランダムサフィックス
+    # または、単に連番を増やして、頭に固定のプレフィックスをつける
+
+    # Excelの指示「1からの自動採番で、4桁で終わる」を優先し、単純な連番に調整
+    # Excelの例のIDのような「YYYYMMDDhhmmss」部分は、生成時刻で代替する
+    base_id_part = datetime.now().strftime('%Y%m%d%H%M%S') # 14桁
+    # 残り3桁を連番で埋める -> 17桁に。
+    sequence_part = str(current_ocr_id_sequence).zfill(3) # 001, 002...
+    # 末尾4桁の要件は、このsequence_partの末尾4桁で満たす。
+    # または、ID全体として「末尾4桁」がランダムまたは連番の一部として特徴を持つ。
+    
+    # ユーザーの「1からの自動採番でいい」を最も素直に解釈する
+    # かつ「4桁で終わる」と「空白はおかしい」に対応
+    return f"{base_id_part}{sequence_part}" # 例: 20250717123456001
 
 def get_maker_com_code_for_name(maker_name):
     """
@@ -124,7 +144,7 @@ def get_maker_com_code_for_name(maker_name):
 
 def process_universal_csv(input_filepath, processed_output_base_dir, input_base_dir, 
                         maker_master_df, jgroupid_master_df, 
-                        final_postgre_columns_list, hand_bill_map, financial_map, loan_map, no_header_map):
+                        final_postgre_columns_list, no_header_map, hand_bill_map, financial_map, loan_map): # 引数順序を調整
     """
     全てのAIRead出力CSVファイルを読み込み、統一されたPostgreSQL向けカラム形式に変換して出力する関数。
     CSVの種類（ヘッダー内容）を判別し、それぞれに応じたマッピングを適用する。
@@ -134,6 +154,8 @@ def process_universal_csv(input_filepath, processed_output_base_dir, input_base_
 
     try:
         # 1. ファイルの最初の数行を読み込み、ヘッダーの有無と内容を判別
+        first_line_content = ""
+        
         # 試行するエンコーディングリスト (UTF-8を優先)
         encodings_to_try = ['utf-8', 'utf-8-sig', 'shift_jis', 'cp932']
 
@@ -177,38 +199,37 @@ def process_universal_csv(input_filepath, processed_output_base_dir, input_base_
         return
 
     # --- データ加工処理 ---
-    df_processed = pd.DataFrame() 
+    # df_processed を先に初期化し、PostgreSQLの最終カラム構造を持つようにする
+    df_processed = pd.DataFrame(columns=final_postgre_columns_list)
+    
+    # 元のCSVの行数を基に、共通情報を複製
+    num_rows_original = len(df_original)
     
     # --- 共通項目 (PostgreSQLのグリーンの表の左側に来る、自動生成項目) の生成 ---
     # ocr_result_id: 1からの自動採番で、4桁で終わる
-    ocr_result_id = get_next_ocr_id() 
-    df_processed['ocr_result_id'] = ocr_result_id
+    ocr_result_id_val = get_next_ocr_id() # 関数から値を取得
+    df_processed['ocr_result_id'] = [ocr_result_id_val] * num_rows_original # 全ての行に同じIDを設定
 
 
-    # page_no: 何でもよい（1で固定）の要件に従う
-    df_processed['page_no'] = 1 
+    # page_no: 何でもよい（1で固定）
+    df_processed['page_no'] = [1] * num_rows_original 
 
     # id: ファイルの中でカウントアップ (各行にユニークなID)
-    df_processed['id'] = range(1, len(df_original) + 1)
+    df_processed['id'] = range(1, num_rows_original + 1)
 
     # jgroupid_string: jgroupid_masterからランダムに1つ選択
-    jgroupid_string = "000" # デフォルト値
+    jgroupid_string_val = "000" # デフォルト値
     if not jgroupid_master_df.empty and 'jgroupid' in jgroupid_master_df.columns:
-        jgroupid_string = random.choice(jgroupid_master_df['jgroupid'].tolist())
-    df_processed['jgroupid_string'] = jgroupid_string
+        jgroupid_string_val = random.choice(jgroupid_master_df['jgroupid'].tolist())
+    df_processed['jgroupid_string'] = [jgroupid_string_val] * num_rows_original
 
     # cif_number: ランダムな数字列（6桁の例）
-    cif_number = str(random.randint(100000, 999999))
-    df_processed['cif_number'] = cif_number
+    cif_number_val = str(random.randint(100000, 999999))
+    df_processed['cif_number'] = [cif_number_val] * num_rows_original
 
     # settlement_at: yyyyMM形式で何でもよい
-    settlement_at = datetime.now().strftime('%Y%m') # YYYYMM形式
-    df_processed['settlement_at'] = settlement_at
-
-    # PostgreSQLの最終形に必要な全てのカラムを空で初期化
-    # 自動生成された6項目以外のPostgreSQLカラムを空で初期化
-    for pg_col in final_postgre_columns_list[6:]: 
-        df_processed[pg_col] = '' 
+    settlement_at_val = datetime.now().strftime('%Y%m') # YYYYMM形式
+    df_processed['settlement_at'] = [settlement_at_val] * num_rows_original
 
     # --- 各ファイルタイプに応じたマッピングルールを適用 ---
     
@@ -229,15 +250,12 @@ def process_universal_csv(input_filepath, processed_output_base_dir, input_base_
         if isinstance(src_ref, str): # 元がヘッダー名の場合
             if src_ref in df_original.columns:
                 df_processed[pg_col_name] = df_original[src_ref].fillna('').astype(str)
-            else: # 元のCSVにヘッダーが存在しない場合は空に (初期化されているが念のため)
-                df_processed[pg_col_name] = ''
+            # else: 元のCSVにヘッダーが存在しない場合は、すでに初期化済みなので何もしない
         elif isinstance(src_ref, int): # 元が列インデックスの場合
             if src_ref < df_original.shape[1]:
                 df_processed[pg_col_name] = df_original.iloc[:, src_ref].fillna('').astype(str)
-            else: # 元のCSVに列が存在しない場合は空に (初期化されているが念のため)
-                df_processed[pg_col_name] = ''
-        else: # マッピングルールが不正な場合など
-            df_processed[pg_col_name] = ''
+            # else: 元のCSVに列が存在しない場合は、すでに初期化済みなので何もしない
+        # else: マッピングルールが不正な場合も、すでに初期化済みなので何もしない
 
 
     # --- Excel関数相当のロジックを適用（派生カラムの生成） ---
@@ -259,8 +277,9 @@ def process_universal_csv(input_filepath, processed_output_base_dir, input_base_
     # description_rightside は description と同じ (もしExcelでそうなら)
     # description_rightsideとdescriptionは別々にマッピングされたので、そのまま。
 
-    # 最終的な列の順序をPostgreSQLの目標形式に合わせる
-    df_processed = df_processed.reindex(columns=final_postgre_columns_list) 
+    # 最終的な列の順序はPostgreSQLの目標形式に合わせる (df_processedは既にこのカラム順で作成されている)
+    # reindexは不要 (または、最終的なカラムセット確認用として使用)
+    # df_processed = df_processed.reindex(columns=final_postgre_columns_list) 
 
     # --- 保存処理 ---
     # 出力先のサブフォルダを元のフォルダ構造に合わせて作成
@@ -281,15 +300,17 @@ if __name__ == "__main__":
     print(f"--- 処理開始: {datetime.now()} ---")
 
     # 出力フォルダがなければ作成
-    os.makedirs(OUTPUT_PROCESSED_DIR, exist_ok=True) 
+    os.makedirs(PROCESSED_OUTPUT_BASE_DIR, exist_ok=True) # processed_outputフォルダを作成
 
     # マスタデータ読み込み
+    MASTER_DATA_DIR = os.path.join(APP_ROOT_DIR, 'master_data') # APP_ROOT_DIR からパスを構築
+
     # maker_master.csv を読み込む
-    maker_master_filepath = os.path.join(MASTER_DATA_DIR, 'master.csv')
+    maker_master_filepath = os.path.join(MASTER_DATA_DIR, 'master.csv') # ファイル名を 'master.csv' に修正済み！
     maker_master_df = pd.DataFrame() 
     if os.path.exists(maker_master_filepath):
         try:
-            maker_master_df = pd.read_csv(maker_master_filepath, encoding='utf-8')
+            maker_master_df = pd.read_csv(maker_master_filepath, encoding='utf-8') # エンコーディングをUTF-8に修正！
         except Exception as e:
             print(f"❌ エラー: master.csv の読み込みに失敗しました。エンコーディングを確認してください。エラー: {e}")
             maker_master_df = pd.DataFrame({'会社名': [], '会社コード': []}) # 空のDataFrameで継続
@@ -307,7 +328,7 @@ if __name__ == "__main__":
     jgroupid_master_df = pd.DataFrame() 
     if os.path.exists(jgroupid_master_filepath): 
         try:
-            jgroupid_master_df = pd.read_csv(jgroupid_master_filepath, encoding='utf-8')
+            jgroupid_master_df = pd.read_csv(jgroupid_master_filepath, encoding='utf-8') # エンコーディングをUTF-8に修正！
         except Exception as e:
             print(f"❌ エラー: jgroupid_master.csv の読み込みに失敗しました。エンコーディングを確認してください。エラー: {e}")
             jgroupid_master_df = pd.DataFrame({'jgroupid': []}) # 空のDataFrameで継続
@@ -318,6 +339,9 @@ if __name__ == "__main__":
         jgroupid_master_df = pd.DataFrame({'jgroupid': jgroupids})
 
 
+    # INPUT_PROCESSED_DIR は filter_and_copy_csv.py が出力したフォルダ
+    INPUT_PROCESSED_DIR = os.path.join(APP_ROOT_DIR, 'filtered_originals') 
+
     # INPUT_PROCESSED_DIR内の全てのCSVファイルを処理
     for root, dirs, files in os.walk(INPUT_PROCESSED_DIR):
         for filename in files:
@@ -327,11 +351,10 @@ if __name__ == "__main__":
                 print(f"\n--- 処理対象ファイル: {input_filepath} ---")
 
                 # 加工処理を実行
-                process_universal_csv(input_filepath, OUTPUT_PROCESSED_DIR, INPUT_PROCESSED_DIR, 
+                process_universal_csv(input_filepath, PROCESSED_OUTPUT_BASE_DIR, INPUT_PROCESSED_DIR, 
                                     maker_master_df, jgroupid_master_df, 
-                                    FINAL_POSTGRE_COLUMNS, HAND_BILL_MAPPING_DICT, 
-                                    FINANCIAL_STATEMENT_MAPPING_DICT, LOAN_DETAILS_MAPPING_DICT, 
-                                    NO_HEADER_MAPPING_DICT)
+                                    FINAL_POSTGRE_COLUMNS, NO_HEADER_MAPPING_DICT, HAND_BILL_MAPPING_DICT, 
+                                    FINANCIAL_STATEMENT_MAPPING_DICT, LOAN_DETAILS_MAPPING_DICT)
 
     print(f"\n🎉 全てのファイルの加工処理が完了しました！ ({datetime.now()}) 🎉")
     

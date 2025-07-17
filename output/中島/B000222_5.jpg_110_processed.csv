@@ -1,6 +1,0 @@
-﻿ocr_result_id,page_no,id,jgroupid_string,cif_number,settlement_at,maker_name_original,maker_name,maker_com_code,issue_date_rightside_date,issue_date,due_date_rightside_date,due_date,balance_rightside,balance,payment_bank_name_rightside,payment_bank_name,payment_bank_branch_name_rightside,payment_bank_branch_name,description_rightside,description
-,,1,000,382784,202507,借入先名称(氏名),借入先名称(氏名),,借入先所在地(住所),借入先所在地(住所),法人・代表者との関係,法人・代表者との関係,利率,利率,期末現在高,期末現在高,期中の支払利子額,期中の支払利子額,担保の内容,
-,,2,000,382784,202507,紀陽銀行／紀の川支店,紀陽銀行／紀の川支店,,和歌山市松江北2-1-4,和歌山市松江北2-1-4,,,,,60000000,60000000,1592,1592,,
-,,3,000,382784,202507,商工組合中央金庫／和歌山支店,商工組合中央金庫／和歌山支店,,和歌山市十番丁1,和歌山市十番丁1,,,,,0,0,219088,219088,,
-,,4,000,382784,202507,保証料,保証料,,,,,,,,,,19250,19250,,
-,,5,000,382784,202507,長期借入金計,長期借入金計,,,,,,,,60000000,60000000,239930,239930,,

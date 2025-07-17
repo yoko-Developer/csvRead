@@ -1,9 +1,0 @@
-﻿ocr_result_id,page_no,id,jgroupid_string,cif_number,settlement_at,maker_name_original,maker_name,maker_com_code,issue_date_rightside_date,issue_date,due_date_rightside_date,due_date,balance_rightside,balance,payment_bank_name_rightside,payment_bank_name,payment_bank_branch_name_rightside,payment_bank_branch_name,description_rightside,description
-,,1,000,205843,202507,科目,科目,,名称(氏名),名称(氏名),所在地(住所),所在地(住所),,,期末現在高,期末現在高,摘要,摘要,,
-,,2,000,205843,202507,未払金,未払金,,川崎北税務署,川崎北税務署,消費税,消費税,,,3736300,3736300,,,,
-,,3,000,205843,202507,〃,〃,,,,,,,,10575,10575,,,,
-,,4,000,205843,202507,計,計,,,,,,,,3746875,3746875,,,,
-,,5,000,205843,202507,未払費用,未払費用,,従業員給料他,従業員給料他,,,,,324653,324653,,,,
-,,6,000,205843,202507,〃,〃,,社会保険料,社会保険料,,,,,928827,928827,,,,
-,,7,000,205843,202507,計,計,,,,,,,,1253480,1253480,,,,
-,,8,000,205843,202507,計,計,,,,,,,,103042494,103042494,,,,

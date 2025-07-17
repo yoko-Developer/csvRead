@@ -1,8 +1,0 @@
-﻿ocr_result_id,page_no,id,jgroupid_string,cif_number,settlement_at,maker_name_original,maker_name,maker_com_code,issue_date_rightside_date,issue_date,due_date_rightside_date,due_date,balance_rightside,balance,payment_bank_name_rightside,payment_bank_name,payment_bank_branch_name_rightside,payment_bank_branch_name,description_rightside,description
-,,1,000,786029,202507,支払先,支払先,,振出年月日,振出年月日,支払期日,支払期日,金額,金額,支払銀行名称,支払銀行名称,支払銀行支店名,支払銀行支店名,摘要,
-,,2,000,786029,202507,(株)welzo,(株)welzo,,5.5.9,5.5.9,5.8.5,5.8.5,26417600,26417600,琉球銀行,琉球銀行,大謝名支店,大謝名支店,,
-,,3,000,786029,202507,(株)welzo,(株)welzo,,5.6.7,5.6.7,5.9.5,5.9.5,13431428,13431428,琉球銀行,琉球銀行,大謝名支店,大謝名支店,,
-,,4,000,786029,202507,(株)welzo,(株)welzo,,5.7.6,5.7.6,5.10.5,5.10.5,11898867,11898867,琉球銀行,琉球銀行,大謝名支店,大謝名支店,,
-,,5,000,786029,202507,アイリスオーヤマ(株),アイリスオーヤマ(株),,5.6.7,5.6.7,5.8.22,5.8.22,581312,581312,琉球銀行,琉球銀行,大謝名支店,大謝名支店,,
-,,6,000,786029,202507,アイリスオーヤマ(株),アイリスオーヤマ(株),,5.7.6,5.7.6,5.9.20,5.9.20,1311659,1311659,琉球銀行,琉球銀行,大謝名支店,大謝名支店,,
-,,7,000,786029,202507,合計,合計,,,,,,53640866,53640866,,,,,,

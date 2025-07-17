@@ -1,9 +1,0 @@
-﻿ocr_result_id,page_no,id,jgroupid_string,cif_number,settlement_at,maker_name_original,maker_name,maker_com_code,issue_date_rightside_date,issue_date,due_date_rightside_date,due_date,balance_rightside,balance,payment_bank_name_rightside,payment_bank_name,payment_bank_branch_name_rightside,payment_bank_branch_name,description_rightside,description
-,,1,000,759479,202507,金融機関名,金融機関名,,支店名,支店名,種類,種類,摘要,摘要,口座番号,口座番号,期末現在高,期末現在高,,
-,,2,000,759479,202507,鹿児島相互信用金庫,鹿児島相互信用金庫,,本店営業部,本店営業部,定期預金,定期預金,,,1030379,1030379,6665966,6665966,,
-,,3,000,759479,202507,〃,〃,,〃,〃,〃,〃,,,1219410,1219410,1014807,1014807,,
-,,4,000,759479,202507,（小計）,（小計）,,,,,,,,,,65846689,65846689,,
-,,5,000,759479,202507,南日本銀行,南日本銀行,,本店営業部,本店営業部,定期積金,定期積金,,,1232480,1232480,200000,200000,,
-,,6,000,759479,202507,鹿児島相互信用金庫,鹿児島相互信用金庫,,〃,〃,〃,〃,,,1455618,1455618,1600000,1600000,,
-,,7,000,759479,202507,（小計）,（小計）,,,,,,,,,,1800000,1800000,,
-,,8,000,759479,202507,計,計,,,,,,,,,,320882110,320882110,,

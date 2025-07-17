@@ -1,7 +1,0 @@
-﻿ocr_result_id,page_no,id,jgroupid_string,cif_number,settlement_at,maker_name_original,maker_name,maker_com_code,issue_date_rightside_date,issue_date,due_date_rightside_date,due_date,balance_rightside,balance,payment_bank_name_rightside,payment_bank_name,payment_bank_branch_name_rightside,payment_bank_branch_name,description_rightside,description
-,,1,000,376076,202507,借入先名称(氏名),借入先名称(氏名),,借入先所在地(住所),借入先所在地(住所),借入金法人・代表者との関係,借入金法人・代表者との関係,利率,利率,期末現在高,期末現在高,期中の支払利子額,期中の支払利子額,担保の内容,
-,,2,000,376076,202507,北洋銀行南郷通支店,北洋銀行南郷通支店,,札幌市白石区東札幌2条6丁目5-1,札幌市白石区東札幌2条6丁目5-1,,,0.5,0.5,12500000,12500000,,,,
-,,3,000,376076,202507,北陸銀行豊平支店,北陸銀行豊平支店,,札幌市豊平区豊平4条2丁目6-3,札幌市豊平区豊平4条2丁目6-3,,,0.45,0.45,9968000,9968000,,,,
-,,4,000,376076,202507,北洋銀行南郷通支店,北洋銀行南郷通支店,,札幌市白石区東札幌2条6丁目5-1,札幌市白石区東札幌2条6丁目5-1,,,0.65,0.65,4000000,4000000,,,,
-,,5,000,376076,202507,,,,長期借入金計,長期借入金計,,,,,158128000,158128000,,,,
-,,6,000,376076,202507,,,,計,計,,,,,206540000,206540000,552807,552807,,

@@ -1,6 +1,0 @@
-﻿ocr_result_id,page_no,id,jgroupid_string,cif_number,settlement_at,maker_name_original,maker_name,maker_com_code,issue_date_rightside_date,issue_date,due_date_rightside_date,due_date,balance_rightside,balance,payment_bank_name_rightside,payment_bank_name,payment_bank_branch_name_rightside,payment_bank_branch_name,description_rightside,description
-,,1,000,267870,202507,借入先名称(氏名),借入先名称(氏名),,借入先所在地(住所),借入先所在地(住所),法人・代表者との関係,法人・代表者との関係,利率,利率,期末現在高,期末現在高,期中の支払利子額,期中の支払利子額,担保の内容,
-,,2,000,267870,202507,(社債),(社債),,,,,,,,,,,,,
-,,3,000,267870,202507,第四北越/新町,第四北越/新町,,長岡市神田3-4-5,長岡市神田3-4-5,,,,,50000000,50000000,150000,150000,第2回無担保社債,
-,,4,000,267870,202507,,,,小計,小計,,,,,50000000,50000000,150000,150000,,
-,,5,000,267870,202507,,,,計,計,,,,,259277000,259277000,2123971,2123971,,

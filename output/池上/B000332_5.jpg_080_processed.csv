@@ -1,8 +1,0 @@
-﻿ocr_result_id,page_no,id,jgroupid_string,cif_number,settlement_at,maker_name_original,maker_name,maker_com_code,issue_date_rightside_date,issue_date,due_date_rightside_date,due_date,balance_rightside,balance,payment_bank_name_rightside,payment_bank_name,payment_bank_branch_name_rightside,payment_bank_branch_name,description_rightside,description
-,,1,000,510808,202507,支払先,支払先,,振出年月日,振出年月日,支払期日,支払期日,金額,金額,支払銀行名称,支払銀行名称,支払銀行支店名,支払銀行支店名,摘要,
-,,2,000,510808,202507,ローヤルテック,ローヤルテック,,R5.6.20,R5.6.20,R5.10.20,R5.10.20,3000000,3000000,みずほ銀行東大阪支店,みずほ銀行東大阪支店,,,,
-,,3,000,510808,202507,〃,〃,,R5.6.20,R5.6.20,R5.10.20,R5.10.20,965359,965359,みずほ銀行東大阪支店,みずほ銀行東大阪支店,,,,
-,,4,000,510808,202507,〃,〃,,R5.7.20,R5.7.20,R5.11.20,R5.11.20,440473,440473,みずほ銀行東大阪支店,みずほ銀行東大阪支店,,,,
-,,5,000,510808,202507,ローヤルテック(株),ローヤルテック(株),,R5.8.21,R5.8.21,R5.12.20,R5.12.20,803123,803123,みずほ銀行東大阪支店,みずほ銀行東大阪支店,,,,
-,,6,000,510808,202507,支払手形計,支払手形計,,,,,,37666029,37666029,,,,,,
-,,7,000,510808,202507,計,計,,,,,,37666029,37666029,,,,,,

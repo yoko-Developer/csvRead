@@ -1,8 +1,0 @@
-﻿ocr_result_id,page_no,id,jgroupid_string,cif_number,settlement_at,maker_name_original,maker_name,maker_com_code,issue_date_rightside_date,issue_date,due_date_rightside_date,due_date,balance_rightside,balance,payment_bank_name_rightside,payment_bank_name,payment_bank_branch_name_rightside,payment_bank_branch_name,description_rightside,description
-,,1,000,527078,202507,(特別利益),(特別利益),,,,,,,,,,,,,
-,,2,000,527078,202507,特別利益計,特別利益計,,0.0,0.0,,,,,,,,,,
-,,3,000,527078,202507,(特別損失),(特別損失),,,,,,,,,,,,,
-,,4,000,527078,202507,特別損失計,特別損失計,,0.0,0.0,,,,,,,,,,
-,,5,000,527078,202507,税引前当期純利益(損失),税引前当期純利益(損失),,,,"▲4,494,082","▲4,494,082",,,,,,,,
-,,6,000,527078,202507,法人税、住民税及び事業税,法人税、住民税及び事業税,,,,"70,000","70,000",,,,,,,,
-,,7,000,527078,202507,当期純利益(損失),当期純利益(損失),,,,"▲4,564,082","▲4,564,082",,,,,,,,

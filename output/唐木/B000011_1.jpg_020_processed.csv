@@ -1,7 +1,0 @@
-﻿ocr_result_id,page_no,id,jgroupid_string,cif_number,settlement_at,maker_name_original,maker_name,maker_com_code,issue_date_rightside_date,issue_date,due_date_rightside_date,due_date,balance_rightside,balance,payment_bank_name_rightside,payment_bank_name,payment_bank_branch_name_rightside,payment_bank_branch_name,description_rightside,description
-,,1,000,155364,202507,振出人,振出人,,振出年月日,振出年月日,支払期日,支払期日,金額,金額,支払銀行名称,支払銀行名称,支払銀行支店名,支払銀行支店名,割引銀行名及び支店名等,摘要
-,,2,000,155364,202507,(株)盛永組,(株)盛永組,,R.4-11-25,R.4-11-25,R.5-2-25,R.5-2-25,3400000,3400000,北陸銀行,北陸銀行,旭川支店,旭川支店,北保証サービス,
-,,3,000,155364,202507,(株)盛永組,(株)盛永組,,R.4-12-26,R.4-12-26,R.5-3-25,R.5-3-25,810000,810000,北陸銀行,北陸銀行,旭川支店,旭川支店,北保証サービス,
-,,4,000,155364,202507,(株)廣野組,(株)廣野組,,R.5-1-25,R.5-1-25,R.5-3-25,R.5-3-25,700000,700000,北海道銀行,北海道銀行,旭川支店,旭川支店,,手持ち手形
-,,5,000,155364,202507,小計,小計,,,,,,4910000,4910000,,,,,,
-,,6,000,155364,202507,計,計,,,,,,4910000,4910000,,,,,,

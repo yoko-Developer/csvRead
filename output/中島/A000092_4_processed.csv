@@ -1,6 +1,0 @@
-﻿ocr_result_id,page_no,id,jgroupid_string,cif_number,settlement_at,maker_name_original,maker_name,maker_com_code,issue_date_rightside_date,issue_date,due_date_rightside_date,due_date,balance_rightside,balance,payment_bank_name_rightside,payment_bank_name,payment_bank_branch_name_rightside,payment_bank_branch_name,description_rightside,description
-,,1,000,905174,202507,当期首残高,当期首残高,,"18,000,000","18,000,000","2,904,000","2,904,000","15,490,099","15,490,099","4,000,000","4,000,000","8,586,099","8,586,099","▲4,755,000","28,735,099"
-,,2,000,905174,202507,当期変動額,当期変動額,,,,,,,,,,,,,
-,,3,000,905174,202507,当期純損益金,当期純損益金,,,,,,"511,480","511,480",,,"511,480","511,480",,"511,480"
-,,4,000,905174,202507,当期変動額合計,当期変動額合計,,,,,,"511,480","511,480",,,"511,480","511,480",,"511,480"
-,,5,000,905174,202507,当期末残高,当期末残高,,"18,000,000","18,000,000","2,904,000","2,904,000","16,001,579","16,001,579","4,000,000","4,000,000","9,097,579","9,097,579","▲4,755,000","29,246,579"

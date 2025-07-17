@@ -1,8 +1,0 @@
-﻿ocr_result_id,page_no,id,jgroupid_string,cif_number,settlement_at,maker_name_original,maker_name,maker_com_code,issue_date_rightside_date,issue_date,due_date_rightside_date,due_date,balance_rightside,balance,payment_bank_name_rightside,payment_bank_name,payment_bank_branch_name_rightside,payment_bank_branch_name,description_rightside,description
-,,1,000,373405,202507,借入先名称(氏名),借入先名称(氏名),,借入先所在地(住所),借入先所在地(住所),法人・代表者との関係,法人・代表者との関係,利率,利率,期末現在高,期末現在高,期中の支払利子額,期中の支払利子額,担保の内容,
-,,2,000,373405,202507,NECキャピタルソリューション,NECキャピタルソリューション,,,,,,,,5735400,5735400,0,0,"リース債務@72,600円×79回",
-,,3,000,373405,202507,その他計,その他計,,,,,,,,5735400,5735400,0,0,,
-,,4,000,373405,202507,,,,,,,,,,,,1378740,1378740,リコーリース保証料,
-,,5,000,373405,202507,,,,,,,,,,,,1376176,1376176,保証料振替,
-,,6,000,373405,202507,その他計,その他計,,,,,,,,0,0,2754916,2754916,,
-,,7,000,373405,202507,,,,合計,合計,,,,,1321212362,1321212362,19785728,19785728,,

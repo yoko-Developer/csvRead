@@ -1,8 +1,0 @@
-﻿ocr_result_id,page_no,id,jgroupid_string,cif_number,settlement_at,maker_name_original,maker_name,maker_com_code,issue_date_rightside_date,issue_date,due_date_rightside_date,due_date,balance_rightside,balance,payment_bank_name_rightside,payment_bank_name,payment_bank_branch_name_rightside,payment_bank_branch_name,description_rightside,description
-,,1,000,699751,202507,当期首残高,当期首残高,,"20,000,000","20,000,000",,,"3,500,000","3,500,000",,,,,"1,500,000","607,387,328"
-,,2,000,699751,202507,当期変動額,当期変動額,,,,,,,,,,,,,
-,,3,000,699751,202507,剰余金の配当,剰余金の配当,,,,,,,,,,,,,"▲3,000,000"
-,,4,000,699751,202507,剰余金から準備金への振替,剰余金から準備金への振替,,,,,,"300,000","300,000",,,,,,"▲300,000"
-,,5,000,699751,202507,当期純利益,当期純利益,,,,,,,,,,,,,"103,953,224"
-,,6,000,699751,202507,当期変動額合計,当期変動額合計,,-,-,-,-,"300,000","300,000",-,-,-,-,-,"100,653,224"
-,,7,000,699751,202507,当期末残高,当期末残高,,"20,000,000","20,000,000",,,"3,800,000","3,800,000",,,,,"1,500,000","708,040,552"

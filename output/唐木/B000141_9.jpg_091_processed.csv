@@ -1,9 +1,0 @@
-﻿ocr_result_id,page_no,id,jgroupid_string,cif_number,settlement_at,maker_name_original,maker_name,maker_com_code,issue_date_rightside_date,issue_date,due_date_rightside_date,due_date,balance_rightside,balance,payment_bank_name_rightside,payment_bank_name,payment_bank_branch_name_rightside,payment_bank_branch_name,description_rightside,description
-,,1,000,922274,202507,科目,科目,,名称(氏名),名称(氏名),所在地(住所),所在地(住所),,,期末現在高,期末現在高,摘要,摘要,,
-,,2,000,922274,202507,,,,未払金計,未払金計,,,,,10329511,10329511,,,,
-,,3,000,922274,202507,未払費用,未払費用,,従業員,従業員,,,,,234378,234378,R5/3決算分A給料手当他,R5/3決算分A給料手当他,,
-,,4,000,922274,202507,〃,〃,,従業員,従業員,,,,,690906,690906,R5/3決算分A法定福利費,R5/3決算分A法定福利費,,
-,,5,000,922274,202507,〃,〃,,従業員,従業員,,,,,366635,366635,R5/3決算分B賃金手当,R5/3決算分B賃金手当,,
-,,6,000,922274,202507,〃,〃,,従業員,従業員,,,,,1463889,1463889,R5/3決算分B法定福利費,R5/3決算分B法定福利費,,
-,,7,000,922274,202507,,,,未払費用計,未払費用計,,,,,2755808,2755808,,,,
-,,8,000,922274,202507,計,計,,,,,,,,,,,,,

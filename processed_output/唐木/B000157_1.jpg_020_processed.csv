@@ -1,0 +1,7 @@
+﻿ocr_result_id,page_no,id,jgroupid_string,cif_number,settlement_at,maker_name_original,maker_name,maker_com_code,issue_date_rightside_date,issue_date,due_date_rightside_date,due_date,balance_rightside,balance,payment_bank_name_rightside,payment_bank_name,payment_bank_branch_name_rightside,payment_bank_branch_name,description_rightside,description
+,,1,000,713767,202507,振出人,振出人,001,振出年月日,振出年月日,支払期日,支払期日,金額,金額,支払銀行名称,支払銀行名称,支払銀行支店名,支払銀行支店名,割引銀行名及び支店名等,摘要
+,,2,000,713767,202507,森寅鋼業(株),森寅鋼業(株),1338,令4.6.30,令4.6.30,令4.10.31,令4.10.31,219220,219220,,,,,,
+,,3,000,713767,202507,〃,〃,048,令4.7.29,令4.7.29,令4.11.30,令4.11.30,250124,250124,,,,,,
+,,4,000,713767,202507,〃,〃,048,令4.8.31,令4.8.31,令4.12.31,令4.12.31,510596,510596,,,,,,
+,,5,000,713767,202507,〃,〃,048,令4.9.30,令4.9.30,令5.1.31,令5.1.31,161099,161099,,,,,,
+,,6,000,713767,202507,合計,合計,020,,,,,1141039,1141039,,,,,,

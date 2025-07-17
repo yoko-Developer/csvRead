@@ -1,0 +1,7 @@
+﻿ocr_result_id,page_no,id,jgroupid_string,cif_number,settlement_at,maker_name_original,maker_name,maker_com_code,issue_date_rightside_date,issue_date,due_date_rightside_date,due_date,balance_rightside,balance,payment_bank_name_rightside,payment_bank_name,payment_bank_branch_name_rightside,payment_bank_branch_name,description_rightside,description
+,,1,000,562412,202507,振出人,振出人,001,振出年月日,振出年月日,支払期日,支払期日,金額,金額,支払銀行名称,支払銀行名称,支払銀行支店名,支払銀行支店名,割引銀行名及び支店名等,摘要
+,,2,000,562412,202507,興建産業(株),興建産業(株),1133,令5.6.30,令5.6.30,令5.11.5,令5.11.5,4848140,4848140,きらぼし銀行,きらぼし銀行,,,,
+,,3,000,562412,202507,三洋コンクリート工業(株),三洋コンクリート工業(株),1134,,,,,1373339,1373339,千葉銀行,千葉銀行,,,,電子債権2枚
+,,4,000,562412,202507,(株)角屋ハウジング,(株)角屋ハウジング,1135,令5.6.20,令5.6.20,令5.9.30,令5.9.30,1228645,1228645,山梨中央銀行,山梨中央銀行,,,,
+,,5,000,562412,202507,(有)興石開発,(有)興石開発,1136,令5.6.30,令5.6.30,令5.9.29,令5.9.29,300000,300000,甲府信用金庫,甲府信用金庫,,,,
+,,6,000,562412,202507,合計,合計,020,,,,,7750124,7750124,,,,,,

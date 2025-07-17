@@ -1,0 +1,7 @@
+﻿ocr_result_id,page_no,id,jgroupid_string,cif_number,settlement_at,maker_name_original,maker_name,maker_com_code,issue_date_rightside_date,issue_date,due_date_rightside_date,due_date,balance_rightside,balance,payment_bank_name_rightside,payment_bank_name,payment_bank_branch_name_rightside,payment_bank_branch_name,description_rightside,description
+,,1,000,888966,202507,振出人,振出人,001,振出年月日,振出年月日,支払期日,支払期日,金額,金額,支払銀行名称,支払銀行名称,支払銀行支店名,支払銀行支店名,割引銀行名及び支店名等,摘要
+,,2,000,888966,202507,割引手形,割引手形,1092,,,,,,,,,,,,
+,,3,000,888966,202507,不二倉業(株),不二倉業(株),1908,,,,,10000000,10000000,,,,,佐賀銀行久留米,割引手形
+,,4,000,888966,202507,不二倉業(株),不二倉業(株),1908,,,,,2869520,2869520,,,,,筑邦銀行本店,割引手形
+,,5,000,888966,202507,計,計,037,,,,,12869520,12869520,,,,,,
+,,6,000,888966,202507,合計,合計,020,,,,,,,,,,,,

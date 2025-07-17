@@ -1,0 +1,6 @@
+﻿ocr_result_id,page_no,id,jgroupid_string,cif_number,settlement_at,maker_name_original,maker_name,maker_com_code,issue_date_rightside_date,issue_date,due_date_rightside_date,due_date,balance_rightside,balance,payment_bank_name_rightside,payment_bank_name,payment_bank_branch_name_rightside,payment_bank_branch_name,description_rightside,description
+,,1,000,462934,202507,振出人,振出人,001,振出年月日,振出年月日,支払期日,支払期日,金額,金額,支払銀行名称,支払銀行名称,支払銀行支店名,支払銀行支店名,割引銀行名及び支店名等,摘要
+,,2,000,462934,202507,犬飼タオル(株),犬飼タオル(株),1852,令4.11.28,令4.11.28,令5.2.28,令5.2.28,2992036,2992036,八十二,八十二,名古屋,名古屋,,
+,,3,000,462934,202507,野村タオル(株),野村タオル(株),1856,令4.11.28,令4.11.28,令5.2.28,令5.2.28,185124,185124,三菱UFJ,三菱UFJ,名古屋中央,名古屋中央,,
+,,4,000,462934,202507,(小計(割引手形)),(小計(割引手形)),1117,,,,,3177160,3177160,,,,,,
+,,5,000,462934,202507,計,計,037,,,,,12105833,12105833,,,,,,

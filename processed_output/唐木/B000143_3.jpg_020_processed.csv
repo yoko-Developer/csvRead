@@ -1,0 +1,6 @@
+﻿ocr_result_id,page_no,id,jgroupid_string,cif_number,settlement_at,maker_name_original,maker_name,maker_com_code,issue_date_rightside_date,issue_date,due_date_rightside_date,due_date,balance_rightside,balance,payment_bank_name_rightside,payment_bank_name,payment_bank_branch_name_rightside,payment_bank_branch_name,description_rightside,description
+,,1,000,500873,202507,振出人,振出人,001,振出年月日,振出年月日,支払期日,支払期日,金額,金額,支払銀行名称,支払銀行名称,支払銀行支店名,支払銀行支店名,割引銀行名及び支店名等,摘要
+,,2,000,500873,202507,(株)オダ,(株)オダ,1219,5.9.25,5.9.25,5.12.25,5.12.25,2884579,2884579,名古屋銀行,名古屋銀行,内田橋文店,内田橋文店,,
+,,3,000,500873,202507,(株)愛洋産柴,(株)愛洋産柴,1223,5.9.29,5.9.29,6.1.20,6.1.20,1243427,1243427,三菱UEI銀行,三菱UEI銀行,大曽根支店,大曽根支店,,
+,,4,000,500873,202507,三光産楽(株),三光産楽(株),1224,5.9.29,5.9.29,6.1.31,6.1.31,3540000,3540000,三井住友銀行,三井住友銀行,青山支店,青山支店,,
+,,5,000,500873,202507,計,計,037,,,,,62451449,62451449,,,,,,

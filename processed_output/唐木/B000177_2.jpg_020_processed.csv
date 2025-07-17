@@ -1,4 +1,3 @@
 ﻿ocr_result_id,page_no,id,jgroupid_string,cif_number,settlement_at,maker_name_original,maker_name,maker_com_code,issue_date_rightside_date,issue_date,due_date_rightside_date,due_date,balance_rightside,balance,payment_bank_name_rightside,payment_bank_name,payment_bank_branch_name_rightside,payment_bank_branch_name,description_rightside,description
-20250717125008298,1,1,000,866474,202507,振出人,振出人,001,振出年月日,振出年月日,支払期日,支払期日,金額,金額,支払銀行名称,支払銀行名称,支払銀行支店名,支払銀行支店名,割引銀行名及び支店名等,摘要
-20250717125008298,1,2,000,866474,202507,日生建設(株),日生建設(株),1461,,,,,89890000,89890000,,,,,,
-20250717125008298,1,3,000,866474,202507,合計,合計,020,,,,,89890000,89890000,,,,,,
+0298,1,1,019,302979,202507,日生建設(株),日生建設(株),1460,,,,,89890000,89890000,,,,,,
+0298,1,2,019,302979,202507,合計,合計,019,,,,,89890000,89890000,,,,,,

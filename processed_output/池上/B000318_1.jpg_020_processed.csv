@@ -1,5 +1,4 @@
 ﻿ocr_result_id,page_no,id,jgroupid_string,cif_number,settlement_at,maker_name_original,maker_name,maker_com_code,issue_date_rightside_date,issue_date,due_date_rightside_date,due_date,balance_rightside,balance,payment_bank_name_rightside,payment_bank_name,payment_bank_branch_name_rightside,payment_bank_branch_name,description_rightside,description
-20250717125013515,1,1,000,185619,202507,振出人,振出人,001,振出年月日,振出年月日,支払期日,支払期日,金額,金額,支払銀行名称,支払銀行名称,支払銀行支店名,支払銀行支店名,割引銀行名及び支店名等,摘要
-20250717125013515,1,2,000,185619,202507,(株)更科商店,(株)更科商店,2539,,,,,235366,235366,,,,,,
-20250717125013515,1,3,000,185619,202507,長谷製菓(株),長谷製菓(株),2540,,,,,6105730,6105730,,,,,,
-20250717125013515,1,4,000,185619,202507,合計,合計,020,,,,,6341096,6341096,,,,,,
+0515,1,1,050,899685,202507,(株)更科商店,(株)更科商店,2538,,,,,235366,235366,,,,,,
+0515,1,2,050,899685,202507,長谷製菓(株),長谷製菓(株),2539,,,,,6105730,6105730,,,,,,
+0515,1,3,050,899685,202507,合計,合計,019,,,,,6341096,6341096,,,,,,

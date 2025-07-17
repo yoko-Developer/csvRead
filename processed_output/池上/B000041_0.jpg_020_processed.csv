@@ -1,5 +1,4 @@
 ﻿ocr_result_id,page_no,id,jgroupid_string,cif_number,settlement_at,maker_name_original,maker_name,maker_com_code,issue_date_rightside_date,issue_date,due_date_rightside_date,due_date,balance_rightside,balance,payment_bank_name_rightside,payment_bank_name,payment_bank_branch_name_rightside,payment_bank_branch_name,description_rightside,description
-0479,1,1,014,805503,202507,く裏書手形>,く裏書手形>,456,,,,,,,,,,,,
-0479,1,2,014,805503,202507,別紙明細,別紙明細,457,,,,,69660895.0,69660895.0,,,,,,
-0479,1,3,014,805503,202507,,,,,,,,69660895.0,69660895.0,計,計,,,,
-0479,1,4,014,805503,202507,計,計,135,,,,,69660895.0,69660895.0,,,,,,
+0479,1,1,014,285479,202507,く裏書手形>,く裏書手形>,452,,,,,,,,,,,,
+0479,1,2,014,285479,202507,別紙明細,別紙明細,453,,,,,69660895,69660895,,,,,,
+0479,1,3,014,285479,202507,,,,,,,,69660895,69660895,計,計,,,,

@@ -1,4 +1,3 @@
 ﻿ocr_result_id,page_no,id,jgroupid_string,cif_number,settlement_at,maker_name_original,maker_name,maker_com_code,issue_date_rightside_date,issue_date,due_date_rightside_date,due_date,balance_rightside,balance,payment_bank_name_rightside,payment_bank_name,payment_bank_branch_name_rightside,payment_bank_branch_name,description_rightside,description
-0184,1,1,091,691821,202507,日立Astemo(株),日立Astemo(株),193,5.3.31,5.3.31,5.8.31,5.8.31,1207011,1207011,みずほ銀行,みずほ銀行,,,,
-0184,1,2,091,691821,202507,電子記録債権計,電子記録債権計,490,,,,,109045368,109045368,,,,,,
-0184,1,3,091,691821,202507,計,計,135,,,,,116524392,116524392,,,,,,
+0184,1,1,091,189630,202507,日立Astemo(株),日立Astemo(株),189,5.3.31,5.3.31,5.8.31,5.8.31,1207011,1207011,みずほ銀行,みずほ銀行,,,,
+0184,1,2,091,189630,202507,電子記録債権計,電子記録債権計,486,,,,,109045368,109045368,,,,,,

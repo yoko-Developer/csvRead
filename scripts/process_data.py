@@ -13,7 +13,7 @@ SEARCH_RESULT_OUTPUT_BASE_DIR = os.path.join(APP_ROOT_DIR, 'filtered_originals')
 PROCESSED_OUTPUT_BASE_DIR = os.path.join(APP_ROOT_DIR, 'processed_output') 
 MASTER_DATA_DIR = os.path.join(APP_ROOT_DIR, 'master_data')
 
-# ★★★ FINAL_POSTGRE_COLUMNS はお客様が提示した23カラムのリストに完全に一致！これが真の最終形！ ★★★
+# 23カラム
 FINAL_POSTGRE_COLUMNS = [
     'ocr_result_id', 'page_no', 'id', 'jgroupid_string', 'cif_number', 'settlement_at',
     'maker_name_original', 'maker_name', 'maker_com_code',
@@ -35,7 +35,6 @@ FINAL_POSTGRE_COLUMNS = [
 
 
 # --- 各CSVファイル形式ごとのマッピングルールを定義 ---
-# ★★★ HAND_BILL_MAPPING_DICT はFINAL_POSTGRE_COLUMNSの23カラムに合わせて調整！ ★★★
 HAND_BILL_MAPPING_DICT = {
     'maker_name': '振出人',
     'issue_date': '振出年月日',                    
@@ -76,12 +75,11 @@ NO_HEADER_MAPPING_DICT = {
 
 
 # --- 関数定義 ---
-# get_ocr_result_id_for_group はファイルグループ名を引数として受け取る
 # ocr_id_mapping と _ocr_id_sequence_counter はメイン処理で初期化し、グローバル変数化
 ocr_id_mapping = {}
 _ocr_id_sequence_counter = 0 
 
-def get_ocr_result_id_for_group(file_group_root_name): # 引数名を修正 (例: B000001)
+def get_ocr_result_id_for_group(file_group_root_name): 
     """
     ファイルグループ名（例: B000001）に基づいて、yyyymmddhhmmsssss0 形式のocr_result_idを生成または取得する。
     """
@@ -89,21 +87,15 @@ def get_ocr_result_id_for_group(file_group_root_name): # 引数名を修正 (例
     global _ocr_id_sequence_counter
 
     if file_group_root_name not in ocr_id_mapping:
-        # 新しいファイルグループの場合、現在日時と新しいシーケンス番号でIDを生成
         current_time_str = datetime.now().strftime('%Y%m%d%H%M') # yyyymmddhhmm
         
-        # sssss (5桁シーケンス番号)。末尾1桁は0固定、残り4桁を通し番号 (0000, 0010, 0020...)
-        # 「ファイルごとに2桁目を0から昇順に」 -> 00000, 00010, 00020, ... の形式
-        # _ocr_id_sequence_counter * 10 で 0, 10, 20, ... を生成し、5桁ゼロ埋め
         sequence_part_int = _ocr_id_sequence_counter * 10
-        # 5桁に収めるため、最大99990までを許容（00000から99990）
-        if sequence_part_int > 99999: # 万が一5桁を超えた場合、リセットやエラーハンドリングも検討可能
-            sequence_part_int = sequence_part_int % 100000 # 5桁に丸める
+        if sequence_part_int > 99999: 
+            sequence_part_int = sequence_part_int % 100000 
         
         sequence_part_str = str(sequence_part_int).zfill(5) 
         
-        # new_ocr_id = f"{current_time_str}{sequence_part_str[:-1]}0" # 最後の1桁を0で固定 (これは正しい)
-        new_ocr_id = f"{current_time_str}{sequence_part_str}" # ocr_result_id は sssss0 形式なので、sssss の部分を生成し、その末尾は0にする。
+        new_ocr_id = f"{current_time_str}{sequence_part_str}" # 18桁形式 yyyymmddhhmmsssss0
 
         ocr_id_mapping[file_group_root_name] = new_ocr_id
         _ocr_id_sequence_counter += 1
@@ -151,11 +143,11 @@ def get_maker_com_code_for_name(maker_name):
 
 
 def process_universal_csv(input_filepath, processed_output_base_dir, input_base_dir, 
-                        maker_master_df, ocr_id_map_for_groups, current_file_group_root_name, # 引数名を修正 (例: B000001)
+                        maker_master_df, ocr_id_map_for_groups, current_file_group_root_name, 
                         final_postgre_columns_list, no_header_map, hand_bill_map, financial_map, loan_map):
     """
-    全てのAIRead出力CSVファイルを読み込み、統一されたPostgreSQL向けカラム形式に変換して出力する関数。
-    CSVの種類（ヘッダー内容）を判別し、それぞれに応じたマッピングを適用する。
+    全てのAIRead出力CSVファイルを読み込み、統一されたPostgreSQL向けカラム形式に変換して出力する関数
+    CSVの種類（ヘッダー内容）を判別し、それぞれに応じたマッピングを適用する
     """
     df_original = None
     file_type = "不明" 
@@ -224,11 +216,11 @@ def process_universal_csv(input_filepath, processed_output_base_dir, input_base_
     print(f"  ℹ️ 「〃」マークを直上データで埋め、元々ブランクだった箇所は維持しました。")
 
     # 合計行の削除ロジック
-    keywords_to_delete = ["合計", "小計", "計", "手持手形計", "割引手形計"] # 手形計も追加
+    keywords_to_delete = ["合計", "小計", "計", "手持手形計", "割引手形計"] 
     
     filter_conditions = []
     # str.contains() を使用し、正規表現を適用
-    keywords_regex = r'|'.join([re.escape(k) for k in keywords_to_delete]) # リストの各要素をエスケープしてOR結合
+    keywords_regex = r'|'.join([re.escape(k) for k in keywords_to_delete]) 
     
     if file_type == "手形情報":
         if '振出人' in df_data_rows.columns:
@@ -252,7 +244,7 @@ def process_universal_csv(input_filepath, processed_output_base_dir, input_base_
     
     num_rows_to_process = len(df_data_rows) 
     
-    # df_processed の初期化を最終調整
+    # df_processed の初期化
     df_processed = pd.DataFrame('', index=range(num_rows_to_process), columns=final_postgre_columns_list)
 
 
@@ -264,10 +256,12 @@ def process_universal_csv(input_filepath, processed_output_base_dir, input_base_
 
     df_processed['id'] = range(1, num_rows_to_process + 1)
 
-    jgroupid_string_val = get_next_jgroupid_string() 
-    df_processed['jgroupid_string'] = [jgroupid_string_val] * num_rows_to_process
+    # ★★★ jgroupid_string を固定値 '001' に変更 ★★★
+    df_processed['jgroupid_string'] = ['001'] * num_rows_to_process
 
-    cif_number_val = str(random.randint(100000, 999999))
+    # ★★★ cif_number をファイル名から抽出した6桁に変更 ★★★
+    # current_file_group_root_name は "B000001" の形式なので、先頭の'B'を除いた6桁を取得
+    cif_number_val = current_file_group_root_name[1:] # 'B'を除いた部分
     df_processed['cif_number'] = [cif_number_val] * num_rows_to_process
 
     settlement_at_val = datetime.now().strftime('%Y%m') 
@@ -314,10 +308,6 @@ def process_universal_csv(input_filepath, processed_output_base_dir, input_base_
     
     df_processed['maker_com_code'] = df_processed['maker_name'].apply(get_maker_com_code_for_name)
 
-    # issue_date_original, issue_date, due_date_original, due_date, balance_original, balance
-    # issue_date, due_date, balance は HAND_BILL_MAPPING_DICT または NO_HEADER_MAPPING_DICT で直接マッピングされている
-    # issue_date_original, due_date_original, balance_original はそれらからのコピー
-
     df_processed['issue_date_original'] = df_processed['issue_date'].copy() 
     df_processed['due_date_original'] = df_processed['due_date'].copy()   
 
@@ -334,11 +324,6 @@ def process_universal_csv(input_filepath, processed_output_base_dir, input_base_
     df_processed['balance'] = df_processed['balance'].apply(clean_balance_no_comma)
     df_processed['balance_original'] = df_processed['balance'].copy() 
 
-
-    # paying_bank_name_original, paying_bank_name, paying_bank_branch_name_original, paying_bank_branch_name
-    # discount_bank_name_original, discount_bank_name, description_original, description
-    # これらのカラムは HAND_BILL_MAPPING_DICT または NO_HEADER_MAPPING_DICT で直接マッピングされている
-    
     df_processed['paying_bank_name_original'] = df_processed['paying_bank_name'].copy() 
     df_processed['paying_bank_branch_name_original'] = df_processed['paying_bank_branch_name'].copy() 
     df_processed['discount_bank_name_original'] = df_processed['discount_bank_name'].copy() 
@@ -402,29 +387,27 @@ if __name__ == "__main__":
 
     INPUT_PROCESSED_DIR = os.path.join(APP_ROOT_DIR, 'filtered_originals') 
 
-    # ★★★ ocr_result_id のマッピングを事前に生成するロジック ★★★
+    # ★★★ ocr_result_id のマッピングを事前に生成するロジック（ファイルグループのルート名抽出） ★★★
     print("\n--- ocr_result_id マッピング事前生成開始 ---")
     ocr_id_mapping = {}
     _ocr_id_sequence_counter = 0 
     
-    # 対象となる全ファイルをリストアップし、ファイルグループでソート
-    all_target_file_groups_root = set() # ファイルグループのルート名 (例: B000001) を格納するセット
+    all_target_file_groups_root = set() 
     for root, dirs, files in os.walk(INPUT_PROCESSED_DIR):
         for filename in files:
             if filename.lower().endswith('.csv') and not filename.lower().endswith('_processed.csv'):
                 # ファイル名から「ファイルグループのルート名」を抽出 (例: B000001)
                 # B000001_2.jpg_020.csv -> B000001
-                match = re.match(r'^(B\d{6})_(\d)\.jpg_020\.csv$', filename, re.IGNORECASE)
+                match = re.match(r'^(B\d{6})_.*\.jpg_020\.csv$', filename, re.IGNORECASE) # ★★★ 正規表現を修正！_ページ.jpg の部分も考慮 ★★★
                 if match:
-                    all_target_file_groups_root.add(match.group(1)) # B000001 の部分をセットに追加
+                    all_target_file_groups_root.add(match.group(1)) 
                 else:
                     print(f"  ℹ️ ファイル名パターンに合致しないファイル: {filename} はocr_result_id生成対象外です。")
                     
-    sorted_file_groups_root = sorted(list(all_target_file_groups_root)) # ソートする
+    sorted_file_groups_root = sorted(list(all_target_file_groups_root)) 
     
-    # 昇順にソートされたファイルグループに対して ocr_result_id を割り当てる
     for group_root_name in sorted_file_groups_root:
-        get_ocr_result_id_for_group(group_root_name) # この関数が ocr_id_mapping を更新する
+        get_ocr_result_id_for_group(group_root_name) 
     
     print("--- ocr_result_id マッピング事前生成完了 ---")
     print(f"生成された ocr_result_id マッピング (最初の5つ): {list(ocr_id_mapping.items())[:5]}...")
@@ -438,16 +421,16 @@ if __name__ == "__main__":
 
                 # 現在のファイルのファイルグループのルート名を抽出
                 current_file_group_root_name = None
-                match = re.match(r'^(B\d{6})_(\d)\.jpg_020\.csv$', filename, re.IGNORECASE)
+                match = re.match(r'^(B\d{6})_.*\.jpg_020\.csv$', filename, re.IGNORECASE) # ★★★ 正規表現を修正！_ページ.jpg の部分も考慮 ★★★
                 if match:
-                    current_file_group_root_name = match.group(1) # B000001 の部分
+                    current_file_group_root_name = match.group(1) 
                 
                 if current_file_group_root_name is None:
                     print(f"  ⚠️ 警告: ファイル {filename} のファイルグループのルート名を特定できませんでした。このファイルはスキップします。")
                     continue 
 
                 process_universal_csv(input_filepath, PROCESSED_OUTPUT_BASE_DIR, INPUT_PROCESSED_DIR, 
-                                    maker_master_df, ocr_id_mapping, current_file_group_root_name, # 追加引数を渡す
+                                    maker_master_df, ocr_id_mapping, current_file_group_root_name, 
                                     FINAL_POSTGRE_COLUMNS, NO_HEADER_MAPPING_DICT, HAND_BILL_MAPPING_DICT, 
                                     FINANCIAL_STATEMENT_MAPPING_DICT, LOAN_DETAILS_MAPPING_DICT)
 

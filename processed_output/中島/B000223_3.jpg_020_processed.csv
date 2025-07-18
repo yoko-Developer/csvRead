@@ -1,3 +1,3 @@
-﻿ocr_result_id,page_no,id,jgroupid_string,cif_number,settlement_at,maker_name_original,maker_name,maker_com_code,issue_date_rightside_date,issue_date,due_date_rightside_date,due_date,balance_rightside,balance,payment_bank_name_rightside,payment_bank_name,payment_bank_branch_name_rightside,payment_bank_branch_name,description_rightside,description
-0090,1,1,090,927855,202507,早瀬工業(株),早瀬工業(株),607,R5.3.20,R5.3.20,R5.7.10,R5.7.10,114869,114869,,,,,,
-0090,1,2,090,927855,202507,小田建材店(有),小田建材店(有),608,R5.5.31,R5.5.31,R5.9.12,R5.9.12,109593,109593,,,,,,
+﻿ocr_result_id,page_no,id,jgroupid_string,cif_number,settlement_at,maker_name_original,maker_name,maker_com_code,issue_date_original,issue_date,due_date_original,due_date,balance_original,balance,paying_bank_name_original,paying_bank_name,paying_bank_branch_name_original,paying_bank_branch_name,discount_bank_name_original,discount_bank_name,description_original,description
+0090,1,1,090,674602,202507,早瀬工業(株),早瀬工業(株),607,R5.3.20,R5.3.20,R5.7.10,R5.7.10,114869,114869,,,,,,,,
+0090,1,2,090,674602,202507,小田建材店(有),小田建材店(有),608,R5.5.31,R5.5.31,R5.9.12,R5.9.12,109593,109593,,,,,,,,

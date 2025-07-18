@@ -1,4 +1,4 @@
-﻿ocr_result_id,page_no,id,jgroupid_string,cif_number,settlement_at,maker_name_original,maker_name,maker_com_code,issue_date_rightside_date,issue_date,due_date_rightside_date,due_date,balance_rightside,balance,payment_bank_name_rightside,payment_bank_name,payment_bank_branch_name_rightside,payment_bank_branch_name,description_rightside,description
-0382,1,1,010,392376,202507,受取手形,受取手形,235,,,,,,,,,,,,
-0382,1,2,010,392376,202507,不二倉業(株),不二倉業(株),999,4.3.31,4.3.31,4.7.31,4.7.31,5000000,5000000,,,,,,
-0382,1,3,010,392376,202507,不二倉業(株),不二倉業(株),999,4.3.31,4.3.31,4.7.31,4.7.31,1816580,1816580,,,,,,
+﻿ocr_result_id,page_no,id,jgroupid_string,cif_number,settlement_at,maker_name_original,maker_name,maker_com_code,issue_date_original,issue_date,due_date_original,due_date,balance_original,balance,paying_bank_name_original,paying_bank_name,paying_bank_branch_name_original,paying_bank_branch_name,discount_bank_name_original,discount_bank_name,description_original,description
+0382,1,1,010,252927,202507,受取手形,受取手形,235,,,,,,,,,,,,,,
+0382,1,2,010,252927,202507,不二倉業(株),不二倉業(株),999,4.3.31,4.3.31,4.7.31,4.7.31,5000000,5000000,,,,,,,,
+0382,1,3,010,252927,202507,不二倉業(株),不二倉業(株),999,4.3.31,4.3.31,4.7.31,4.7.31,1816580,1816580,,,,,,,,

@@ -1,8 +1,8 @@
-﻿ocr_result_id,page_no,id,jgroupid_string,cif_number,settlement_at,maker_name_original,maker_name,maker_com_code,issue_date_rightside_date,issue_date,due_date_rightside_date,due_date,balance_rightside,balance,payment_bank_name_rightside,payment_bank_name,payment_bank_branch_name_rightside,payment_bank_branch_name,description_rightside,description
-0055,1,1,055,305255,202507,(株)渡辺商行,(株)渡辺商行,391,,,,,20377610,20377610,,,,,,
-0055,1,2,055,305255,202507,(株)ルネサステクノロジ福岡,(株)ルネサステクノロジ福岡,392,,,,,19620590,19620590,,,,,,
-0055,1,3,055,305255,202507,東海興業(株),東海興業(株),393,,,,,6546100,6546100,,,,,,
-0055,1,4,055,305255,202507,ツカサ重機(株),ツカサ重機(株),394,,,,,794200,794200,,,,,,
-0055,1,5,055,305255,202507,三菱重工食品包装機械(株),三菱重工食品包装機械(株),395,,,,,363000,363000,,,,,,
-0055,1,6,055,305255,202507,ダイジェット工業(株),ダイジェット工業(株),396,,,,,127000,127000,,,,,,
-0055,1,7,055,305255,202507,受取手形計,受取手形計,371,,,,,47828500,47828500,,,,,,
+﻿ocr_result_id,page_no,id,jgroupid_string,cif_number,settlement_at,maker_name_original,maker_name,maker_com_code,issue_date_original,issue_date,due_date_original,due_date,balance_original,balance,paying_bank_name_original,paying_bank_name,paying_bank_branch_name_original,paying_bank_branch_name,discount_bank_name_original,discount_bank_name,description_original,description
+0055,1,1,055,689004,202507,(株)渡辺商行,(株)渡辺商行,391,,,,,20377610,20377610,,,,,,,,
+0055,1,2,055,689004,202507,(株)ルネサステクノロジ福岡,(株)ルネサステクノロジ福岡,392,,,,,19620590,19620590,,,,,,,,
+0055,1,3,055,689004,202507,東海興業(株),東海興業(株),393,,,,,6546100,6546100,,,,,,,,
+0055,1,4,055,689004,202507,ツカサ重機(株),ツカサ重機(株),394,,,,,794200,794200,,,,,,,,
+0055,1,5,055,689004,202507,三菱重工食品包装機械(株),三菱重工食品包装機械(株),395,,,,,363000,363000,,,,,,,,
+0055,1,6,055,689004,202507,ダイジェット工業(株),ダイジェット工業(株),396,,,,,127000,127000,,,,,,,,
+0055,1,7,055,689004,202507,受取手形計,受取手形計,371,,,,,47828500,47828500,,,,,,,,

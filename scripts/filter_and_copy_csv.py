@@ -7,7 +7,7 @@ import datetime
 # 検索元フォルダ
 INPUT_BASE_DIR = r'G:\共有ドライブ\VLM-OCR\20_教師データ\30_output_csv'
 # コピー先フォルダ
-SEARCH_RESULT_OUTPUT_BASE_DIR = r'C:\Users\User26\yoko\dev\csvRead\filtered_originals'
+SEARCH_RESULT_OUTPUT_BASE_DIR = r'G:\共有ドライブ\商工中金\202412_勘定科目明細本番稼働\50_検証\010_反対勘定性能評価\20_テストデータ\作成ワーク\10_受取手形\Import'
 
 # 検索パターン (Bで始まり、020.csvで終わるファイル)
 # re.IGNORECASE: 大文字小文字を区別しない

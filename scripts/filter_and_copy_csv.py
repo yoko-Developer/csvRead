@@ -3,16 +3,16 @@ import shutil
 import re
 import datetime
 
-# --- 設定項目 ---
-# 検索元フォルダ (お客様の共有ドライブのパス)
+# 設定項目
+# 検索元フォルダ
 INPUT_BASE_DIR = r'G:\共有ドライブ\VLM-OCR\20_教師データ\30_output_csv'
-# コピー先フォルダ (お客様のローカルパス)
+# コピー先フォルダ
 SEARCH_RESULT_OUTPUT_BASE_DIR = r'C:\Users\User26\yoko\dev\csvRead\filtered_originals'
 
 # 検索パターン (Bで始まり、020.csvで終わるファイル)
-# re.IGNORECASE は大文字小文字を区別しない
-# .* は任意の文字が0回以上繰り返されることを意味する
-# \. はドット(.)をリテラルとして扱う
+# re.IGNORECASE: 大文字小文字を区別しない
+# .*: 任意の文字が0回以上繰り返されることを意味する
+# \.: ドット(.)をリテラルとして扱う
 SEARCH_PATTERN = r'^B.*020\.csv$'
 
 def copy_filtered_csv_files():
@@ -45,7 +45,7 @@ def copy_filtered_csv_files():
 
                 try:
                     # ファイルをコピー
-                    # shutil.copy2 はメタデータもコピー
+                    # shutil.copy2: メタデータもコピー
                     shutil.copy2(src_filepath, dest_filepath)
                     copied_count += 1
                     # print(f"  コピーしました: {filename}") # 大量に出力される場合はコメントアウト
@@ -53,7 +53,7 @@ def copy_filtered_csv_files():
                     print(f"❌ エラー: {filename} のコピー中に問題が発生しました。エラー: {e}")
                     skipped_count += 1
             # else:
-            #     print(f"  スキップしました (パターン不一致): {filename}") # デバッグ用
+            # print(f"  スキップしました (パターン不一致): {filename}") # デバッグ用
 
     print(f"\n--- ファイルコピー処理完了 ({datetime.datetime.now()}) ---")
     print(f"✅ 検索元フォルダ内の合計ファイル数: {total_files_checked}")

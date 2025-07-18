@@ -6,14 +6,14 @@ import random
 import shutil
 import numpy as np 
 
-# --- 設定項目 ---
+# 設定項目
 INPUT_BASE_DIR = r'G:\共有ドライブ\VLM-OCR\20_教師データ\30_output_csv' 
 APP_ROOT_DIR = r'C:\Users\User26\yoko\dev\csvRead'
 SEARCH_RESULT_OUTPUT_BASE_DIR = os.path.join(APP_ROOT_DIR, 'filtered_originals')
 PROCESSED_OUTPUT_BASE_DIR = os.path.join(APP_ROOT_DIR, 'processed_output') 
 MASTER_DATA_DIR = os.path.join(APP_ROOT_DIR, 'master_data')
 
-# 23カラム
+# 23カラムの定義
 FINAL_POSTGRE_COLUMNS = [
     'ocr_result_id', 'page_no', 'id', 'jgroupid_string', 'cif_number', 'settlement_at',
     'maker_name_original', 'maker_name', 'maker_com_code',
@@ -34,7 +34,7 @@ FINAL_POSTGRE_COLUMNS = [
 ]
 
 
-# --- 各CSVファイル形式ごとのマッピングルールを定義 ---
+# 各CSVファイル形式ごとのマッピングルールを定義
 HAND_BILL_MAPPING_DICT = {
     'maker_name': '振出人',
     'issue_date': '振出年月日',                    
@@ -74,7 +74,6 @@ NO_HEADER_MAPPING_DICT = {
 }
 
 
-# --- 関数定義 ---
 # ocr_id_mapping と _ocr_id_sequence_counter はメイン処理で初期化し、グローバル変数化
 ocr_id_mapping = {}
 _ocr_id_sequence_counter = 0 
@@ -102,7 +101,6 @@ def get_ocr_result_id_for_group(file_group_root_name):
     
     return ocr_id_mapping[file_group_root_name]
 
-# 他の関数は変更なし
 maker_name_to_com_code_map = {}
 next_maker_com_code_val = 100 
 current_jgroupid_index = 0 
@@ -203,14 +201,14 @@ def process_universal_csv(input_filepath, processed_output_base_dir, input_base_
         traceback.print_exc()
         return
 
-    # --- データ加工処理 ---
+    # データ加工処理
     df_data_rows = df_original.copy() 
 
     if df_data_rows.empty:
         print(f"  警告: ファイル {os.path.basename(input_filepath)} に有効なデータ行が見つからなかったため、加工をスキップします。")
         return 
 
-    # 「〃」マークのみをffillで埋め、空文字列はそのまま維持
+    # 「〃」のみをffillで埋め、空文字列はそのまま維持
     df_data_rows = df_data_rows.ffill() 
     df_data_rows = df_data_rows.fillna('') 
     print(f"  ℹ️ 「〃」マークを直上データで埋め、元々ブランクだった箇所は維持しました。")
@@ -248,18 +246,18 @@ def process_universal_csv(input_filepath, processed_output_base_dir, input_base_
     df_processed = pd.DataFrame('', index=range(num_rows_to_process), columns=final_postgre_columns_list)
 
 
-    # --- 共通項目 (PostgreSQLのグリーンの表の左側に来る、自動生成項目) を生成 ---
-    # ★★★ ocr_result_id はファイルグループ名から取得するように変更 ★★★
+    # 共通項目 (PostgreSQLのグリーンの表の左側、自動生成項目) を生成
+    # ocr_result_id: ファイルグループ名から取得
     df_processed['ocr_result_id'] = [get_ocr_result_id_for_group(current_file_group_root_name)] * num_rows_to_process 
 
     df_processed['page_no'] = [1] * num_rows_to_process 
 
     df_processed['id'] = range(1, num_rows_to_process + 1)
 
-    # ★★★ jgroupid_string を固定値 '001' に変更 ★★★
+    # jgroupid_string: 固定値 '001'
     df_processed['jgroupid_string'] = ['001'] * num_rows_to_process
 
-    # ★★★ cif_number をファイル名から抽出した6桁に変更 ★★★
+    # cif_number: ファイル名から抽出した6桁の数値
     # current_file_group_root_name は "B000001" の形式なので、先頭の'B'を除いた6桁を取得
     cif_number_val = current_file_group_root_name[1:] # 'B'を除いた部分
     df_processed['cif_number'] = [cif_number_val] * num_rows_to_process
@@ -267,7 +265,7 @@ def process_universal_csv(input_filepath, processed_output_base_dir, input_base_
     settlement_at_val = datetime.now().strftime('%Y%m') 
     df_processed['settlement_at'] = [settlement_at_val] * num_rows_to_process
 
-    # --- 各ファイルタイプに応じたマッピングルールを適用 ---
+    # 各ファイルタイプに応じたマッピングルールを適用
     mapping_to_use = {}
     if file_type == "手形情報":
         mapping_to_use = hand_bill_map
@@ -278,7 +276,7 @@ def process_universal_csv(input_filepath, processed_output_base_dir, input_base_
     else: 
         mapping_to_use = no_header_map
 
-    df_data_rows.columns = df_data_rows.columns.astype(str) # 念のためここでもstrに変換
+    df_data_rows.columns = df_data_rows.columns.astype(str)
     
     for pg_col_name, src_ref in mapping_to_use.items():
         source_data_series = None
@@ -286,14 +284,14 @@ def process_universal_csv(input_filepath, processed_output_base_dir, input_base_
             if src_ref in df_data_rows.columns: 
                 source_data_series = df_data_rows[src_ref]
             else:
-                print(f"  ⚠️ 警告: マッピング元のカラム '{src_ref}' が元のCSVファイルに見つかりませんでした（PostgreSQLカラム: {pg_col_name}）。このカラムはブランクになります。")
+                print(f"  ⚠️ 警告: マッピング元のカラム '{src_ref}' が元のCSVファイルに見つかりませんでした（PostgreSQLカラム: {pg_col_name}）このカラムはブランク")
         elif isinstance(src_ref, int): 
             if str(src_ref) in df_data_rows.columns: 
                 source_data_series = df_data_rows[str(src_ref)]
             elif src_ref < df_data_rows.shape[1]: 
                 source_data_series = df_data_rows.iloc[:, src_ref]
             else:
-                print(f"  ⚠️ 警告: マッピング元の列インデックス '{src_ref}' が元のCSVファイルに存在しません（PostgreSQLカラム: {pg_col_name}）。このカラムはブランクになります。")
+                print(f"  ⚠️ 警告: マッピング元の列インデックス '{src_ref}' が元のCSVファイルに存在しません（PostgreSQLカラム: {pg_col_name}）このカラムはブランク")
 
         if source_data_series is not None:
             df_processed[pg_col_name] = source_data_series.astype(str).values 
@@ -302,8 +300,6 @@ def process_universal_csv(input_filepath, processed_output_base_dir, input_base_
 
 
     # --- Excel関数相当のロジックを適用（派生カラムの生成） ---
-    # ★★★ 各カラムの生成ロジックをお客様が提示した23カラムのリストに忠実に再現する！ ★★★
-    
     df_processed['maker_name_original'] = df_processed['maker_name'].copy() 
     
     df_processed['maker_com_code'] = df_processed['maker_name'].apply(get_maker_com_code_for_name)
@@ -329,9 +325,8 @@ def process_universal_csv(input_filepath, processed_output_base_dir, input_base_
     df_processed['discount_bank_name_original'] = df_processed['discount_bank_name'].copy() 
     df_processed['description_original'] = df_processed['description'].copy() 
     
-    # ★★★ 修正ここまで ★★★
     
-    # --- 保存処理 ---
+    # 保存処理
     relative_path_to_file = os.path.relpath(input_filepath, input_base_dir)
     relative_dir_to_file = os.path.dirname(relative_path_to_file)
     processed_output_sub_dir = os.path.join(processed_output_base_dir, relative_dir_to_file)
@@ -343,7 +338,7 @@ def process_universal_csv(input_filepath, processed_output_base_dir, input_base_
 
     print(f"✅ 加工完了: {input_filepath} -> {processed_output_filepath}")
 
-# --- メイン処理 ---
+# メイン処理 
 if __name__ == "__main__":
     print(f"--- 処理開始: {datetime.now()} ---")
 
@@ -387,7 +382,7 @@ if __name__ == "__main__":
 
     INPUT_PROCESSED_DIR = os.path.join(APP_ROOT_DIR, 'filtered_originals') 
 
-    # ★★★ ocr_result_id のマッピングを事前に生成するロジック（ファイルグループのルート名抽出） ★★★
+    # ocr_result_id のマッピングを事前に生成するロジック（ファイルグループのルート名抽出）
     print("\n--- ocr_result_id マッピング事前生成開始 ---")
     ocr_id_mapping = {}
     _ocr_id_sequence_counter = 0 
@@ -398,7 +393,7 @@ if __name__ == "__main__":
             if filename.lower().endswith('.csv') and not filename.lower().endswith('_processed.csv'):
                 # ファイル名から「ファイルグループのルート名」を抽出 (例: B000001)
                 # B000001_2.jpg_020.csv -> B000001
-                match = re.match(r'^(B\d{6})_.*\.jpg_020\.csv$', filename, re.IGNORECASE) # ★★★ 正規表現を修正！_ページ.jpg の部分も考慮 ★★★
+                match = re.match(r'^(B\d{6})_.*\.jpg_020\.csv$', filename, re.IGNORECASE)
                 if match:
                     all_target_file_groups_root.add(match.group(1)) 
                 else:
@@ -412,7 +407,7 @@ if __name__ == "__main__":
     print("--- ocr_result_id マッピング事前生成完了 ---")
     print(f"生成された ocr_result_id マッピング (最初の5つ): {list(ocr_id_mapping.items())[:5]}...")
 
-    # ★★★ メインのファイル処理ループ ★★★
+    # メインのファイル処理ループ
     for root, dirs, files in os.walk(INPUT_PROCESSED_DIR):
         for filename in files:
             if filename.lower().endswith('.csv') and not filename.lower().endswith('_processed.csv'): 
@@ -421,7 +416,7 @@ if __name__ == "__main__":
 
                 # 現在のファイルのファイルグループのルート名を抽出
                 current_file_group_root_name = None
-                match = re.match(r'^(B\d{6})_.*\.jpg_020\.csv$', filename, re.IGNORECASE) # ★★★ 正規表現を修正！_ページ.jpg の部分も考慮 ★★★
+                match = re.match(r'^(B\d{6})_.*\.jpg_020\.csv$', filename, re.IGNORECASE)
                 if match:
                     current_file_group_root_name = match.group(1) 
                 

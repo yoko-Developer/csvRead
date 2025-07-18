@@ -1,4 +1,4 @@
 ﻿ocr_result_id,page_no,id,jgroupid_string,cif_number,settlement_at,maker_name_original,maker_name,maker_com_code,issue_date_rightside_date,issue_date,due_date_rightside_date,due_date,balance_rightside,balance,payment_bank_name_rightside,payment_bank_name,payment_bank_branch_name_rightside,payment_bank_branch_name,description_rightside,description
-0385,1,1,013,982313,202507,割引手形,割引手形,185,,,,,,,,,,,,
-0385,1,2,013,982313,202507,不二倉業(株),不二倉業(株),101,,,,,7778920,7778920,,,,,割引手形,割引手形
-0385,1,3,013,982313,202507,不二倉業(株),不二倉業(株),101,,,,,15739360,15739360,,,,,割引手形,割引手形
+0385,1,1,013,702388,202507,割引手形,割引手形,183,,,,,,,,,,,,
+0385,1,2,013,702388,202507,不二倉業(株),不二倉業(株),999,,,,,7778920,7778920,,,,,佐賀銀行久留米,割引手形
+0385,1,3,013,702388,202507,不二倉業(株),不二倉業(株),999,,,,,15739360,15739360,,,,,福岡銀行広川,割引手形

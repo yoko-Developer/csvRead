@@ -6,41 +6,38 @@ import random
 import shutil
 import numpy as np 
 
-# --- 設定項目（ここだけ、くまちゃんの環境に合わせて修正してね！） ---
 INPUT_BASE_DIR = r'G:\共有ドライブ\VLM-OCR\20_教師データ\30_output_csv' 
 APP_ROOT_DIR = r'C:\Users\User26\yoko\dev\csvRead'
 SEARCH_RESULT_OUTPUT_BASE_DIR = os.path.join(APP_ROOT_DIR, 'filtered_originals')
 PROCESSED_OUTPUT_BASE_DIR = os.path.join(APP_ROOT_DIR, 'processed_output') 
 MASTER_DATA_DIR = os.path.join(APP_ROOT_DIR, 'master_data')
 
-# ★★★ FINAL_POSTGRE_COLUMNS を最初のExcel画像のヘッダーに完全に一致させる！これが真の最終形！ ★★★
-# 余分な _original / paying_bank / discount_bank 系カラムは全て削除
+# 全21カラム
 FINAL_POSTGRE_COLUMNS = [
     'ocr_result_id', 'page_no', 'id', 'jgroupid_string', 'cif_number', 'settlement_at',
     'maker_name_original', 'maker_name', 'maker_com_code',
     'issue_date_rightside_date', 'issue_date',
     'due_date_rightside_date', 'due_date',
     'balance_rightside', 'balance',
-    'payment_bank_name_rightside', # Excel画像の16列目
-    'payment_bank_name',           # Excel画像の17列目
-    'payment_bank_branch_name_rightside', # Excel画像の18列目
-    'payment_bank_branch_name',    # Excel画像の19列目
-    'description_rightside',       # Excel画像の20列目
-    'description'                  # Excel画像の21列目
+    'payment_bank_name_rightside', 
+    'payment_bank_name',           
+    'payment_bank_branch_name_rightside', 
+    'payment_bank_branch_name',    
+    'description_rightside',       
+    'description'                  
 ]
 
 
 # --- 各CSVファイル形式ごとのマッピングルールを定義 ---
-# ★★★ HAND_BILL_MAPPING_DICT もFINAL_POSTGRE_COLUMNSに合わせて究極の簡素化！ ★★★
 HAND_BILL_MAPPING_DICT = {
     'maker_name': '振出人',
     'issue_date': '振出年月日',
     'due_date': '支払期日',
     'balance': '金額', 
-    'payment_bank_name': '支払銀行名称',            # 元のCSVの '支払銀行名称' を直接 'payment_bank_name' へ
-    'payment_bank_branch_name': '支払銀行支店名',   # 元のCSVの '支払銀行支店名' を直接 'payment_bank_branch_name' へ
-    'description_rightside': '割引銀行名及び支店名等', # 元のCSVの '割引銀行名及び支店名等' を 'description_rightside' へ
-    'description': '摘要'                       # 元のCSVの '摘要' を直接 'description' へ
+    'payment_bank_name': '支払銀行名称',            
+    'payment_bank_branch_name': '支払銀行支店名',   
+    'description_rightside': '割引銀行名及び支店名等', # '割引銀行名及び支店名等' を 'description_rightside' へ
+    'description': '摘要'                       # '摘要' を 'description' へ
 }
 
 FINANCIAL_STATEMENT_MAPPING_DICT = {
@@ -59,8 +56,6 @@ LOAN_DETAILS_MAPPING_DICT = {
     'description': '利率',            
 }
 
-# ヘッダーなしの場合のデフォルトマッピング（列インデックスが元になる）
-# 元データ: 振出人(0), 振出年月日(1), 支払期日(2), 支払銀行名称(3), 支払銀行支店名(4), 金額(5), 割引銀行名及び支店名等(6), 摘要(7)
 NO_HEADER_MAPPING_DICT = {
     'maker_name': 0, 
     'issue_date': 1, 
@@ -123,8 +118,8 @@ def process_universal_csv(input_filepath, processed_output_base_dir, input_base_
                         maker_master_df, 
                         final_postgre_columns_list, no_header_map, hand_bill_map, financial_map, loan_map):
     """
-    全てのAIRead出力CSVファイルを読み込み、統一されたPostgreSQL向けカラム形式に変換して出力する関数。
-    CSVの種類（ヘッダー内容）を判別し、それぞれに応じたマッピングを適用する。
+    全てのAIRead出力CSVファイルを読み込み、統一されたPostgreSQL向けカラム形式に変換して出力
+    CSVの種類（ヘッダー内容）を判別し、それぞれに応じたマッピングを適用
     """
     df_original = None
     file_type = "不明" 
@@ -134,9 +129,12 @@ def process_universal_csv(input_filepath, processed_output_base_dir, input_base_
         
         for enc in encodings_to_try:
             try:
+                # keep_default_na=False で空文字列は NaN に変換しない
+                # na_values=['〃'] で '〃' のみ NaN にする
                 df_original = pd.read_csv(input_filepath, encoding=enc, header=0, sep=',', quotechar='"', 
-                                          dtype=str, na_values=['〃'], keep_default_na=False)
+                                        dtype=str, na_values=['〃'], keep_default_na=False)
                 
+                # 読み込んだカラム名をクリーンアップ（前後の空白除去）
                 df_original.columns = df_original.columns.str.strip() 
                 
                 current_headers = df_original.columns.tolist()
@@ -153,8 +151,9 @@ def process_universal_csv(input_filepath, processed_output_base_dir, input_base_
                     file_type = "借入金明細"
                 else:
                     file_type = "汎用データ_ヘッダーなし"
+                    # ヘッダーなしの場合も同じ読み込みオプションを適用
                     df_original = pd.read_csv(input_filepath, encoding=enc, header=None, sep=',', quotechar='"', 
-                                              dtype=str, na_values=['〃'], keep_default_na=False)
+                                            dtype=str, na_values=['〃'], keep_default_na=False)
                     df_original.columns = df_original.columns.astype(str).str.strip() 
                 
                 print(f"  デバッグ: ファイル {os.path.basename(input_filepath)} の判定結果: '{file_type}'")
@@ -187,13 +186,13 @@ def process_universal_csv(input_filepath, processed_output_base_dir, input_base_
         print(f"  警告: ファイル {os.path.basename(input_filepath)} に有効なデータ行が見つからなかったため、加工をスキップします。")
         return 
 
-    # 「〃」マークのみをffillで埋め、空文字列はそのまま維持
+    # 「〃」のみをffillで埋め、空文字列はそのまま維持
     df_data_rows = df_data_rows.ffill() 
     df_data_rows = df_data_rows.fillna('') 
     print(f"  ℹ️ 「〃」マークを直上データで埋め、元々ブランクだった箇所は維持しました。")
 
     # 合計行の削除ロジック
-    keywords_to_delete = ["合計", "小計", "計"] 
+    keywords_to_delete = ["合計", "小計", "計", "手持手形計", "割引手形計"] # 手形計も追加
     
     filter_conditions = []
     if file_type == "手形情報":
@@ -207,7 +206,7 @@ def process_universal_csv(input_filepath, processed_output_base_dir, input_base_
             filter_conditions.append(df_data_rows['借入先名称(氏名)'].isin(keywords_to_delete))
     elif file_type == "汎用データ_ヘッダーなし":
         if '0' in df_data_rows.columns: 
-             filter_conditions.append(df_data_rows['0'].isin(keywords_to_delete))
+            filter_conditions.append(df_data_rows['0'].isin(keywords_to_delete))
 
     if filter_conditions:
         combined_filter = pd.concat(filter_conditions, axis=1).any(axis=1)
@@ -218,9 +217,8 @@ def process_universal_csv(input_filepath, processed_output_base_dir, input_base_
     
     num_rows_to_process = len(df_data_rows) 
     
-    # ★★★ df_processed の初期化と基本カラムの設定順序を厳密に制御する ★★★
-    df_processed = pd.DataFrame(columns=final_postgre_columns_list, index=range(num_rows_to_process))
-    df_processed.iloc[:, :] = '' # 全てのセルを空文字列で初期化
+    # 必要なカラム名を持つ空のDataFrameを作成し、全セルを空文字列で初期化
+    df_processed = pd.DataFrame('', index=range(num_rows_to_process), columns=final_postgre_columns_list)
 
 
     # --- 共通項目 (PostgreSQLのグリーンの表の左側に来る、自動生成項目) を生成 ---
@@ -275,7 +273,7 @@ def process_universal_csv(input_filepath, processed_output_base_dir, input_base_
 
 
     # --- Excel関数相当のロジックを適用（派生カラムの生成） ---
-    # ★★★ 各カラムの生成ロジックをExcel関数とExcel画像に忠実に再現し、派生元を明確にする ★★★
+    # ★★★ 各カラムの生成ロジックをExcel画像に忠実に再現する！ ★★★
     
     df_processed['maker_name_original'] = df_processed['maker_name'].copy() 
     
@@ -298,18 +296,16 @@ def process_universal_csv(input_filepath, processed_output_base_dir, input_base_
     df_processed['balance_rightside'] = df_processed['balance'].copy() 
 
     # payment_bank_name_rightside, payment_bank_name, payment_bank_branch_name_rightside, payment_bank_branch_name, description_rightside, description
-    # これらは HAND_BILL_MAPPING_DICT で元のCSVから直接マッピングされるカラム
-    # それらの値から、_original や _rightside を派生させる。
+    # これらのカラムは FINAL_POSTGRE_COLUMNS にある基本的なカラムで、HAND_BILL_MAPPING_DICT で元のCSVから直接マッピングされる
+    # それらの値から、Excel画像に見られる「コピー」関係を再現
     
-    # ここでのポイントは、FINAL_POSTGRE_COLUMNS に paying_bank_name_original などが存在しないため、
-    # これらの派生ロジックは不要となる。
-    # 代わりに、payment_bank_name / payment_bank_branch_name から _rightside 版をコピーする。
-
     df_processed['payment_bank_name_rightside'] = df_processed['payment_bank_name'].copy() 
     df_processed['payment_bank_branch_name_rightside'] = df_processed['payment_bank_branch_name'].copy() 
-    df_processed['description_rightside'] = df_processed['description'].copy() 
     
-    # ★★★ 修正ここまで（不要な派生ロジックを削除！） ★★★
+    # description_rightside は HAND_BILL_MAPPING_DICT で '割引銀行名及び支店名等' から直接マッピングされている
+    # description は HAND_BILL_MAPPING_DICT で '摘要' から直接マッピングされている
+
+    # ★★★ 修正ここまで（これ以上、FINAL_POSTGRE_COLUMNSにないカラムへの派生ロジックは加えない） ★★★
     
     # --- 保存処理 ---
     relative_path_to_file = os.path.relpath(input_filepath, input_base_dir)
@@ -378,5 +374,5 @@ if __name__ == "__main__":
                                     FINAL_POSTGRE_COLUMNS, NO_HEADER_MAPPING_DICT, HAND_BILL_MAPPING_DICT, 
                                     FINANCIAL_STATEMENT_MAPPING_DICT, LOAN_DETAILS_MAPPING_DICT)
 
-    print(f"\n🎉 全てのファイルの加工処理が完了しました！ ({datetime.now()}) 🎉")
+    print(f"\n🎉 全てのファイルの加工処理が完了 ({datetime.now()}) 🎉")
     

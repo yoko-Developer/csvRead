@@ -4,7 +4,8 @@ import re
 from datetime import datetime
 import random 
 import shutil
-import numpy as np 
+import numpy as np
+import json # ocr_id_mapping の保存/読み込みに必要
 
 # 設定項目
 INPUT_BASE_DIR = r'G:\共有ドライブ\商工中金\202412_勘定科目明細本番稼働\50_検証\010_反対勘定性能評価\20_テストデータ\作成ワーク\10_受取手形\Import'
@@ -76,7 +77,8 @@ NO_HEADER_MAPPING_DICT = {
 
 # ocr_id_mapping と _ocr_id_sequence_counter はメイン処理で初期化し、グローバル変数化
 ocr_id_mapping = {}
-_ocr_id_sequence_counter = 0 
+_ocr_id_sequence_counter = 0
+_ocr_id_fixed_timestamp_str = "" # メイン処理開始時に設定
 
 def get_ocr_result_id_for_group(file_group_root_name): 
     """
@@ -101,6 +103,7 @@ def get_ocr_result_id_for_group(file_group_root_name):
     
     return ocr_id_mapping[file_group_root_name]
 
+# maker_name_to_com_code_map はグローバル変数化
 maker_name_to_com_code_map = {}
 next_maker_com_code_val = 100 
 current_jgroupid_index = 0 
@@ -133,11 +136,11 @@ def get_maker_com_code_for_name(maker_name):
         new_code_int = next_maker_com_code_val % 1000 
         if new_code_int < 100: 
             new_code_int = 100 + new_code_int 
-        new_code = str(new_code_int).zfill(3) 
+        new_code_4digit = '2' + str(new_code_int).zfill(3) # 例: 111 -> 2111 
         
-        maker_name_to_com_code_map[maker_name_str] = new_code
+        maker_name_to_com_code_map[maker_name_str] = new_code_4digit # マップには4桁コードを保存
         next_maker_com_code_val += 1
-        return new_code
+        return new_code_4digit
 
 
 def process_universal_csv(input_filepath, processed_output_base_dir, input_base_dir, 

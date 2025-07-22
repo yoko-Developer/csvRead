@@ -27,7 +27,7 @@ FINAL_POSTGRE_COLUMNS = [
     'paying_bank_branch_name_original', 
     'paying_bank_branch_name',  
     'discount_bank_name_original',
-    'discount_name',       
+    'discount_bank_name',       
     'description_original',     
     'description'               
 ]

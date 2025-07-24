@@ -7,7 +7,7 @@ import shutil
 import numpy as np 
 import json 
 
-# --- 設定項目（ここだけ、くまちゃんの環境に合わせて修正してね！） ---
+# --- 設定項目 ---
 INPUT_BASE_DIR = r'G:\共有ドライブ\商工中金\202412_勘定科目明細本番稼働\50_検証\010_反対勘定性能評価\20_テストデータ\作成ワーク\10_受取手形\Import' 
 APP_ROOT_DIR = r'C:\Users\User26\yoko\dev\csvRead'
 SEARCH_RESULT_OUTPUT_BASE_DIR = os.path.join(APP_ROOT_DIR, 'filtered_originals')
@@ -125,11 +125,11 @@ LOAN_DETAILS_MAPPING_DICT = {
     'description_rightside': '期中の支払利子額', 
     'description': '利率',            
 }
-# ★★★ NO_HEADER_MAPPING_DICT をタブ区切りデータに合わせて再定義！ ★★★
-# この辞書は、ヘッダーなしのタブ区切りデータ（例: 0000017_1.jpg_020.csv）を読み込む際に使用します。
+# ★★★ NO_HEADER_MAPPING_DICT はタブ区切りデータに合わせて再定義！ ★★★
+# この辞書は、ヘッダーなしのタブ区切りデータ（お客様提供のログと元データ例）を読み込む際に使用します。
 # キーはPostgreSQLのカラム名、値は元のCSVファイルにおける「0から始まる列番号」です。
 # ！！注意！！ このマッピングは、お客様の実際の入力ファイルの内容に厳密に一致する必要があります。
-#             お客様提供のログと元データ例を基に、正確なインデックスに修正しました。
+#             お客様提供の複数の元データ例を基に、正確なインデックスに修正しました。
 NO_HEADER_MAPPING_DICT = {
     # 基本情報（ログの0-5列目）
     'ocr_result_id': 0,
@@ -147,27 +147,35 @@ NO_HEADER_MAPPING_DICT = {
     'issue_date': 10,          
     'due_date_original': 11,   
     'due_date': 12,            
-    # balance（ログの13-14列目）
-    'balance_original': 13,    
-    'balance': 14,             
-    # paying_bank情報（ログの15-18列目）
+    # paying_bank情報（ログの15-16列目）
     'paying_bank_name_original': 15, 
     'paying_bank_name': 15,          
     'paying_bank_branch_name_original': 16, 
     'paying_bank_branch_name': 16,   
     # paying_bank_code は元データにないためマッピングなし (空のままにする)
     # discount_bank情報（ログの19-20列目）
-    'discount_bank_name_original': 19, # 例: "CA02611売上代金" のような値が来る場合もあれば空欄の場合もある
-    'discount_bank_name': 20,          # 例: "CA02611売上代金"
+    'discount_bank_name_original': 19, 
+    'discount_bank_name': 20,          
     # discount_bank_code は元データにないためマッピングなし (空のままにする)
     # description（ログの21-22列目）
-    'description_original': 21,        # 例: "AX247838"
-    'description': 22,                 # 例: "AX247838"
+    'description_original': 21,        
+    'description': 22,                 
     # registration_number などは元データに直接対応なし
 }
 
 
 # --- 関数定義 ---
+# ★★★ clean_balance_no_comma 関数をグローバルスコープに移動！ ★★★
+def clean_balance_no_comma(value): 
+    try:
+        cleaned_value = str(value).replace(',', '').replace('¥', '').replace('￥', '').replace('円', '').strip() 
+        if not cleaned_value:
+            return '' 
+        numeric_value = float(cleaned_value)
+        return str(int(numeric_value)) 
+    except ValueError:
+        return '' 
+
 ocr_id_mapping = {}
 _ocr_id_sequence_counter = 0 
 _ocr_id_fixed_timestamp_str = "" 
@@ -220,6 +228,43 @@ def get_maker_com_code_for_name(maker_name):
         next_maker_com_code_val += 1
         return new_code_4digit
 
+# ★★★ 新規追加：金額らしい列かどうかを判定する関数（お客様の提供を参考に） ★★★
+def is_likely_amount_column(series):
+    """金額らしい列かどうかを判定する関数"""
+    if not pd.api.types.is_string_dtype(series): 
+        series = series.astype(str)
+    
+    cleaned_series = series.dropna().astype(str).str.replace(r'[¥￥,円\s　]', '', regex=True)
+    
+    if cleaned_series.empty:
+        return False 
+
+    patterns = [r'^\d{1,3}(,\d{3})*(\.\d+)?$', r'^\d+円$', r'^[\d,]+$', r'^\d+\.\d{2}$', r'^[+-]?\d+$'] 
+    
+    match_count = 0
+    for val in cleaned_series:
+        if any(re.fullmatch(p, val) for p in patterns): 
+            match_count += 1
+    
+    return match_count >= max(1, len(cleaned_series) * 0.5) 
+
+# ★★★ 新規追加：金額列のインデックスを特定する関数（お客様の提供を参考に） ★★★
+def detect_amount_column_index(df):
+    """DataFrameから金額列のインデックスを特定する"""
+    potential_amount_cols = []
+    for i in range(df.shape[1] -1, -1, -1): # 後ろから走査
+        col = df.columns[i]
+        if is_likely_amount_column(df[col]):
+            numeric_values = df[col].astype(str).str.replace(r'[¥￥,円\s　]', '', regex=True).apply(lambda x: pd.to_numeric(x, errors='coerce'))
+            if not numeric_values.isnull().all(): 
+                potential_amount_cols.append((i, numeric_values.sum())) 
+    
+    if not potential_amount_cols:
+        return -1 
+
+    potential_amount_cols.sort(key=lambda x: x[1], reverse=True)
+    return potential_amount_cols[0][0] 
+
 
 def process_universal_csv(input_filepath, processed_output_base_dir, input_base_dir, 
                         maker_master_df, ocr_id_map_for_groups, current_file_group_root_name, 
@@ -247,11 +292,15 @@ def process_universal_csv(input_filepath, processed_output_base_dir, input_base_
                 is_financial = ('account' in current_headers_comma)
                 is_loan = ('借入先名称(氏名)' in current_headers_comma)
                 
-                if is_hand_bill or is_financial or is_loan:
+                if is_hand_bill:
                     df_original = df_temp_comma_header.copy()
-                    if is_hand_bill: file_type = "手形情報"
-                    elif is_financial: file_type = "財務諸表"
-                    elif is_loan: file_type = "借入金明細"
+                    file_type = "手形情報"
+                elif is_financial:
+                    df_original = df_temp_comma_header.copy()
+                    file_type = "財務諸表"
+                elif is_loan:
+                    df_original = df_temp_comma_header.copy()
+                    file_type = "借入金明細"
                 else: 
                     # 2. ヘッダーなし、タブ区切りで読み込みを試す (汎用データ_ヘッダーなしの可能性が高い)
                     try:
@@ -409,6 +458,24 @@ def process_universal_csv(input_filepath, processed_output_base_dir, input_base_
                 pass 
 
 
+    # ★★★ 金額カラムの動的検出ロジックを追加！ ★★★
+    # 汎用データの場合のみ、金額を自動検出して埋める
+    if file_type == "汎用データ_ヘッダーなし":
+        amount_col_idx = detect_amount_column_index(df_data_rows)
+        if amount_col_idx != -1:
+            # balance_original は金額カラムの1つ前のインデックスのデータ、balance は金額カラム自体のデータ
+            # これは一般的なケースであり、お客様のデータ例で金額が2列並んでいるケースに対応
+            raw_balance_series = df_data_rows.iloc[:, amount_col_idx].astype(str) # 金額カラム自体
+            # amount_col_idx -1 は必ずしも original ではないが、現状のデータパターンから仮定
+            raw_balance_original_series = df_data_rows.iloc[:, amount_col_idx - 1].astype(str) if amount_col_idx > 0 else pd.Series([''] * len(df_data_rows))
+            
+            df_processed['balance_original'] = raw_balance_original_series.copy() 
+            df_processed['balance'] = raw_balance_series.apply(clean_balance_no_comma) 
+            print(f"  ℹ️ 金額カラムを列インデックス '{amount_col_idx}' から動的に検出しました。")
+        else:
+            print("  ⚠️ 警告: 金額カラムを動的に検出できませんでした。balanceカラムはブランクのままです。")
+
+
     # --- Excel関数相当のロジックを適用（派生カラムの生成） ---
     # ★★★ 各カラムの生成ロジックをお客様が提示した最新の79カラムリストに忠実に再現する！ ★★★
     
@@ -442,19 +509,10 @@ def process_universal_csv(input_filepath, processed_output_base_dir, input_base_
     df_processed['discount_bank_code'] = '' 
 
     # balance_original, balance
-    def clean_balance_no_comma(value): 
-        try:
-            cleaned_value = str(value).replace(',', '').strip()
-            if not cleaned_value:
-                return '' 
-            numeric_value = float(cleaned_value)
-            return str(int(numeric_value)) 
-        except ValueError:
-            return '' 
+    # clean_balance_no_comma 関数は既にグローバルに定義されている
+    # df_processed['balance'] と df_processed['balance_original'] は動的検出で既に設定されている可能性があるので、上書きしない
+    # もし動的検出で設定されなかった場合（amount_col_idx == -1）は、初期値の空文字列のままとなる
     
-    df_processed['balance'] = df_processed['balance'].apply(clean_balance_no_comma)
-    df_processed['balance_original'] = df_processed['balance'].copy() 
-
     # description_original, description
     df_processed['description_original'] = df_processed['description'].copy() 
     
@@ -582,18 +640,14 @@ if __name__ == "__main__":
     for root, dirs, files in os.walk(INPUT_CSV_FILES_DIR): 
         for filename in files:
             if filename.lower().endswith('.csv') and not filename.lower().endswith('_processed.csv'):
-                # 受取手形アプリのファイル名パターン (B*020.csv) は、**ここでのフィルタリングには使用しない**
-                # しかし、ファイルグループのルート名 (BXXXXXX) を抽出するために match は必要
+                # ファイル名から「ファイルグループのルート名」を抽出 (BXXXXXX)
                 # INPUT_CSV_FILES_DIR には B*020.csv のみが存在すると仮定
-                
-                # ファイル名から「ファイルグループのルート名」を抽出
-                # 例: B000001_2.jpg_020.csv -> B000001
+                # B*020.csv のパターンに合致するもののみを処理
                 match = re.match(r'^(B\d{6})_.*\.jpg_020\.csv$', filename, re.IGNORECASE) 
                 
                 if match: # パターンに合致した場合のみ処理
                     all_target_file_groups_root.add(match.group(1)) 
                 else:
-                    # ここでファイルがスキップされる場合、それは copy_filtered_csvs.py の問題か、ファイル名が想定外
                     print(f"  ℹ️ ocr_result_id生成対象外のファイル名: {filename} (パターン不一致)。")
                     
     sorted_file_groups_root = sorted(list(all_target_file_groups_root)) 
@@ -621,7 +675,9 @@ if __name__ == "__main__":
                 print(f"\n--- 処理対象ファイル: {input_filepath} ---")
 
                 current_file_group_root_name = None
-                # 受取手形アプリのファイル名パターン (B*020.csv)
+                # ファイル名から「ファイルグループのルート名」を抽出 (BXXXXXX)
+                # INPUT_CSV_FILES_DIR には B*020.csv のみが存在すると仮定
+                # B*020.csv のパターンに合致するもののみを処理
                 match = re.match(r'^(B\d{6})_.*\.jpg_020\.csv$', filename, re.IGNORECASE)
                 if match:
                     current_file_group_root_name = match.group(1) 

@@ -125,11 +125,10 @@ LOAN_DETAILS_MAPPING_DICT = {
     'description_rightside': '期中の支払利子額', 
     'description': '利率',            
 }
-# ★★★ NO_HEADER_MAPPING_DICT はタブ区切りデータに合わせて再定義！ ★★★
+# ★★★ NO_HEADER_MAPPING_DICT はタブ区切りデータの「デフォルト」として再定義！ ★★★
 # この辞書は、ヘッダーなしのタブ区切りデータ（お客様提供のログと元データ例）を読み込む際に使用します。
 # キーはPostgreSQLのカラム名、値は元のCSVファイルにおける「0から始まる列番号」です。
-# ！！注意！！ このマッピングは、お客様の実際の入力ファイルの内容に厳密に一致する必要があります。
-#             お客様提供の複数の元データ例を基に、正確なインデックスに修正しました。
+# balance は動的検出に任せるため、ここでの固定マッピングは優先度を下げます。
 NO_HEADER_MAPPING_DICT = {
     # 基本情報（ログの0-5列目）
     'ocr_result_id': 0,
@@ -252,6 +251,7 @@ def is_likely_amount_column(series):
 def detect_amount_column_index(df):
     """DataFrameから金額列のインデックスを特定する"""
     potential_amount_cols = []
+    # 全てのカラムをチェックするが、後半の方に金額がある可能性が高いため、後ろから探すことも考慮
     for i in range(df.shape[1] -1, -1, -1): # 後ろから走査
         col = df.columns[i]
         if is_likely_amount_column(df[col]):
@@ -305,7 +305,7 @@ def process_universal_csv(input_filepath, processed_output_base_dir, input_base_
                     # 2. ヘッダーなし、タブ区切りで読み込みを試す (汎用データ_ヘッダーなしの可能性が高い)
                     try:
                         df_temp_tab_noheader = pd.read_csv(input_filepath, encoding=enc, header=None, sep='\t', quotechar='"', 
-                                                          dtype=str, na_values=['〃'], keep_default_na=False)
+                                                        dtype=str, na_values=['〃'], keep_default_na=False)
                         df_temp_tab_noheader.columns = df_temp_tab_noheader.columns.astype(str).str.strip()
                         
                         # 汎用データと判定する基準: タブ区切りで読み込めて、かつある程度の列数があること
@@ -322,7 +322,7 @@ def process_universal_csv(input_filepath, processed_output_base_dir, input_base_
                         print(f"  ファイル {os.path.basename(input_filepath)} を {enc} でタブ区切り読み込み失敗。カンマ区切りを試します。エラー: {e_tab}")
                         file_type = "汎用データ_ヘッダーなし" # この場合は実際には汎用データになるはず
                         df_original = pd.read_csv(input_filepath, encoding=enc, header=None, sep=',', quotechar='"', 
-                                                  dtype=str, na_values=['〃'], keep_default_na=False)
+                                                dtype=str, na_values=['〃'], keep_default_na=False)
                         df_original.columns = df_original.columns.astype(str).str.strip() 
                 
                 print(f"  デバッグ: ファイル {os.path.basename(input_filepath)} の判定結果: '{file_type}'")
@@ -380,7 +380,7 @@ def process_universal_csv(input_filepath, processed_output_base_dir, input_base_
         if 'maker_name' in no_header_map and str(no_header_map['maker_name']) in df_data_rows.columns: 
             filter_conditions.append(df_data_rows[str(no_header_map['maker_name'])].str.contains(keywords_regex, regex=True, na=False))
         elif '0' in df_data_rows.columns: # 最悪0列目全体でチェック
-             filter_conditions.append(df_data_rows['0'].str.contains(keywords_regex, regex=True, na=False))
+            filter_conditions.append(df_data_rows['0'].str.contains(keywords_regex, regex=True, na=False))
 
     if filter_conditions:
         combined_filter = pd.concat(filter_conditions, axis=1).any(axis=1)
@@ -466,11 +466,9 @@ def process_universal_csv(input_filepath, processed_output_base_dir, input_base_
             # balance_original は金額カラムの1つ前のインデックスのデータ、balance は金額カラム自体のデータ
             # これは一般的なケースであり、お客様のデータ例で金額が2列並んでいるケースに対応
             raw_balance_series = df_data_rows.iloc[:, amount_col_idx].astype(str) # 金額カラム自体
-            # amount_col_idx -1 は必ずしも original ではないが、現状のデータパターンから仮定
-            raw_balance_original_series = df_data_rows.iloc[:, amount_col_idx - 1].astype(str) if amount_col_idx > 0 else pd.Series([''] * len(df_data_rows))
-            
-            df_processed['balance_original'] = raw_balance_original_series.copy() 
-            df_processed['balance'] = raw_balance_series.apply(clean_balance_no_comma) 
+            # balance_original も balance と同じ値をクリーンしてコピー
+            df_processed['balance'] = raw_balance_series.apply(clean_balance_no_comma)
+            df_processed['balance_original'] = df_processed['balance'].copy() # balanceからコピーする
             print(f"  ℹ️ 金額カラムを列インデックス '{amount_col_idx}' から動的に検出しました。")
         else:
             print("  ⚠️ 警告: 金額カラムを動的に検出できませんでした。balanceカラムはブランクのままです。")
@@ -570,6 +568,9 @@ def process_universal_csv(input_filepath, processed_output_base_dir, input_base_
     df_processed['updatedatetime'] = '' 
     df_processed['updateuser'] = 'testuser' 
     
+    # balanceが空でない場合にbalance_originalにbalanceの値をコピーします。	
+    df_processed.loc[df_processed['balance'].astype(str).str.strip() != '', 'balance_original'] = df_processed['balance']
+    
     # --- 保存処理 ---
     relative_path_to_file = os.path.relpath(input_filepath, input_base_dir)
     relative_dir_to_file = os.path.dirname(relative_path_to_file)
@@ -656,7 +657,7 @@ if __name__ == "__main__":
         get_ocr_result_id_for_group(group_root_name) 
     
     print("--- ocr_result_id マッピング事前生成完了 ---")
-    print(f"生成された ocr_result_id マッピング (最初の5つ): {list(ocr_id_mapping.items())[:5]}...")
+    print(f"生成された ocr_id_mapping (最初の5つ): {list(ocr_id_mapping.items())[:5]}...")
 
     # 生成した ocr_id_mapping をファイルに保存
     ocr_id_map_filepath = os.path.join(MASTER_DATA_DIR, 'ocr_id_mapping.json') 
@@ -692,4 +693,3 @@ if __name__ == "__main__":
                                     FINANCIAL_STATEMENT_MAPPING_DICT, LOAN_DETAILS_MAPPING_DICT) 
 
     print(f"\n🎉 全てのファイルの加工処理が完了しました！ ({datetime.now()}) 🎉")
-    

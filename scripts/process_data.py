@@ -486,9 +486,13 @@ def process_universal_csv(input_filepath, processed_output_base_dir, input_base_
     df_processed['discount_bank_code'] = '' 
 
     # balance_original, balance
-    # clean_balance_no_comma 関数は既にグローバルに定義されている
-    # df_processed['balance'] と df_processed['balance_original'] は動的検出で既に設定されている可能性があるので、上書きしない
-    # もし動的検出で設定されなかった場合（amount_col_idx == -1）は、初期値の空文字列のままとなる
+    # まず、balanceカラムを確実にクリーンアップする	
+    # clean_balance_no_comma 関数は既にグローバルに定義されている	# clean_balance_no_comma 関数は既にグローバルに定義されている
+    df_processed['balance'] = df_processed['balance'].apply(clean_balance_no_comma)	# df_processed['balance'] と df_processed['balance_original'] は動的検出で既に設定されている可能性があるので、上書きしない
+    print(f" ℹ️ 'balance' カラムに clean_balance_no_comma を適用し、カンマと通貨記号を削除しました。")	
+    # クリーンアップされた 'balance' の値を 'balance_original' にコピーする	# もし動的検出で設定されなかった場合（amount_col_idx == -1）は、初期値の空文字列のままとなる
+    df_processed['balance_original'] = df_processed['balance'].copy()	
+    print(f" ℹ️ 'balance' カラムのクリーンアップされた値を 'balance_original' にコピーしました。")
     
     # description_original, description
     df_processed['description_original'] = df_processed['description'].copy() 

@@ -3,6 +3,8 @@ import os
 import re
 import shutil 
 from datetime import datetime 
+import json 
+import glob # glob モジュールは新しいロジックで必須
 
 # 設定項目
 APP_ROOT_DIR = r'C:\Users\User26\yoko\dev\csvRead'
@@ -11,6 +13,8 @@ APP_ROOT_DIR = r'C:\Users\User26\yoko\dev\csvRead'
 PROCESSED_OUTPUT_BASE_DIR = os.path.join(APP_ROOT_DIR, 'processed_output') 
 # マージ済みファイルを保存するフォルダ
 MERGED_OUTPUT_BASE_DIR = os.path.join(APP_ROOT_DIR, 'merged_output') 
+# マスタデータフォルダ（ocr_id_mapping_notesReceivable.json が保存されている場所）    
+MASTER_DATA_DIR = os.path.join(APP_ROOT_DIR, 'master_data')
 
 # このリストは process_data.py の FINAL_POSTGRE_COLUMNS と完全に一致している必要がある
 FINAL_POSTGRE_COLUMNS = [
@@ -95,154 +99,134 @@ FINAL_POSTGRE_COLUMNS = [
     'updateuser'             
 ]
 
+# 金額っぽい値かを判定する関数
+def is_money(value: str) -> bool:
+    """金額っぽい値（数字のみまたはカンマ区切り）かを判定"""
+    if isinstance(value, str):
+        # カンマ、円マークなどを除去してから判定
+        value = value.replace(",", "").replace("¥", "").replace("￥", "").replace("円", "").strip()
+    # 3桁以上の数字、または小数点を含む数字、または符号付き数字を金額と判定
+    return re.fullmatch(r"^[+-]?\d{1,}(\.\d+)?$", str(value)) is not None 
+
 
 def merge_processed_csv_files():
     """
     processed_output フォルダ内の加工済みCSVファイルをファイルグループごとに結合し、
     merged_output フォルダに保存する関数。
     """
-    print(f"--- ファイルグループごとの結合処理開始 ---")
+    print(f"--- ファイルグループごとの結合処理開始 ({datetime.now()}) ---")
     print(f"加工済みファイルフォルダ: {PROCESSED_OUTPUT_BASE_DIR}")
     print(f"結合済みファイル出力フォルダ: {MERGED_OUTPUT_BASE_DIR}")
 
-    # 結合済みファイル出力フォルダが存在しない場合は作成
     os.makedirs(MERGED_OUTPUT_BASE_DIR, exist_ok=True)
 
-    files_to_merge_by_group = {}
-    
-    # processed_output フォルダ内を再帰的に検索
-    for root, dirs, files in os.walk(PROCESSED_OUTPUT_BASE_DIR): 
-        for filename in files:
-            # '_processed.csv' で終わるファイルのみを対象とする
-            if filename.lower().endswith('_processed.csv'):
-                # ファイル名から「ファイルグループのルート名」と「ページ番号」を抽出
-                # 例: B000001_1.jpg_020_processed.csv -> group_root="B000001", page_num="1"
-                match = re.match(r'^(B\d{6})_(\d+)\.jpg_020_processed\.csv$', filename, re.IGNORECASE)
-                if match:
-                    group_root_name = match.group(1) # 例: B000001
-                    page_num = int(match.group(2))   # 例: 1 (ページ番号)
-                    filepath = os.path.join(root, filename)
+    # ★★★ お客様の新しいマージロジックを全面的に採用 ★★★
+    all_data_frames = [] # 各ファイルのデータ部分（ヘッダーなし）を格納するリスト
 
-                    if group_root_name not in files_to_merge_by_group:
-                        files_to_merge_by_group[group_root_name] = []
-                    files_to_merge_by_group[group_root_name].append((page_num, filepath))
-                else:
-                    print(f"  ℹ️ マージ対象外のファイル形式 (パターン不一致): {filename}")
+    # 対象ファイルをすべて取得 (recursive=True でサブディレクトリも検索)
+    csv_files_to_merge = glob.glob(os.path.join(PROCESSED_OUTPUT_BASE_DIR, '**', '*_processed.csv'), recursive=True)
 
-    merged_files_count = 0
-    # ファイルグループのルート名でソートして、結合順を保証
-    sorted_merged_groups = sorted(files_to_merge_by_group.keys())
+    if not csv_files_to_merge:
+        print("⚠️ 警告: マージ対象のファイルが見つかりませんでした。")
+        print(f"\n--- ファイルグループごとの結合処理完了 ({datetime.now()}) ---")
+        print(f"🎉 結合されたファイルグループ数: 0 🎉")
+        return
 
-    for group_root_name in sorted_merged_groups: # ソートされたグループ名でループ
-        page_files = files_to_merge_by_group[group_root_name]
-        # 各ファイルグループ内で、ページ番号の昇順でファイルをソート
-        page_files.sort(key=lambda x: x[0]) 
+    # グループ名は「all」にする（お客様の指示）
+    group_name = 'all'
+    output_file_path = os.path.join(MERGED_OUTPUT_BASE_DIR, f'{group_name}_merged.csv')
 
-        combined_df = pd.DataFrame(columns=FINAL_POSTGRE_COLUMNS) # 最終カラム順で初期化
-        
-        print(f"  → グループ '{group_root_name}' のファイルを結合中...")
-        
-        # 結合されたDF全体でのidを再採番するためのカウンター
-        global_id_counter = 1 
+    print(f"  → 全てのファイルを結合し、'{group_name}' グループとして保存します。")
 
-        # このグループの ocr_result_id, cif_number, jgroupid_string の期待値は、最初のファイルの値を採用
-        expected_ocr_id_for_group = None
-        expected_cif_number_for_group = None
-        expected_jgroupid_string_for_group = '001' # Jgroupidは常に001固定
-
-        # 最初のファイルを読み込んで、IDの期待値を設定（チェック用）
-        if page_files:
-            first_page_filepath = page_files[0][1]
-            try:
-                df_first_page_for_check = pd.read_csv(first_page_filepath, encoding='utf-8-sig', dtype=str, nrows=1)
-                if not df_first_page_for_check.empty:
-                    expected_ocr_id_for_group = df_first_page_for_check.iloc[0]['ocr_result_id'] if 'ocr_result_id' in df_first_page_for_check.columns else None
-                    expected_cif_number_for_group = df_first_page_for_check.iloc[0]['cif_number'] if 'cif_number' in df_first_page_for_check.columns else None
-            except Exception as e:
-                print(f"  ❌ エラー: グループ '{group_root_name}' の最初のファイル ({os.path.basename(first_page_filepath)}) 読み込み中にエラー。ID期待値取得不可。このグループは結合されません。エラー: {e}")
-                continue # このグループの結合をスキップ
-
-
-        for page_index, (page_num, filepath) in enumerate(page_files):
-            try:
-                df_page = pd.read_csv(filepath, encoding='utf-8-sig', dtype=str)
-                
-                if df_page.empty: 
-                    print(f"    ℹ️ {os.path.basename(filepath)} は空のためスキップします。")
-                    continue
-
-                # ID情報の不一致チェックロジックを緩和し、ファイルから読み込んだ値を信頼する
-                current_file_ocr_id = df_page.iloc[0]['ocr_result_id'] if 'ocr_result_id' in df_page.columns else 'N/A_NoCol'
-                current_file_jgroupid = df_page.iloc[0]['jgroupid_string'] if 'jgroupid_string' in df_page.columns else 'N/A_NoCol'
-                current_file_cif = df_page.iloc[0]['cif_number'] if 'cif_number' in df_page.columns else 'N/A_NoCol'
-                
-                print(f"    デバッグ: {os.path.basename(filepath)} のID情報: OCR={current_file_ocr_id}, JG={current_file_jgroupid}, CIF={current_file_cif}")
-
-                # 警告は出すが、強制的に期待値に修正する
-                if expected_ocr_id_for_group and current_file_ocr_id != expected_ocr_id_for_group and current_file_ocr_id != 'N/A_NoCol':
-                    print(f"  ⚠️ 警告: グループ '{group_root_name}' のファイル '{os.path.basename(filepath)}' でocr_result_idの不一致を検出。ファイルの値 ({current_file_ocr_id}) を'{expected_ocr_id_for_group}'に強制修正します。")
-                    df_page['ocr_result_id'] = expected_ocr_id_for_group # 強制修正
-
-                if expected_cif_number_for_group and current_file_cif != expected_cif_number_for_group and current_file_cif != 'N/A_NoCol':
-                    print(f"  ⚠️ 警告: グループ '{group_root_name}' のファイル '{os.path.basename(filepath)}' でcif_numberの不一致を検出。ファイルの値 ({current_file_cif}) を'{expected_cif_number_for_group}'に強制修正します。")
-                    df_page['cif_number'] = expected_cif_number_for_group # 強制修正
-
-                if current_file_jgroupid != expected_jgroupid_string_for_group and current_file_jgroupid != 'N/A_NoCol':
-                    print(f"  ⚠️ 警告: グループ '{group_root_name}' のファイル '{os.path.basename(filepath)}' でjgroupid_stringの不一致を検出しました。期待: {expected_jgroupid_string_for_group}, 実際: {current_file_jgroupid}。結合後、強制的に'{expected_jgroupid_string_for_group}'に修正します。")
-                
-                # ocr_result_id, cif_number, jgroupid_string を上書き修正
-                df_page['ocr_result_id'] = expected_ocr_id_for_group
-                df_page['cif_number'] = expected_cif_number_for_group
-                df_page['jgroupid_string'] = expected_jgroupid_string_for_group
-
-
-                # 結合前にカラム順をFINAL_POSTGRE_COLUMNSに合わせる（重要）
-                df_page = df_page[FINAL_POSTGRE_COLUMNS] 
-
-                # df_page の 'id' は、マージされる各ファイル内で1から始まるため、ここで全体の連番に振り直す。
-                df_page['id'] = range(global_id_counter, global_id_counter + len(df_page))
-                global_id_counter += len(df_page) 
-
-                # page_no はお客様のご要望で1固定なので、元の値を維持する (または全て1にする)
-                df_page['page_no'] = 1 
-                
-                combined_df = pd.concat([combined_df, df_page], ignore_index=True)
-                print(f"    - ページ {page_num} ({os.path.basename(filepath)}) を結合しました。")
-            except Exception as e:
-                print(f"  ❌ エラー: ページ {page_num} のファイル {os.path.basename(filepath)} の読み込み/結合中に問題が発生しました。エラー: {e}")
-                import traceback 
-                traceback.print_exc() 
-                combined_df = pd.concat([combined_df, pd.DataFrame(columns=FINAL_POSTGRE_COLUMNS)], ignore_index=True)
-
-
-        # ファイル名を B000001_merged.csv に変更
-        merged_output_filename = f"{group_root_name}_merged.csv" # ここを修正
-        merged_output_filepath = os.path.join(MERGED_OUTPUT_BASE_DIR, merged_output_filename)
-        
-        # 古いファイルを削除
-        old_filename_pattern = f"{group_root_name}_processed_merged.csv"
-        old_filepath = os.path.join(MERGED_OUTPUT_BASE_DIR, old_filename_pattern)
-        if os.path.exists(old_filepath):
-            try:
-                os.remove(old_filepath)
-                print(f"  ✅ 古いファイル '{old_filename_pattern}' を削除しました。")
-            except Exception as e:
-                print(f"  ❌ エラー: 古いファイル '{old_filename_pattern}' の削除中に問題が発生しました。エラー: {e}")
-
+    for file_path in sorted(csv_files_to_merge): # ファイルパスをソートして結合順を保証
         try:
-            if not combined_df.empty: # 結合結果が空でない場合のみ保存
-                # header=False を指定してヘッダ行を削除
-                combined_df.to_csv(merged_output_filepath, index=False, encoding='utf-8-sig', header=False) 
-                merged_files_count += 1
-                print(f"  ✅ グループ '{group_root_name}' の結合ファイルを保存しました: {merged_output_filepath}")
-            else:
-                print(f"  ⚠️ 警告: グループ '{group_root_name}' に結合対象の有効なデータが見つからなかったため、ファイルは保存されません。")
+            # 1行目をヘッダーとしてスキップし、データ部分のみを読み込む
+            # df = pd.read_csv(file, header=None, skiprows=1) # お客様のコード案
+            # pandasのread_csvはheader=0でヘッダーを読み込み、それ以外の行がデータとなる
+            # なので、skiprows=1 を指定すると、実際のヘッダー行をスキップして、次の行をヘッダーとして誤認識してしまう
+            # 正しいヘッダー付きファイルとして読み込み、その後必要に応じて調整する
+            df_current_file = pd.read_csv(file_path, encoding='utf-8-sig', dtype=str, header=0, na_values=['〃'], keep_default_na=False)
+            
+            if df_current_file.empty: 
+                print(f"    ℹ️ {os.path.basename(file_path)} は空のためスキップします。")
+                continue
+
+            # デバッグ情報: 読み込み直後のカラム数と一覧
+            actual_cols = df_current_file.columns.tolist()
+            print(f"    📄 ファイル {os.path.basename(file_path)} 読み込み直後のカラム数: {len(actual_cols)}")
+            print(f"    🧩 ファイル {os.path.basename(file_path)} 読み込み直後のカラム一覧: {actual_cols}")
+
+            # 想定される最終カラム数と一致するかを厳密にチェック
+            if len(actual_cols) != len(FINAL_POSTGRE_COLUMNS):
+                print(f"    ⚠️ 警告: ファイル {os.path.basename(file_path)} の列数が想定と異なります（{len(actual_cols)}列 vs 期待 {len(FINAL_POSTGRE_COLUMNS)}列）。このファイルはスキップされます。")
+                continue # 列数が一致しない場合はスキップ
+
+            # 列名に重複がないかチェック（もしあればPandasが自動で.1などを付与するため、ここでチェック）
+            if len(set(actual_cols)) != len(actual_cols):
+                print(f"    ⚠️ 警告: ファイル {os.path.basename(file_path)} で重複する列名が検出されました → {actual_cols}。このファイルはスキップされます。")
+                continue # 列名に重複がある場合もスキップ
+
+            # ここでdf_current_fileのカラム名をFINAL_POSTGRE_COLUMNSに強制的に設定
+            # これにより、df_current_fileの物理的なデータとFINAL_POSTGRE_COLUMNSの名前が正しく紐づきます。
+            # もし物理的な順序がずれていれば、データは正しいカラムに流れ込む
+            df_current_file = df_current_file.reindex(columns=FINAL_POSTGRE_COLUMNS).fillna('')
+
+
+            # OCR IDやCIFなどのID情報の強制上書きは、process_data.pyで既に処理されているため、ここでは行わない
+            # process_data.py が出力した _processed.csv の ID 情報は信頼する
+            
+            # balance列の金額チェック（保存前に整形）
+            # is_money関数を使用して、金額として有効な値のみを保持する
+            for col in ['balance_original', 'balance']:
+                if col in df_current_file.columns:
+                    df_current_file[col] = df_current_file[col].apply(lambda x: x if is_money(x) else "")
+
+
+            all_data_frames.append(df_current_file)
+            print(f"    - {os.path.basename(file_path)} のデータを結合リストに追加しました。")
+
         except Exception as e:
-            print(f"  ❌ エラー: グループ '{group_root_name}' の結合ファイルの保存中に問題が発生しました。エラー: {e}")
+            print(f"  ❌ エラー: ファイル {os.path.basename(file_path)} の読み込み/処理中に問題が発生しました。エラー: {e}")
+            import traceback 
+            traceback.print_exc() 
 
-    print(f"ファイルグループごとの結合処理完了")
-    print(f"🎉 結合されたファイルグループ数: {merged_files_count} 🎉")
+    if not all_data_frames:
+        print("⚠️ 警告: 結合対象の有効なデータが見つからなかったため、マージは行われません。")
+        print(f"\n--- ファイルグループごとの結合処理完了 ({datetime.now()}) ---")
+        print(f"🎉 結合されたファイルグループ数: 0 🎉")
+        return
 
+    # 全てのデータフレームを結合
+    merged_df = pd.concat(all_data_frames, ignore_index=True)
+    
+    # 最終結合DataFrameのカラムチェック（念のため）
+    if list(merged_df.columns) != FINAL_POSTGRE_COLUMNS:
+        print("❗ 最終結合DataFrameのカラム順が想定と異なります。再インデックスします。")
+        merged_df = merged_df.reindex(columns=FINAL_POSTGRE_COLUMNS).fillna('')
+    
+    # 最終的な金額列のチェックとクリーンアップ（この段階で最後の保証）
+    for col in ['balance_original', 'balance']:
+        if col in merged_df.columns:
+            merged_df[col] = merged_df[col].apply(lambda x: x if is_money(x) else "")
+    print(f"  ℹ️ 最終マージ済みDataFrameの'balance_original'と'balance'カラムの金額チェックとクリーンアップを行いました。")
+
+
+    # 結合されたDataFrameを保存
+    try:
+        # header=False で保存 (PostgreSQL COPYコマンド向け)
+        merged_df.to_csv(output_file_path, index=False, header=False, encoding='utf-8-sig')
+        print(f"✅ 全てマージ完了！→ {output_file_path}")
+    except Exception as e:
+        print(f"❌ エラー: マージ済みファイル '{output_file_path}' の保存中に問題が発生しました。エラー: {e}")
+        import traceback
+        traceback.print_exc()
+
+
+    print(f"\n--- ファイルグループごとの結合処理完了 ({datetime.now()}) ---")
+    print(f"🎉 結合されたファイルグループ数: 1 (allグループ) 🎉") # グループはall一つなので常に1
+    print(f"\n🎉 全ての結合処理が完了しました！ ({datetime.now()}) 🎉")
+
+# --- メイン処理 ---
 if __name__ == "__main__":
     print(f"--- 結合処理スクリプト開始: {datetime.now()} ---")
     merge_processed_csv_files()
